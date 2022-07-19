@@ -1,0 +1,47 @@
+---
+permalink: deploy/task-register-oncommand-api-services-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: virtual, volume, datastores, registering, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'Bei Verwendung von ONTAP 9.6 oder einer älteren Version können Sie über das vVol Dashboard nur Details zu VMware Virtual Volumes (VVols) Datastores und Virtual Machines anzeigen, wenn Sie sich für VASA Provider registriert haben, um Daten für die VVols-VM- und Datastore-Berichte abzurufen.' 
+---
+= Melden Sie sich mit der virtuellen Appliance für VSC, VASA Provider und SRA an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Verwendung von ONTAP 9.6 oder einer älteren Version können Sie über das vVol Dashboard nur Details zu VMware Virtual Volumes (VVols) Datastores und Virtual Machines anzeigen, wenn Sie sich für VASA Provider registriert haben, um Daten für die VVols-VM- und Datastore-Berichte abzurufen.
+
+Sie müssen 2.1 oder höher von heruntergeladen haben.
+
+[NOTE]
+====
+Das vVol Dashboard zeigt Performance-Kennzahlen nur an, wenn SAN VVols Datastores und Virtual Machines mit ONTAP 9.3 oder höher konfiguriert werden.
+
+====
+.Schritte
+. Klicken Sie auf der Virtual Storage Console (VSC) *Startseite*-Seite auf *Einstellungen*.
+. Klicken Sie auf der Registerkarte *Administrative Einstellungen* auf *Erweiterung verwalten*.
+. Verwenden Sie zum Aktivieren den Schieberegler * OnCommand API Services* registrieren.
+. Geben Sie die IP-Adresse, den Service-Port und die Anmeldeinformationen für ein.
++
+Sie können auch das Dialogfeld *VASA Provider Extensions* verwalten für die folgenden Änderungen verwenden:
+
++
+** So aktualisieren Sie die Registrierung, wenn Änderungen an den Anmeldedaten vorgenommen werden:
+** Um die Registrierung rückgängig zu machen, wenn Sie das vVol Dashboard nicht mehr benötigen.
++
+Um die Registrierung für den VASA Provider zu entfernen, müssen Sie das Kontrollkästchen * OnCommand API Services registrieren* deaktivieren.
+
+
+
+. Klicken Sie Auf *Anwenden*.
++
+Das vVol Dashboard zeigt die Metriken für ONTAP 9.6 oder frühere SAN vVol Datastores nur an, nachdem die Registrierung abgeschlossen ist.
+
+
+
+*Verwandte Informationen*
+
+https://mysupport.netapp.com/site/["NetApp Support"^]

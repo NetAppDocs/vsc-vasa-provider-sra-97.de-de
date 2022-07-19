@@ -1,0 +1,61 @@
+---
+permalink: deploy/task-enable-datastore-mounting-across-different-subnets.html 
+sidebar: sidebar 
+keywords: enabling, datastore, mounting, across, different, subnets, 
+summary: 'Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren ESXi Hosts und Ihrem Speichersystem unterscheidet, müssen Sie die Voreinstellungen für Virtual Storage Console für VMware vSphere ändern. Wenn Sie die Voreinferenzdatei nicht ändern, schlägt die Bereitstellung von Datastore fehl, da (VSC) den Datastore nicht mounten kann.' 
+---
+= Aktivieren Sie das Mounten von Datenspeichern in unterschiedlichen Subnetzen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren ESXi Hosts und Ihrem Speichersystem unterscheidet, müssen Sie die Voreinstellungen für Virtual Storage Console für VMware vSphere ändern. Wenn Sie die Voreinferenzdatei nicht ändern, schlägt die Bereitstellung von Datastore fehl, da (VSC) den Datastore nicht mounten kann.
+
+Wenn die Bereitstellung von Datenspeichern fehlschlägt, protokolliert VSC die folgenden Fehlermeldungen:
+
+`Unable to continue. No ip addresses found when cross-referencing kernel ip addresses and addresses on the controller.`
+
+`Unable to find a matching network to NFS mount volume to these hosts.` ``
+
+.Schritte
+. Melden Sie sich bei Ihrer vCenter Server-Instanz an.
+. Starten Sie die Wartungskonsole mit der virtuellen Maschine Ihrer vereinheitlichten Appliance.
++
+link:task-access-virtual-appliance-maiintenance-console-options.html["Greifen Sie auf die Optionen der Wartungskonsole der virtuellen Appliance für VSC, VASA Provider und SRA zu"]
+
+. Eingabe `4` Um die Option *Support und Diagnose* zu öffnen.
+. Eingabe `2` Um die Option *Access Diagnostic Shell* zu öffnen.
+. Eingabe `vi /opt/netapp/vscserver/etc/kamino/kaminoprefs.xml` Um die zu aktualisieren `kaminoprefs.xml` Datei:
+. Aktualisieren Sie die `kaminoprefs.xml` Datei:
++
+[cols="1a,1a"]
+|===
+| Verwenden Sie... | Tun Sie das... 
+
+
+ a| 
+ISCSI
+ a| 
+Ändern Sie den Wert der Eintragstaste `default.allow.iscsi.mount.networks` Von ALLEN bis zum Wert Ihrer ESXi Hostnetzwerke.
+
+
+
+ a| 
+NFS
+ a| 
+Ändern Sie den Wert der Eintragstaste `default.allow.nfs.mount.networks` Von ALLEN bis zum Wert Ihrer ESXi Hostnetzwerke.
+
+|===
++
+Die Vorgabedatei enthält Beispielwerte für diese Eintragstasten.
+
++
+[NOTE]
+====
+Der Wert „`ALL`“ bedeutet nicht alle Netzwerke. „`ALL`“ ermöglicht die Verwendung aller übereinstimmenden Netzwerke zwischen dem Host und dem Speichersystem zur Mounten von Datastores. Wenn Sie Hostnetzwerke angeben, können Sie das Mounten nur über die angegebenen Subnetze aktivieren.
+
+====
+. Speichern und schließen Sie das `kaminoprefs.xml` Datei:
+

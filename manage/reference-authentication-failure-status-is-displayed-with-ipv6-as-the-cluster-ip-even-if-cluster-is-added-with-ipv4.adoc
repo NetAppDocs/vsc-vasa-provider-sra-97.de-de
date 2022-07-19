@@ -1,0 +1,38 @@
+---
+permalink: manage/reference-authentication-failure-status-is-displayed-with-ipv6-as-the-cluster-ip-even-if-cluster-is-added-with-ipv4.html 
+sidebar: sidebar 
+keywords: authentication, failure, for,, storage system, troubleshooting, error, 
+summary: Das Hinzufügen eines Speichersystems mit IPv4 führt zu einem Authentifizierungsfehler mit dem IPv6-Status im Speichersystem-Grid 
+---
+= Wenn Sie ein Speichersystem mit IPv4 hinzufügen, führt dies zu einem Authentifizierungsfehler mit dem IPv6-Status im Speichersystem-Grid
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Problem
+
+Das Storage-System-Grid zeigt den Authentifizierungsfehler mit der IPv6-Adresse für ein Speichersystem an, obwohl das Speichersystem mit einer IPv4-Adresse hinzugefügt wurde.
+
+
+
+== Ursache
+
+Wenn Sie ein Dual-Stack-Storage-System mit IPv4 und IPv6 LIFs haben und Sie ein Storage-System mit IPv4 LIF hinzufügen, dann kann die VSC während der regelmäßigen Erkennung die IPv6 LIF auch erkennen. Diese IPv6-Erkennung schlägt mit Authentifizierungsfehler fehl, da das IPv6-LIF nicht explizit hinzugefügt wird. Dieser Fehler hat keine Auswirkung auf die Vorgänge, die für das Speichersystem durchgeführt werden.
+
+
+
+== Korrekturmaßnahme
+
+Sie müssen Folgendes durchführen:
+
+. Klicken Sie auf der VSC Startseite auf *Storage Systems*.
+. Klicken Sie auf das Speichersystem, das den Status „unbekannt“ mit der IPv6-Adresse aufweist.
+. Ändern Sie die IP-Adresse in IPv4 mit den festgelegten Standardanmeldeinformationen.
+. Klicken Sie auf *Zurück zur Auflistung* und dann auf *ALLE WIEDERENTDECKEN*.
++
+Der veraltete IPv6-Eintrag aus der Liste der Speichersysteme wird gelöscht und das Speichersystem wird ohne Authentifizierungsfehler erkannt.
+
+

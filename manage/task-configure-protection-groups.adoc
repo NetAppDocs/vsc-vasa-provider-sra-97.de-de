@@ -1,0 +1,61 @@
+---
+permalink: manage/task-configure-protection-groups.html 
+sidebar: sidebar 
+keywords: configuring, protection, groups, 
+summary: Sie müssen Schutzgruppen erstellen, um eine Gruppe virtueller Maschinen auf dem geschützten Standort zu schützen. 
+---
+= Konfigurieren Sie Schutzgruppen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen Schutzgruppen erstellen, um eine Gruppe virtueller Maschinen auf dem geschützten Standort zu schützen.
+
+Stellen Sie sicher, dass die Quell- und Zielstandorte für Folgendes konfiguriert sind:
+
+* Dieselbe Version von SRM wurde installiert
+* VVols Datastore, der mit aktivierter Replizierung konfiguriert ist und bei denen ein Datastore angehängt ist
+* Ähnliche Storage-Funktionsprofile
+* Ähnliche VM Storage Policies mit Replizierungsfunktion, die in SRM abgebildet werden muss
+* Virtual Machines
+* Gepaarte geschützte Standorte und Recovery-Standorte
+* Quell- und Ziel-Datastores sollten auf den jeweiligen Sites gemountet werden
+
+
+.Schritte
+. Melden Sie sich bei Ihrem vCenter Server an und klicken Sie dann auf Menü:Site Recovery[Protection Groups].
+. Klicken Sie im Fensterbereich *Schutzgruppen* auf *Neu*.
+. Geben Sie einen Namen und eine Beschreibung für die Schutzgruppe, Richtung an, und klicken Sie dann auf *WEITER*.
+. Wählen Sie im Feld *Typ* eine der folgenden Optionen aus:
++
+[cols="1a,1a"]
+|===
+| Für... | Feldoption eingeben... 
+
+
+ a| 
+*Traditioneller Datastore*
+ a| 
+Datastore-Gruppen (Array-basierte Replizierung)
+
+
+
+ a| 
+*VVols Datastore*
+ a| 
+Virtuelle Volumes (vVol Replizierung)
+
+|===
++
+Die Fehlerdomäne ist nichts anderes als SVMs mit aktivierter Replizierung. Die SVMs, deren Peering nur implementiert wurde und keine Probleme auftreten, werden angezeigt.
+
+. Wählen Sie auf der Registerkarte *Replikationsgruppen* entweder das aktivierte Array-Paar oder die Replikationsgruppen aus, für die Sie die virtuelle Maschine konfiguriert haben, und klicken Sie dann auf *WEITER*.
++
+Alle virtuellen Maschinen in der Replikationsgruppe werden der Schutzgruppe hinzugefügt.
+
+. Wählen Sie entweder den vorhandenen Wiederherstellungsplan aus oder erstellen Sie einen neuen Plan, indem Sie auf *zu neuem Wiederherstellungsplan hinzufügen* klicken.
+. Überprüfen Sie auf der Registerkarte *Ready to Complete* die Details der von Ihnen erstellten Schutzgruppe und klicken Sie dann auf *Finish*.
+

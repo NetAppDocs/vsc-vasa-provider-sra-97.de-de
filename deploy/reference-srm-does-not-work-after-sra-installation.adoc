@@ -1,0 +1,31 @@
+---
+permalink: deploy/reference-srm-does-not-work-after-sra-installation.html 
+sidebar: sidebar 
+keywords: netapp, storage, replication, adapter, ontap, appear, site, recovery, manager, appliance, 
+summary: NetApp Storage Replication Adapter für ONTAP wird nicht auf der Site Recovery Manager-Appliance angezeigt 
+---
+= NetApp Storage Replication Adapter für ONTAP wird nicht auf der Site Recovery Manager-Appliance angezeigt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Problem
+
+Storage Replication Adapter (SRA) wird nach dem Hochladen und Konfigurieren von SRA nicht auf der Appliance-Schnittstelle des Site Recovery Manager (SRM) angezeigt.
+
+
+
+== Ursache
+
+Es wird kein Fehler angezeigt, wenn falsche SRA-Anmeldedaten (Benutzername oder Passwort) verwendet werden, um SRA mithilfe des folgenden Befehls zu konfigurieren.
+
+`perl command.pl -I <sra-server-ip> <vp_username> <vp_passwd>`
+
+
+
+== Korrekturmaßnahme
+
+Aktualisieren Sie die Konfigurationsdetails von SRA mithilfe des folgenden Befehls: `perl command.pl -U <sra-server-ip> <vp_username> <vp_passwd>`

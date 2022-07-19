@@ -1,0 +1,40 @@
+---
+permalink: deploy/concept-guidelines-for-using-vsc-standard-roles.html 
+sidebar: sidebar 
+keywords: guidelines, using, VSC standard roles 
+summary: Wenn Sie mit standardmäßigen Virtual Storage Console für VMware vSphere Rollen arbeiten, gibt es bestimmte Richtlinien, die Sie befolgen sollten. 
+---
+= Richtlinien zur Verwendung von VSC Standardrollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie mit standardmäßigen Virtual Storage Console für VMware vSphere Rollen arbeiten, gibt es bestimmte Richtlinien, die Sie befolgen sollten.
+
+Sie sollten die Standardrollen nicht direkt ändern. Wenn Sie das tun, überschreiben die Änderungen bei jedem VSC-Upgrade die VSC. Das Installationsprogramm aktualisiert bei jedem VSC-Upgrade die Standardrollendefinitionen. So wird sichergestellt, dass die Rollen sowohl für Ihre VSC-Version als auch für alle unterstützten Versionen des vCenter Server aktuell sind.
+
+Sie können jedoch die Standardrollen verwenden, um Rollen zu erstellen, die auf Ihre Umgebung zugeschnitten sind. Dazu sollten Sie die VSC Standardrolle kopieren und dann die kopierte Rolle bearbeiten. Durch das Erstellen einer neuen Rolle können Sie diese Rolle auch beibehalten, wenn Sie den VSC Windows Service neu starten oder aktualisieren.
+
+Möglicherweise verwenden Sie die VSC Standardrollen wie folgt:
+
+* Verwenden Sie die VSC Standardrollen für alle VSC Aufgaben.
++
+In diesem Szenario bieten die Standardrollen alle Berechtigungen, die ein Benutzer zur Durchführung der VSC-Aufgaben benötigt.
+
+* Kombinieren Sie Rollen, um die Aufgaben zu erweitern, die ein Benutzer ausführen kann.
++
+Wenn die VSC Standardrollen zu viel Granularität für Ihre Umgebung bieten, können Sie ihre Rollen erweitern, indem Sie Gruppen auf höherer Ebene mit mehreren Rollen erstellen.
+
++
+Wenn ein Benutzer andere Aufgaben ausführen muss, die keine VSC erfordern, die zusätzliche native Berechtigungen von vCenter Server erfordern, können Sie eine Rolle erstellen, die diese Berechtigungen bereitstellt und sie der Gruppe auch hinzufügen.
+
+* Erstellung feingranularer Rollen
++
+Wenn in Ihrem Unternehmen bestimmte Rollen restriktiver implementiert werden müssen als die VSC Standardrollen, können Sie mit den VSC Rollen neue Rollen erstellen.
+
++
+In diesem Fall würden Sie die nötigen VSC Rollen klonen und dann die geklonte Rolle bearbeiten, damit sie nur die Berechtigungen hat, die Ihr Benutzer benötigt.
+
+

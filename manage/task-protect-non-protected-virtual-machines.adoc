@@ -1,0 +1,33 @@
+---
+permalink: manage/task-protect-non-protected-virtual-machines.html 
+sidebar: sidebar 
+keywords: virtual, machines, configuring, protection, protecting, unprotected, virtual, machines, 
+summary: Sie können den Schutz Ihrer vorhandenen ungeschützten Virtual Machines konfigurieren, die mit VM Storage Policy erstellt wurden, wobei die Replizierung deaktiviert ist. Um einen Schutz zu gewährleisten, sollten Sie die VM-Storage-Richtlinie ändern und eine Replizierungsgruppe zuweisen. 
+---
+= Sicherung ungesicherter Virtual Machines
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Schutz Ihrer vorhandenen ungeschützten Virtual Machines konfigurieren, die mit VM Storage Policy erstellt wurden, wobei die Replizierung deaktiviert ist. Um einen Schutz zu gewährleisten, sollten Sie die VM-Storage-Richtlinie ändern und eine Replizierungsgruppe zuweisen.
+
+Wenn die SVM sowohl IPv4 als auch IPv6 LIFs hat, sollten Sie IPv6 LIFs deaktivieren und später Disaster-Recovery-Workflows durchführen.
+
+.Schritte
+. Klicken Sie auf die erforderliche Virtual Machine, und vergewissern Sie sich, dass sie mit der VM-Standardspeicherrichtlinie konfiguriert ist.
+. Klicken Sie mit der rechten Maustaste auf die ausgewählte virtuelle Maschine, und klicken Sie auf MENU:VM-Richtlinien[VM-Storage-Richtlinien bearbeiten].
+. Wählen Sie eine VM-Speicherrichtlinie aus, bei der die Replikation aktiviert ist. Klicken Sie dazu im Dropdown-Menü *VM-Speicherrichtlinie* auf.
+. Wählen Sie eine Replikationsgruppe aus dem Dropdown-Menü *Replikationsgruppe* aus und klicken Sie dann auf *OK*.
++
+Überprüfen Sie die Zusammenfassung der virtuellen Maschine, um zu bestätigen, dass die virtuelle Maschine geschützt ist.
+
++
+[NOTE]
+====
+Diese Version der virtuellen Appliance für VSC, VASA Provider und SRA unterstützt kein Hot-Clone geschützter Virtual Machines. Sie sollten die Virtual Machine ausschalten und dann den Klonvorgang ausführen.
+
+====
+

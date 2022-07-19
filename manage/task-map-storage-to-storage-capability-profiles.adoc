@@ -1,0 +1,48 @@
+---
+permalink: manage/task-map-storage-to-storage-capability-profiles.html 
+sidebar: sidebar 
+keywords: mapping, datastores, to, storage, capability, profiles, 
+summary: Sie können die Datastores, die VASA Provider für ONTAP zugeordnet sind, den Storage-Funktionsprofilen zuordnen. Sie können einem Datenspeicher, der nicht einem Storage-Funktionsprofil zugeordnet ist, ein Profil zuweisen. 
+---
+= Zuordnen von Datastores zu Storage-Funktionsprofilen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Datastores, die VASA Provider für ONTAP zugeordnet sind, den Storage-Funktionsprofilen zuordnen. Sie können einem Datenspeicher, der nicht einem Storage-Funktionsprofil zugeordnet ist, ein Profil zuweisen.
+
+.Bevor Sie beginnen
+* Sie müssen Ihre VASA Provider Instanz auf der Virtual Storage Console für VMware vSphere registriert haben.
+* Virtual Storage Console (VSC) muss Ihren Storage bereits erkannt haben.
+
+
+Sie können herkömmlichen Datenspeicher einem Storage-Funktionsprofil zuordnen oder das Storage-Funktionsprofil, das einem Datenspeicher zugeordnet ist, ändern. VASA Provider zeigt auf der Seite *Storage Mappings* alle Datastores des virtuellen Volumes (VVol) an. Alle Datastores, auf die in dieser Aufgabe verwiesen wird, sind herkömmliche Datastores.
+
+.Schritte
+. Klicken Sie auf der VSC *Startseite* Seite auf *Storage Mapping*.
++
+Auf der Seite *Storage Mapping* können Sie folgende Informationen ermitteln:
+
++
+** Der vCenter Server, der dem Datastore zugeordnet ist
+** Wie viele Profile passen zum Datenspeicher
++
+Auf der Seite *Storage Mapping* werden nur traditionelle Datenspeicher angezeigt. Auf dieser Seite werden keine VVol Datastores oder qtree Datastores angezeigt.
+
+** Gibt an, ob der Datenspeicher derzeit einem Profil zugeordnet ist
++
+Ein Datastore kann mehrere Profile angleichen. Ein Datastore kann jedoch nur einem Profil zugeordnet werden.
+
+** Gibt an, ob der Datenspeicher mit dem ihm zugeordneten Profil kompatibel ist
+
+
+. Wenn Sie ein Storage-Funktionsprofil einem Datenspeicher zuordnen oder das vorhandene Profil eines Datastores ändern möchten, wählen Sie den Datenspeicher aus.
++
+Um bestimmte Datenspeicher oder andere Informationen auf der Seite *Speicherzuordnung* zu finden, können Sie einen Namen oder einen Teilstring in das Suchfeld eingeben. VSC zeigt die Suchergebnisse in einem Dialogfeld an. Um zur vollständigen Anzeige zurückzukehren, sollten Sie den Text aus dem Suchfeld entfernen und dann auf *Enter* klicken.
+
+. Wählen Sie im Menü *Aktionen* die Option *übereinstimmendes Profil zuweisen*.
+. Wählen Sie das Profil aus, das Sie dem Datastore zuordnen möchten, aus der Liste der übereinstimmenden Profile aus, die im Dialogfeld *Profil dem Datastore zuweisen* angegeben ist, und klicken Sie dann auf *OK*, um das ausgewählte Profil dem Datastore zuzuordnen.
+. Aktualisieren Sie den Bildschirm, um die neue Aufgabe zu überprüfen.
+

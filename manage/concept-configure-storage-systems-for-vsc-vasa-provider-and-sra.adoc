@@ -1,0 +1,14 @@
+---
+permalink: manage/concept-configure-storage-systems-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: configuring, storage, systems, for, vsc, vasa, provider, sra, 
+summary: Sie sollten Storage-Systeme zur virtuellen Appliance hinzufügen und bei Bedarf über die VSC Schnittstelle Standard-Anmeldedaten festlegen. 
+---
+= Konfiguration der Storage-Systeme für VSC, VASA Provider und SRA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten Storage-Systeme zur virtuellen Appliance hinzufügen und bei Bedarf über die VSC Schnittstelle Standard-Anmeldedaten festlegen.

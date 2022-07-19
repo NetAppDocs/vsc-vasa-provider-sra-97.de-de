@@ -1,0 +1,45 @@
+---
+permalink: deploy/reference-key-points-about-assigning-and-modifying-permissions.html 
+sidebar: sidebar 
+keywords: key, points, about, assigning, modifying, permissions, vcenter, server, 
+summary: Bei der Arbeit mit vCenter Server-Berechtigungen gibt es einige wichtige Punkte, die Sie beachten sollten. Ob eine Aufgabe der virtuellen Speicherkonsole für VMware vSphere erfolgreich ist, hängt davon ab, wo Sie eine Berechtigung zugewiesen haben oder welche Aktionen ein Benutzer nach einer Änderung der Berechtigung ergriffen hat. 
+---
+= Kernpunkte zum Zuweisen und Ändern von Berechtigungen für vCenter Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Arbeit mit vCenter Server-Berechtigungen gibt es einige wichtige Punkte, die Sie beachten sollten. Ob eine Aufgabe der virtuellen Speicherkonsole für VMware vSphere erfolgreich ist, hängt davon ab, wo Sie eine Berechtigung zugewiesen haben oder welche Aktionen ein Benutzer nach einer Änderung der Berechtigung ergriffen hat.
+
+
+
+== Berechtigungen werden zugewiesen
+
+Sie müssen nur vCenter Server-Berechtigungen einrichten, wenn Sie den Zugriff auf vSphere-Objekte und -Aufgaben einschränken möchten. Andernfalls können Sie sich als Administrator anmelden. Mit dieser Anmeldung können Sie automatisch auf alle vSphere Objekte zugreifen.
+
+Wenn Sie eine Berechtigung zuweisen, legt die VSC Aufgaben fest, die ein Benutzer ausführen kann.
+
+Um den Abschluss einer Aufgabe zu gewährleisten, müssen Sie die Berechtigung auf einer höheren Ebene zuweisen, z. B. dem Root-Objekt. Dies ist der Fall, wenn eine Aufgabe eine Berechtigung erfordert, die nicht auf ein bestimmtes vSphere-Objekt angewendet wird (z. B. Tracking the Task), oder wenn eine erforderliche Berechtigung auf ein nicht-vSphere-Objekt (z. B. ein Storage-System) angewendet wird.
+
+In diesen Fällen können Sie eine Berechtigung so einrichten, dass sie von den untergeordneten Entitäten übernommen wird. Sie können den untergeordneten Entitäten auch andere Berechtigungen zuweisen. Die einer untergeordneten Entität zugewiesene Berechtigung überschreibt immer die Berechtigung, die von der übergeordneten Einheit übernommen wurde. Dies bedeutet, dass Sie Berechtigungen für eine untergeordnete Einheit als Möglichkeit zur Einschränkung des Geltungsbereichs einer Berechtigung, die einem Root-Objekt zugewiesen und von der untergeordneten Einheit vererbt wurde, haben können.
+
+
+TIP: Sofern die Sicherheitsrichtlinien Ihres Unternehmens keine restriktiveren Berechtigungen erfordern, empfiehlt es sich, dem Root-Objekt (auch als Stammordner bezeichnet) Berechtigungen zuzuweisen.
+
+
+
+== Berechtigungen und nicht vSphere Objekte
+
+Die von Ihnen erstellte Berechtigung wird auf ein nicht-vSphere-Objekt angewendet. Beispielsweise ist ein Storage-System kein vSphere-Objekt. Wenn eine Berechtigung für ein Storage-System gilt, müssen Sie dem VSC-Root-Objekt die Berechtigung mit dieser Berechtigung zuweisen, da es kein vSphere Objekt gibt, dem Sie es zuweisen können.
+
+Beispielsweise müssen alle Berechtigungen, die ein Privileg enthalten, z. B. die VSC-Berechtigung „Storage-Systeme hinzufügen/ändern/überspringen“, auf der Root-Objektebene zugewiesen werden.
+
+
+
+== Ändern von Berechtigungen
+
+Sie können jederzeit eine Berechtigung ändern.
+
+Wenn Sie die Berechtigungen innerhalb einer Berechtigung ändern, muss sich der mit dieser Berechtigung verknüpfte Benutzer abmelden und sich dann wieder anmelden, um die aktualisierte Berechtigung zu aktivieren.

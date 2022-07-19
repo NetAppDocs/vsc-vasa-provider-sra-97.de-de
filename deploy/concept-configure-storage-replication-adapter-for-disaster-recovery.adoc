@@ -1,0 +1,18 @@
+---
+permalink: deploy/concept-configure-storage-replication-adapter-for-disaster-recovery.html 
+sidebar: sidebar 
+keywords: configuring, storage, replication, adapter, disaster, recovery, 
+summary: 'Wenn Sie Ihren vCenter Server für die Disaster Recovery konfigurieren möchten, müssen Sie den Storage Replication Adapter (SRA) aktivieren, nachdem Sie die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) implementiert haben. Nach der Implementierung der virtuellen Appliance wird VSC standardmäßig installiert. Nach der Implementierung der virtuellen Appliance muss SRA für den vCenter Server aktiviert werden.' 
+---
+= Storage Replication Adapter für Disaster Recovery konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Ihren vCenter Server für die Disaster Recovery konfigurieren möchten, müssen Sie den Storage Replication Adapter (SRA) aktivieren, nachdem Sie die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) implementiert haben. Nach der Implementierung der virtuellen Appliance wird VSC standardmäßig installiert. Nach der Implementierung der virtuellen Appliance muss SRA für den vCenter Server aktiviert werden.
+
+*Verwandte Informationen*
+
+xref:task-enable-storage-replication-adapter.adoc[Aktivieren Sie Storage Replication Adapter]

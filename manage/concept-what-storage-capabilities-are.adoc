@@ -1,0 +1,30 @@
+---
+permalink: manage/concept-what-storage-capabilities-are.html 
+sidebar: sidebar 
+keywords: storage, capability, profiles, 
+summary: Eine Storage-Funktion ist eine Reihe von Attributen von Storage-Systemen. Dadurch wird ein bestimmter Level an Storage-Performance, Storage-Effizienz und anderen Funktionen identifiziert, wie z. B. die Verschlüsselung für das Storage-Objekt. 
+---
+= Welche Storage-Funktionen sind verfügbar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Storage-Funktion ist eine Reihe von Attributen von Storage-Systemen. Dadurch wird ein bestimmter Level an Storage-Performance, Storage-Effizienz und anderen Funktionen identifiziert, wie z. B. die Verschlüsselung für das Storage-Objekt.
+
+Bei herkömmlichen Datastores können Sie ein Storage-Funktionsprofil verwenden, um Datastores mit gängigen Attributen zu konsistent zu erstellen und ihnen QoS-Richtlinien zuzuweisen. Während der Bereitstellung werden mit VSC Cluster, SVMs und Aggregate angezeigt, die dem Storage-Funktionsprofil entsprechen. Mit der Option *GLOBAL AUTO-GENERATE PROFILES* aus dem Menü *Storage Mapping* können Sie aus bestehenden herkömmlichen Datastores ein Profil der Speicherfähigkeit generieren. Nach der Erstellung des Profils können Sie mit VSC die Compliance von Datastores mit dem Profil überwachen.
+
+Bei Verwendung mit VVol Datastores kann der Bereitstellungsassistent mehrere Storage-Funktionsprofile verwenden, um verschiedene FlexVol Volumes im Datastore zu erstellen. Sie können die VM Storage-Richtlinie verwenden, um VVols automatisch für eine Virtual Machine in entsprechenden FlexVol Volumes gemäß Definition zu erstellen. Sie können beispielsweise Profile für allgemeine Storage-Klassen erstellen (beispielsweise für Performance-Limits und andere Funktionen wie Verschlüsselung oder FabricPool). Sie können später VM Storage-Richtlinien in vCenter Server erstellen, die Business-Klassen von Virtual Machines darstellen und diese mit dem entsprechenden Storage-Funktionsprofil nach Name verknüpfen (z. B. Produktion, Test, HR).
+
+Bei Verwendung mit VVols wird auch das Storage-Funktionsprofil verwendet, um die Storage-Performance für die individuelle Virtual Machine festzulegen und sie auf dem FlexVol Volume im vVol Datastore abzulegen, der die Performance-Anforderungen am besten erfüllt. Sie können eine QoS-Richtlinie mit minimalen und/oder maximalen IOPS für die Performance festlegen. Die Standardrichtlinien können verwendet werden, wenn Sie eine Virtual Machine bereitstellen oder Ihre VM Storage-Richtlinie später ändern, wenn sich Ihre Geschäftsanforderungen ändern.
+
+Der vCenter Server ordnet dann die Storage-Fähigkeit einer LUN oder eines Volumes dem Datenspeicher zu, der auf dieser LUN oder diesem Volume bereitgestellt ist. Damit können Sie eine Virtual Machine in einem Datenspeicher bereitstellen, der dem Storage-Profil der Virtual Machine entspricht, und es können sichergestellt werden, dass alle Datenspeicher in einem Datastore-Cluster dieselben Storage Service Levels aufweisen.
+
+Mit der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) können Sie jeden Datenspeicher eines virtuellen Volumes (VVol) mit einem neuen Storage-Funktionsprofil konfigurieren, das die Bereitstellung von Virtual Machines mit wechselnden IOPS-Anforderungen auf demselben vVol Datastore unterstützt. Während Sie den VM Provisioning Workflow mit IOPS-Anforderung ausführen, werden alle VVol Datastores in der Liste kompatibler Datastores aufgeführt.
+
+[NOTE]
+====
+Wenn Sie versuchen, virtuelle Maschinen für vCenter Server vor 6.5 bereitzustellen oder zu ändern, werden in der Liste kompatibler Datastores nur die vVol Datastores mit SpeicherFunktionsprofilen mit Performance-Einstellung „`MAX_IOPS`“ aufgeführt. Die verbleibenden vVol-Datenspeicher sind in der Liste mit inkompatiblen Datenspeichern aufgelistet. Sie können diese Klassifizierung ignorieren und einen beliebigen vVol Datastore aus der Liste inkompatibler Datenspeicher auswählen, um die virtuelle Maschine bereitzustellen oder zu ändern.
+
+====

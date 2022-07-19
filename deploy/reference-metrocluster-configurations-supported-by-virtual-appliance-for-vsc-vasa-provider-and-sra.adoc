@@ -1,0 +1,46 @@
+---
+permalink: deploy/reference-metrocluster-configurations-supported-by-virtual-appliance-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: metroCluster, configurations, supported, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'Die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) unterstützt Umgebungen, die MetroCluster IP- und FC-Konfigurationen für ONTAP verwenden. Der Support erfolgt meistens automatisch. Unter Umständen können Sie bei Verwendung einer MetroCluster Umgebung mit VSC und VASA Provider jedoch einige Unterschiede feststellen.' 
+---
+= Von der virtuellen Appliance unterstützte MetroCluster Konfigurationen für VSC, VASA Provider und SRA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) unterstützt Umgebungen, die MetroCluster IP- und FC-Konfigurationen für ONTAP verwenden. Der Support erfolgt meistens automatisch. Unter Umständen können Sie bei Verwendung einer MetroCluster Umgebung mit VSC und VASA Provider jedoch einige Unterschiede feststellen.
+
+
+
+== MetroCluster Konfigurationen und VSC
+
+Sie müssen sicherstellen, dass die VSC die Storage-System-Controller am primären und sekundären Standort erkennt. In der Regel erkennt VSC automatisch Storage Controller. Wenn Sie eine Cluster-Management-LIF verwenden, empfehlen wir, sicherzustellen, dass die VSC die Cluster an beiden Standorten erkannt hat. Andernfalls können Sie die Storage Controller manuell zur VSC hinzufügen. Sie können auch den Benutzernamen und die Passwörter, die VSC für die Verbindung zu den Storage Controllern verwendet, ändern.
+
+Bei einem Switchover wird der am sekundären Standort übertragen. Diese haben das Suffix „`-mc`“ an ihre Namen angehängt. Falls während eines Umschalttavorgangs z. B. zur Bereitstellung eines Datastores ein Switchover stattfindet, wird der Name des Speicherorts geändert und schließt dann das „`-mc`“-Suffix ein. Dieses Suffix wird beim Zurück-Wechsel abgebrochen und das Suffix am primären Standort wird mit der Steuerung fortgesetzt.
+
+[NOTE]
+====
+Wenn Sie direkt mit der MetroCluster Konfiguration zur VSC hinzugefügt haben, so wird nach der Umschaltung die Änderung des SVM-Namens (hinzugefügt durch das „`-mc`“ Suffix) nicht wiedergegeben. Alle anderen Switchover-Vorgänge werden weiterhin normal ausgeführt.
+
+====
+Wenn ein Switchover oder ein Switchover stattfindet, kann die VSC einige Minuten dauern, um die Cluster automatisch zu erkennen und zu erkennen. Wenn dies während der Durchführung einer VSC-Operation wie der Bereitstellung eines Datenspeichers geschieht, kann es zu Verzögerungen kommen.
+
+
+
+== MetroCluster Konfigurationen und VASA Provider
+
+VASA-Provider unterstützt automatisch Umgebungen, die MetroCluster-Konfigurationen verwenden. Die Umschaltung ist in VASA Provider-Umgebungen transparent. Sie können kein direktes Add-to-VASA-Provider hinzufügen.
+
+[NOTE]
+====
+VASA Provider fügt nach einer Umschaltung das Suffix „`-mc`“ nicht an die Namen des am sekundären Standort an.
+
+====
+
+
+== MetroCluster Konfigurationen und SRA
+
+SRA unterstützt keine MetroCluster-Konfigurationen.

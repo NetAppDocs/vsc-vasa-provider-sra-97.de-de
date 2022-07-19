@@ -1,0 +1,32 @@
+---
+permalink: manage/task-collect-the-log-files.html 
+sidebar: sidebar 
+keywords: collecting, the, log, files, 
+summary: Sie können Protokolldateien für Virtual Storage Console für VMware vSphere von der Option sammeln, die in der grafischen Benutzeroberfläche der VSC verfügbar ist. Der technische Support fordert Sie möglicherweise auf, die Protokolldateien zu sammeln, damit Sie Probleme beheben können. 
+---
+= Sammeln Sie die Protokolldateien
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Protokolldateien für Virtual Storage Console für VMware vSphere von der Option sammeln, die in der grafischen Benutzeroberfläche der VSC verfügbar ist. Der technische Support fordert Sie möglicherweise auf, die Protokolldateien zu sammeln, damit Sie Probleme beheben können.
+
+Wenn Sie VASA Provider-Protokolldateien benötigen, können Sie über den Bildschirm *Vendor Provider Control Panel* ein Supportpaket erzeugen. Diese Seite ist Teil der VASA Provider-Wartungsmenüs, auf die Sie über die Konsole der virtuellen Appliance zugreifen können.
+
+https://vm_ip:9083[]
+
+Sie können die VSC Protokolldateien mithilfe der Funktion „`VSC Logs` exportieren“ in der VSC GUI erfassen. Wenn Sie ein VSC-Protokollpaket mit aktiviertem VASA Provider erfassen, werden im VSC-Protokollpaket auch die VP-Protokolle enthalten. Mit den folgenden Schritten erfahren Sie, wie Sie die VSC Protokolldateien sammeln können:
+
+.Schritte
+. Klicken Sie auf der Startseite der Virtual Storage Console auf Menü:Konfiguration[VSC Logs exportieren].
++
+Dieser Vorgang kann mehrere Minuten dauern.
+
+. Speichern Sie die Datei auf Ihrem lokalen Computer, wenn Sie dazu aufgefordert werden.
++
+Sie können dann die senden `.zip` Datei an technischen Support
+
+

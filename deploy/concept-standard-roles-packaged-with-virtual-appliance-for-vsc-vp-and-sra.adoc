@@ -1,0 +1,62 @@
+---
+permalink: deploy/concept-standard-roles-packaged-with-virtual-appliance-for-vsc-vp-and-sra.html 
+sidebar: sidebar 
+keywords: standard, roles, packaged, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'Zur Vereinfachung der Arbeit mit vCenter Server-Berechtigungen und rollenbasierter Zugriffssteuerung (Role Based Access Control, RBAC) bietet (VSC) standardmäßige VSC-Rollen, mit denen Sie wichtige VSC-Aufgaben ausführen können. Es gibt auch eine schreibgeschützte Rolle, mit der Sie VSC Informationen anzeigen, aber keine Aufgaben ausführen können.' 
+---
+= Standardrollen in Verbindung mit der virtuellen Appliance für VSC, VASA Provider und SRA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zur Vereinfachung der Arbeit mit vCenter Server-Berechtigungen und rollenbasierter Zugriffssteuerung (Role Based Access Control, RBAC) bietet (VSC) standardmäßige VSC-Rollen, mit denen Sie wichtige VSC-Aufgaben ausführen können. Es gibt auch eine schreibgeschützte Rolle, mit der Sie VSC Informationen anzeigen, aber keine Aufgaben ausführen können.
+
+Die VSC Standardrollen verfügen sowohl über die erforderlichen VSC-spezifischen Berechtigungen als auch über die nativen vCenter Server-Berechtigungen, die für Benutzer zur Ausführung von VSC Aufgaben erforderlich sind. Darüber hinaus werden die Rollen so eingerichtet, dass sie über die erforderlichen Berechtigungen für alle unterstützten Versionen des vCenter Servers verfügen.
+
+Als Administrator können Sie diese Rollen bei Bedarf Benutzern zuweisen.
+
+[NOTE]
+====
+Wenn Sie die VSC auf die neueste Version aktualisieren, werden die Standardrollen automatisch aktualisiert, um sie mit der neuen Version von VSC zu verwenden.
+
+====
+Sie können sich die VSC Standardrollen anzeigen lassen, indem Sie auf der vSphere Client *Home* Seite auf *Rollen* klicken.
+
+Die Rollen der VSC ermöglichen Ihnen, die folgenden Aufgaben auszuführen:
+
+[cols="1a,1a"]
+|===
+| Rolle | Beschreibung 
+
+
+ a| 
+VSC Administrator
+ a| 
+Bietet alle nativen vCenter Server-Berechtigungen und VSC-spezifische Berechtigungen, die zur Durchführung aller VSC-Aufgaben erforderlich sind.
+
+
+
+ a| 
+VSC schreibgeschützt
+ a| 
+Bietet schreibgeschützten Zugriff auf VSC
+
+Diese Benutzer können keine VSC Aktionen ausführen, die durch den Zugriff gesteuert werden.
+
+
+
+ a| 
+VSC Provisionierung
+ a| 
+Bietet alle nativen vCenter Server-Berechtigungen und VSC-spezifische Berechtigungen, die für die Bereitstellung von Storage erforderlich sind.
+
+Sie können die folgenden Aufgaben ausführen:
+
+* Erstellen neuer Datenspeicher
+* Datastores zerstören
+* Zeigt Informationen zu Storage-Funktionsprofilen an
+
+
+|===

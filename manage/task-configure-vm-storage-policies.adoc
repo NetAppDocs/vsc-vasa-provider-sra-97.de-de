@@ -1,0 +1,36 @@
+---
+permalink: manage/task-configure-vm-storage-policies.html 
+sidebar: sidebar 
+keywords: configuring, vm, storage, policies, 
+summary: Sie sollten VM-Storage-Richtlinien konfigurieren, um Virtual Machines zu managen, die auf VVols Datastores konfiguriert sind, und um Services wie die Replizierung für die virtuellen Festplatten zu aktivieren. Bei herkömmlichen Datenspeichern kann optional diese VM Storage-Richtlinien verwendet werden. 
+---
+= Konfiguration von VM Storage Policies
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten VM-Storage-Richtlinien konfigurieren, um Virtual Machines zu managen, die auf VVols Datastores konfiguriert sind, und um Services wie die Replizierung für die virtuellen Festplatten zu aktivieren. Bei herkömmlichen Datenspeichern kann optional diese VM Storage-Richtlinien verwendet werden.
+
+Der vSphere Web-Client bietet Standard-Storage-Richtlinien. Sie können jedoch Richtlinien erstellen und sie den Virtual Machines zuweisen.
+
+.Schritte
+. Klicken Sie auf der Seite vSphere Client auf Menü:Menü[Richtlinien und Profile].
+. Klicken Sie auf Menü:VM Storage Policies[Create VM Storage Policy].
+. Geben Sie auf der Seite Create VM Storage Policy folgende Details ein:
++
+.. Geben Sie einen Namen und eine Beschreibung für die VM-Speicherrichtlinie ein.
+.. Wählen Sie * Enable rules für „NetApp Clustered Data ONTAP.VP.vvol“ Storage* aus.
+.. Wählen Sie auf der Registerkarte *Platzierung* das gewünschte Speicherfähigkeitsprofil aus.
+.. Wählen Sie die Option *Benutzerdefiniert*, um die Replikation zu aktivieren.
+.. Klicken Sie auf *REGEL HINZUFÜGEN*, um *Asynchronous* Replikation und erforderlich *SnapMirror Schedule* auszuwählen, und klicken Sie dann auf *WEITER*.
+.. Überprüfen Sie die aufgeführten kompatiblen Datenspeicher, und klicken Sie dann auf *Speicherkompatibilität* auf der Registerkarte * auf *Speicherkompatibilität*.
++
+Bei VVols Datastores mit Datensicherungs-FlexVol Volumes wird eine Prüfung kompatibler Datastores nicht durchgeführt.
+
+
+
+. Überprüfen Sie die Auswahl Ihrer VM-Speicherrichtlinie auf der Registerkarte *Überprüfen und beenden* und klicken Sie dann auf *Fertig stellen*.
+

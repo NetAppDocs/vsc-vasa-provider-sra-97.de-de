@@ -1,0 +1,39 @@
+---
+permalink: deploy/task-configure-vasa-provider-to-use-ssh-for-remote-diag-access.html 
+sidebar: sidebar 
+keywords: configuring, virtual, appliance, vsc, vasa, provider, sra, use, ssh, for, remote, diag, access, 
+summary: 'Sie können die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) konfigurieren, um den SSH-Zugriff für den Diagnose-Benutzer zu aktivieren.' 
+---
+= Konfigurieren Sie die virtuelle Appliance für VSC, VASA Provider und SRA für den Remote-Diagnoszugriff über SSH
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) konfigurieren, um den SSH-Zugriff für den Diagnose-Benutzer zu aktivieren.
+
+Die VASA Provider-Erweiterung muss für Ihre vCenter Server-Instanz aktiviert sein.
+
+Die Verwendung von SSH für den Zugriff auf den Diagnosebenutzer weist folgende Einschränkungen auf:
+
+* Sie sind nur eine Anmeldung pro Aktivierung von SSH erlaubt.
+* SSH-Zugriff auf den Diagnose-Benutzer ist deaktiviert, wenn eine der folgenden Ereignisse eintritt:
++
+** Die Zeit läuft ab.
++
+Die Anmeldesitzung bleibt nur bis Mitternacht am nächsten Tag gültig.
+
+** Sie melden sich erneut als Diagnose-Benutzer mit SSH an.
+
+
+
+
+.Schritte
+. Öffnen Sie über den vCenter Server eine Konsole für VASA Provider.
+. Melden Sie sich als maint-Benutzer an.
+. Eingabe `4` So wählen Sie *Support und Diagnose* aus.
+. Eingabe `3` So wählen Sie *Remote-Diagnosezugriff aktivieren* aus.
+. Eingabe `y` Im Dialogfeld *Bestätigung* können Sie den Remote-Diagnosezugriff aktivieren.
+. Geben Sie ein Kennwort für den Remote-Diagnosezugriff ein.
+

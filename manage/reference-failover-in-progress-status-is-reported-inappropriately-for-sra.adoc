@@ -1,0 +1,29 @@
+---
+permalink: manage/reference-failover-in-progress-status-is-reported-inappropriately-for-sra.html 
+sidebar: sidebar 
+keywords: incorrect, status, failover, in, Progress, is, reported, for, SRA, in, SRM, 
+summary: Für SRA in SRM wird ein falscher Status „Failover in Bearbeitung“ gemeldet 
+---
+= Für SRA in SRM wird ein falscher Status „Failover in Bearbeitung“ gemeldet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Problem
+
+Der VMware Site Recovery Manager (SRM) zeigt den Status des Geräts als „`in Bearbeitung`“ für das neu SnapMirror Gerät an.
+
+
+
+== Ursache
+
+Dieses Problem tritt auf, weil ein Eintrag mit dem gleichen Gerätenamen vorhanden ist wie das neu erstellte Gerät im `/opt/netapp/vpserver/conf/devices.txt` Datei:
+
+
+
+== Korrekturmaßnahme
+
+Sie sollten die Einträge, die dem Gerät entsprechen, das Sie von beiden Standorten (Standort A und Standort B) neu erstellt haben, manuell löschen `/opt/netapp/vpserver/conf/devices.txt` Und wiederholen Sie die Geräteentdeckung erneut. Nach Abschluss der Ermittlung werden die Geräte den korrekten Status anzeigen.

@@ -1,0 +1,14 @@
+---
+permalink: manage/concept-manage-datastore.html 
+sidebar: sidebar 
+keywords: managing, traditional, and, vvols, datastores, 
+summary: 'Über die VSC Schnittstelle können Sie sowohl herkömmliche als auch VMware Virtual Volumes (VVols) Datastores managen und Datastore-Vorgänge mounten, skalieren, bearbeiten und entfernen.' 
+---
+= Management herkömmlicher und VVols Datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über die VSC Schnittstelle können Sie sowohl herkömmliche als auch VMware Virtual Volumes (VVols) Datastores managen und Datastore-Vorgänge mounten, skalieren, bearbeiten und entfernen.

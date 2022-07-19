@@ -1,0 +1,29 @@
+---
+permalink: manage/reference-datastore-inaccessible-when-volume-status-is-changed-to-offline.html 
+sidebar: sidebar 
+keywords: datastore, inaccessible, when, volume, status, is, changed, to, offline, 
+summary: Zugriff auf Datenspeicher, wenn der Status eines Volume in Offline geändert wurde 
+---
+= Zugriff auf Datenspeicher, wenn der Status eines Volume in Offline geändert wurde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Problem
+
+Wenn ein Volume eines Datenspeichers offline geschaltet wird, ist der Zugriff auf den Datastore möglich. Selbst wenn das Volume online geschaltet wird, entdeckt die VSC den Datastore nicht. Wenn Sie im vSphere Client mit der rechten Maustaste auf den Datastore klicken, sind keine VSC Aktionen verfügbar.
+
+
+
+== Ursache
+
+Wenn das Volume vom Cluster offline geschaltet wird, wird zuerst das Volume abgehängt und dann offline oder eingeschränkt. Der Verbindungspfad wird entfernt, wenn das Volume offline geschaltet wird und der Datenspeicher nicht mehr zugänglich ist. Wenn das Volume online geschaltet wird, ist der Verbindungspfad nicht verfügbar und nicht standardmäßig auf der gemountet. Dies ist das Verhalten von ONTAP.
+
+
+
+== Korrekturmaßnahme
+
+Sie sollten das Volume online schalten und dann das Volume manuell mit demselben Verbindungspfad wie zuvor einbinden. Sie können die Storage-Erkennung ausführen, um anzuzeigen, dass der Datenspeicher erkannt wird und Aktionen für den Datenspeicher verfügbar sind.

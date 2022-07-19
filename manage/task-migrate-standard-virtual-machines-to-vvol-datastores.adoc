@@ -1,0 +1,25 @@
+---
+permalink: manage/task-migrate-standard-virtual-machines-to-vvol-datastores.html 
+sidebar: sidebar 
+keywords: migrate, traditional, virtual, machines, datastores, 
+summary: 'Sie können Virtual Machines von herkömmlichen Datastores zu Virtual Volumes (VVols) Datastores migrieren, um von richtlinienbasiertem VM-Management und anderen VVols Funktionen zu profitieren. VVols Datastores ermöglichen es, steigende Workload-Anforderungen zu erfüllen.' 
+---
+= Migrieren Sie herkömmliche Virtual Machines zu VVols Datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Virtual Machines von herkömmlichen Datastores zu Virtual Volumes (VVols) Datastores migrieren, um von richtlinienbasiertem VM-Management und anderen VVols Funktionen zu profitieren. VVols Datastores ermöglichen es, steigende Workload-Anforderungen zu erfüllen.
+
+Sie müssen sicherstellen, dass VASA Provider nicht auf den Virtual Machines ausgeführt wird, die Sie migrieren möchten. Wenn Sie eine Virtual Machine migrieren, auf der VASA Provider ausgeführt wird, zu einem VVols Datastore, können Sie keine Managementvorgänge ausführen. Das gilt auch das Hochfahren der Virtual Machines auf VVols Datastores.
+
+Wenn Sie von einem herkömmlichen Datenspeicher zu einem VVol Datastore migrieren, verwendet der vCenter Server vStorage APIs for Array Integration (VAAI)-Verschiebungen, wenn Daten aus VMFS-Datenspeichern verschoben werden, nicht aber aus einer NFS VMDK-Datei. VAAI-Entlastung verringert normalerweise die Last des Hosts.
+
+.Schritte
+. Klicken Sie mit der rechten Maustaste auf die virtuelle Maschine, die Sie migrieren möchten, und klicken Sie dann auf *Migrieren*.
+. Wählen Sie *nur Speicher ändern*, und klicken Sie dann auf *Weiter*.
+. Wählen Sie ein virtuelles Festplattenformat, eine VM Storage Policy und einen VVol Datastore aus, der den Funktionen des zu migrierenden Datastores entspricht, und klicken Sie dann auf *Weiter*.
+. Überprüfen Sie die Einstellungen und klicken Sie dann auf *Fertig stellen*.
+

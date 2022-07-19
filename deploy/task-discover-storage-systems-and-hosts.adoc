@@ -1,0 +1,42 @@
+---
+permalink: deploy/task-discover-storage-systems-and-hosts.html 
+sidebar: sidebar 
+keywords: discovering, storage, systems, hosts, 
+summary: 'Wenn Sie zum ersten Mal (VSC) in einem vSphere Client ausführen, erkennt VSC die ESXi Hosts, ihre LUNs und NFS Exporte und die NetApp Storage-Systeme, die im Besitz dieser LUNs und Exporte sind.' 
+---
+= Erkennen von Storage-Systemen und Hosts
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie zum ersten Mal (VSC) in einem vSphere Client ausführen, erkennt VSC die ESXi Hosts, ihre LUNs und NFS Exporte und die NetApp Storage-Systeme, die im Besitz dieser LUNs und Exporte sind.
+
+.Bevor Sie beginnen
+* Alle ESXi-Hosts müssen eingeschaltet und verbunden sein.
+* Alle zu erkannten Daten müssen ausgeführt werden, und jeder Cluster Node muss über mindestens eine Daten-LIF verfügen, die für das verwendete Storage-Protokoll (NFS, iSCSI oder FC) konfiguriert ist.
+
+
+Sie können jederzeit neue Storage-Systeme ermitteln oder Informationen zu vorhandenen Storage-Systemen aktualisieren, um die aktuellsten Kapazitäts- und Konfigurationsinformationen zu erhalten. Sie können auch die Zugangsdaten, die VSC zur Anmeldung bei den Storage-Systemen verwendet, ändern.
+
+Bei der Erkennung der Storage-Systeme erfasst VSC Informationen von den ESXi Hosts, die von der vCenter Server Instanz gemanagt werden.
+
+.Schritte
+. Wählen Sie auf der Seite vSphere Client *Home* die Option *Hosts und Cluster* aus.
+. Klicken Sie mit der rechten Maustaste auf das gewünschte Datacenter und wählen Sie dann Menü:NetApp VSC[Update Host and Storage Data].
++
+Die VSC zeigt ein Dialogfeld „Bestätigen“ an, in dem Sie darauf hingewiesen werden, dass dieser Vorgang viel Zeit in Anspruch nehmen kann.
+
+. Klicken Sie auf *OK*.
+. Wählen Sie die erkannten Speichercontroller mit dem Status „`Authentifizierungsfehler`“ aus, und klicken Sie dann auf Menü:AKTIONEN[Ändern].
+. Geben Sie die erforderlichen Informationen in das Dialogfeld * Speichersystem ändern* ein.
+. Wiederholen Sie die Schritte 4 und 5 für alle Speichercontroller mit dem Status „`Authentication Failure`“.
+
+
+Nach Abschluss des Erkennungsvorgangs führen Sie folgende Schritte aus:
+
+* Verwenden Sie VSC, um ESXi Hosteinstellungen für Hosts zu konfigurieren, die das Warnsymbol in der Spalte *Adaptereinstellungen*, der Spalte *MPIO Settings* oder der Spalte *NFS Settings* anzeigen.
+* Geben Sie die Anmeldeinformationen des Speichersystems an.
+

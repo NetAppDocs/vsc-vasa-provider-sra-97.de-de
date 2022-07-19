@@ -1,0 +1,22 @@
+---
+permalink: deploy/reference-configure-the-vsc-preferences-files.html 
+sidebar: sidebar 
+keywords: preferences, files, configuring, vsc, preferences, files, 
+summary: 'Die Einstellungsdateien enthalten Einstellungen, die die Vorgänge Virtual Storage Console für VMware vSphere steuern. In den meisten Fällen müssen Sie die Einstellungen in diesen Dateien nicht ändern. Es ist hilfreich zu wissen, welche Vorzugsdateien (VSC) verwenden.' 
+---
+= Konfigurieren Sie die VSC Preferences-Dateien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Einstellungsdateien enthalten Einstellungen, die die Vorgänge Virtual Storage Console für VMware vSphere steuern. In den meisten Fällen müssen Sie die Einstellungen in diesen Dateien nicht ändern. Es ist hilfreich zu wissen, welche Vorzugsdateien (VSC) verwenden.
+
+Die VSC enthält verschiedene Voreinstellungsdateien. Diese Dateien enthalten Eintragsschlüssel und Werte, die bestimmen, wie VSC verschiedene Vorgänge durchführt. Im Folgenden werden einige Präferenz-Dateien beschrieben, die VSC verwendet:
+
+`/opt/netapp/vscserver/etc/kamino/kaminoprefs.xml`
+
+`/opt/netapp/vscserver/etc/vsc/vscPreferences.xml`
+
+Möglicherweise müssen Sie die Voreinpräferenzen-Dateien in bestimmten Situationen ändern. Wenn Sie beispielsweise iSCSI oder NFS verwenden und das Subnetz zwischen Ihren ESXi Hosts und Ihrem Speichersystem unterschiedlich ist, müssen Sie die Voreinstellungen ändern. Falls Sie die Einstellungen in der Voreinstellungsdatei nicht ändern, schlägt die Datastore-Bereitstellung fehl, da VSC den Datastore nicht mounten kann.

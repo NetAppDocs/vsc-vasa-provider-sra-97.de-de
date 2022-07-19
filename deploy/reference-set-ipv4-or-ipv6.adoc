@@ -1,0 +1,54 @@
+---
+permalink: deploy/reference-set-ipv4-or-ipv6.html 
+sidebar: sidebar 
+keywords: setting, ipv4, ipv6, 
+summary: Die Vorzugsdatei kaminoprefs.xml wurde um eine neue Option erweitert, die Sie so einstellen können, dass IPv4 oder IPv6 für alle Storage-Systeme, die der VSC hinzugefügt wurden, unterstützt werden. 
+---
+= Legen Sie IPv4 oder IPv6 fest
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Vorzugsdatei wurde eine neue Option hinzugefügt ``kaminoprefs.xml``Die Sie einstellen können, dass IPv4 oder IPv6 für alle Storage-Systeme, die der VSC hinzugefügt werden, aktiviert werden.
+
+* Der `default.override.option.provision.mount.datastore.address.family` Der Parameter wurde dem hinzugefügt `kaminoprefs.xml` Bevorzugte Datei zur Festlegung eines bevorzugten LIF-Protokolls für die Bereitstellung von Datenspeichern.
++
+Diese Präferenz gilt für alle neu zu VSC hinzugefügten Storage-Systeme.
+
+* Die Werte für die neue Option sind `IPv4`, `IPv6`, und `NONE`.
+* Der Wert ist standardmäßig auf festgelegt `NONE`.
+
+
+[cols="1a,1a"]
+|===
+| Wert | Beschreibung 
+
+
+ a| 
+KEINE
+ a| 
+* Bei der Bereitstellung wird derselbe IPv6- oder IPv4-Adresstyp von Daten-LIF wie der Typ des Clusters oder die Management-LIF verwendet, die zum Hinzufügen des Storage verwendet wird.
+* Wenn der gleiche IPv6- oder IPv4-Adresstyp von Daten-LIF nicht in vorhanden ist, dann erfolgt die Bereitstellung über die andere Art von Daten-LIF, falls verfügbar.
+
+
+
+
+ a| 
+IPv4
+ a| 
+* Die Bereitstellung erfolgt über die IPv4 Daten-LIF in der ausgewählten .
+* Wenn das keine IPv4-Daten-LIF hat, dann erfolgt die Bereitstellung über die IPv6-Daten-LIF, wenn sie im verfügbar ist.
+
+
+
+
+ a| 
+IPv6
+ a| 
+* Die Bereitstellung erfolgt über die IPv6-Daten-LIF in der ausgewählten .
+* Wenn das keine IPv6-Daten-LIF hat, dann erfolgt die Bereitstellung über die IPv4-Daten-LIF, sofern sie im verfügbar ist.
+
+
+|===

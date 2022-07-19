@@ -1,0 +1,51 @@
+---
+permalink: deploy/task-upgrade-storage-replication-adapter.html 
+sidebar: sidebar 
+keywords: sra, upgrade, upgrading, storage, replication, adapter, 
+summary: 'Nach einem Upgrade der virtuellen Appliance für VSC, VASA Provider und SRA oder der Implementierung der neuesten Version der virtuellen Appliance müssen Kunden ihr Storage Replication Adapter (SRA) aktualisieren.' 
+---
+= Aktualisieren Sie Den Storage Replication Adapter
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach einem Upgrade der virtuellen Appliance für VSC, VASA Provider und SRA oder der Implementierung der neuesten Version der virtuellen Appliance müssen Kunden ihr Storage Replication Adapter (SRA) aktualisieren.
+
+.Schritte
+. Sie müssen ein Upgrade auf den neuesten Adapter anhand einer der folgenden Verfahren durchführen, die auf Ihrem Adapter basieren:
++
+[cols="1a,1a"]
+|===
+| * Für...* | Führen Sie folgende Schritte durch... 
+
+
+ a| 
+*Windows*
+ a| 
+.. Melden Sie sich beim SRM Windows Server an.
+.. Deinstallieren Sie das vorhandene SRA _.msi_ -Installationsprogramm vom SRM-Server.
+.. Ändern Sie den Systempfad in `C:\Program Files\VMware\VMware vCenter Site Recovery Manager\external\perl\c\bin`
+.. Doppelklicken Sie auf das Installationsprogramm für _.msi_, das Sie von der NetApp Support-Website heruntergeladen haben, und befolgen Sie die Anweisungen auf dem Bildschirm.
+.. Geben Sie die IP-Adresse und das Passwort der implementierten virtuellen Appliance für VSC, VASA Provider und SRA ein.
+
+
+
+
+ a| 
+*Appliance-basierter Adapter*
+ a| 
+.. Melden Sie sich auf der SRM Appliance Management-Seite an.
+.. Klicken Sie auf *Storage Replication Adapter* und klicken Sie auf *Löschen*, um die vorhandene SRA zu entfernen.
+.. Klicken Sie auf Menü:Neuer Adapter[Durchsuchen].
+.. Klicken Sie hier, um die aktuelle SRA Tarball-Datei auszuwählen, die Sie von der NetApp Support-Website heruntergeladen haben, und klicken Sie dann auf *Installieren*.
+.. Konfigurieren Sie SRA auf der SRM Appliance.
++
+xref:task-configure-sra-on-srm-appliance.adoc[Konfigurieren Sie SRA auf der SRM Appliance]
+
+
+
+|===
+

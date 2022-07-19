@@ -1,0 +1,22 @@
+---
+permalink: manage/concept-configure-protected-and-recovery-site-resources.html 
+sidebar: sidebar 
+keywords: configuring, protected, and, recovery, site, resources, 
+summary: Sie müssen die Ressourcenzuordnungen wie VM-Netzwerke, ESXi-Hosts und Ordner auf beiden Standorten konfigurieren, damit jede Ressource vom geschützten Standort auf die entsprechende Ressource am Recovery-Standort abgebildet werden kann. 
+---
+= Konfigurieren Sie geschützte Ressourcen und Recovery-Standortressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Ressourcenzuordnungen wie VM-Netzwerke, ESXi-Hosts und Ordner auf beiden Standorten konfigurieren, damit jede Ressource vom geschützten Standort auf die entsprechende Ressource am Recovery-Standort abgebildet werden kann.
+
+Sie müssen die folgenden Ressourcenkonfigurationen durchführen:
+
+* Netzwerkzuordnungen
+* Ordnerzuordnungen
+* Ressourcen-Zuordnungen
+* Platzhalter-Datenspeicher
+

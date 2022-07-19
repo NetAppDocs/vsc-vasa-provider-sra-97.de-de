@@ -1,0 +1,29 @@
+---
+permalink: manage/reference-vvol-datastore-provision-fails-with-large-number-of-volumes.html 
+sidebar: sidebar 
+keywords: VVol, datastore, provisioning, fails, with, large, number, of, volumes, 
+summary: Die Bereitstellung von VVol Datastore ist bei einer großen Anzahl von Volumes nicht möglich 
+---
+= Die Bereitstellung von VVol Datastore ist bei einer großen Anzahl von Volumes nicht möglich
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Problem
+
+Die VVol Datastore-Bereitstellung schlägt fehl, wenn Sie versuchen, VVol Datastores mit mehr als sechs Volumes bereitzustellen.
+
+
+
+== Ursache
+
+Die VVol Datastore-Bereitstellung schlägt aufgrund von Socket-Timeouts zwischen VSC und VASA Provider fehl.
+
+
+
+== Korrekturmaßnahme
+
+Sie sollten entweder einen VVol Datastore mit weniger als sechs Volumes erstellen oder nach der Bereitstellung mit der Option *Expand VVol Datastore* die Größe des VVol Datastore erhöhen.

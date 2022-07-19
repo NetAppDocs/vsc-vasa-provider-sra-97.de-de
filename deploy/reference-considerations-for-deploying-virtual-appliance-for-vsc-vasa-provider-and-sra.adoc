@@ -1,0 +1,113 @@
+---
+permalink: deploy/reference-considerations-for-deploying-virtual-appliance-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: considerations, requirements, deploying, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'Bevor Sie die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) implementieren, sollten Sie die Implementierung planen und entscheiden, wie VSC, VASA Provider und SRA in Ihrer Umgebung konfiguriert werden sollen.' 
+---
+= Überlegungen und Anforderungen für die Implementierung der virtuellen Appliance für VSC, VASA Provider und SRA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) implementieren, sollten Sie die Implementierung planen und entscheiden, wie VSC, VASA Provider und SRA in Ihrer Umgebung konfiguriert werden sollen.
+
+In der folgenden Tabelle finden Sie eine Übersicht über die Überlegungen, die vor der Implementierung der virtuellen Appliance für VSC, VASA Provider und SRA berücksichtigt werden sollten.
+
+[cols="1a,1a"]
+|===
+| Überlegungen | Beschreibung 
+
+
+ a| 
+Erstmalige Implementierung der virtuellen Appliance für VSC, VASA Provider und SRA
+ a| 
+Wenn die virtuelle Appliance für VSC, VASA Provider und SRA implementiert wird, werden die VSC Funktionen automatisch installiert. link:concept-deploy-or-upgrade-ontap-tools.html["Implementierung oder Upgrade von VSC, VASA Provider und SRA"^]
+
+link:concept-installation-workflow-for-new-users.html["Implementierungs-Workflow für neue Benutzer der virtuellen VSC, VASA Provider und SRA"^]
+
+
+
+ a| 
+Upgrade von einer bestehenden VSC Implementierung
+ a| 
+Das Upgrade-Verfahren von einer vorhandenen VSC Implementierung zur virtuellen Appliance für VSC, VASA Provider und SRA hängt von der Version von VSC ab und ob VSC, VASA Provider und SRA implementiert wurden. Der Abschnitt zu Bereitstellungs-Workflows und Upgrade enthält weitere Informationen. link:concept-installation-workflow-for-existing-users-of-vsc.html["Implementierungs-Workflow für bestehende Benutzer von VSC, VASA Provider und SRA"^]
+
+Best Practices vor einem Upgrade:
+
+* Sie sollten Informationen über die verwendeten Speichersysteme und deren Anmeldeinformationen erfassen.
++
+Nach dem Upgrade sollten Sie überprüfen, ob alle Speichersysteme automatisch erkannt wurden und die korrekten Anmeldedaten besitzen.
+
+* Wenn Sie eine der Standard-VSC Rollen geändert haben, sollten Sie diese Rollen kopieren, um Ihre Änderungen zu speichern.
++
+VSC überschreibt bei jedem Neustart des VSC Service die Standardrollen mit den aktuellen Standardeinstellungen.
+
+
+
+
+
+ a| 
+Erneutes Generieren eines SSL-Zertifikats für VSC
+ a| 
+Das SSL-Zertifikat wird automatisch generiert, wenn Sie die virtuelle Appliance für VSC, VASA Provider und SRA implementieren. Möglicherweise müssen Sie das SSL-Zertifikat erneut generieren, um ein standortspezifisches Zertifikat zu erstellen. link:task-regenerate-an-ssl-certificate-for-vsc.html["Erstellen Sie ein SSL-Zertifikat für neu"^]
+
+
+
+ a| 
+Festlegen der ESXi-Serverwerte
+ a| 
+Obwohl die meisten ESXi-Serverwerte standardmäßig festgelegt sind, empfiehlt es sich, die Werte zu überprüfen. Diese Werte basieren auf internen Tests. Je nach Umgebung müssen Sie möglicherweise einige der Werte ändern, um die Leistung zu verbessern.
+
+* link:task-configure-esx-server-multipathing-and-timeout-settings.html["Konfigurieren Sie Multipathing- und Zeitüberschreitungseinstellungen für ESXi-Server"^]
+* link:reference-esx-host-values-set-by-vsc-for-vmware-vsphere.html["ESXi-Hostwerte werden mit Virtual Storage Console für VMware vSphere festgelegt"^]
+
+
+
+
+ a| 
+Werte für die Zeitüberschreitung des Gastbetriebssystems
+ a| 
+Die Timeout-Skripte für Gastbetriebssysteme (Gast-OS) legen die SCSI I/O-Zeitüberschreitungswerte für die unterstützten Linux, Solaris und Windows Gastbetriebssysteme fest, um das richtige Failover-Verhalten sicherzustellen.
+
+|===
+Die folgende Tabelle zeigt eine Übersicht über die erforderlichen Komponenten zur Konfiguration der virtuellen Appliance für VSC, VASA Provider und SRA.
+
+[cols="1a,1a"]
+|===
+| Überlegungen | Beschreibung 
+
+
+ a| 
+Anforderungen der rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC)
+ a| 
+VSC unterstützt sowohl vCenter Server RBAC als auch ONTAP RBAC. Das Konto, über das VSC bei vCenter Server registriert wird (mit `_https_://<appliance_ip>:8143/Register.html`) Muss ein vCenter Server Administrator sein (dem vCenter Server Administrator oder der Administratorrolle zugewiesen). Wenn Sie planen, VSC als Administrator auszuführen, müssen Sie über alle erforderlichen Berechtigungen und Berechtigungen für alle Aufgaben verfügen.
+
+Wenn in Ihrem Unternehmen der Zugriff auf vSphere Objekte eingeschränkt werden muss, können Sie Benutzer Standard-VSC-Rollen erstellen und zuweisen, um die Anforderungen von vCenter Server zu erfüllen.
+
+Mithilfe von ONTAP System Manager können Sie die empfohlenen ONTAP-Rollen erstellen. Dabei wird die JSON-Datei verwendet, die in der virtuellen Appliance für VSC, VASA Provider und SRA enthalten ist.
+
+Wenn ein Benutzer versucht, eine Aufgabe ohne die entsprechenden Berechtigungen und Berechtigungen auszuführen, werden die Aufgabenoptionen ausgegraut.
+
+* link:concept-standard-roles-packaged-with-virtual-appliance-for-vsc-vp-and-sra.html["Standardrollen in Verbindung mit der virtuellen Appliance für VSC, VASA Provider und SRA"^]
+* link:concept-recommended-ontap-roles-when-using-vsc-for-vmware-vsphere.html["Empfohlene ONTAP Rollen bei der Verwendung von VSC für VMware vSphere"^]
+
+
+
+
+ a| 
+ONTAP-Version
+ a| 
+Ihre Storage-Systeme müssen mit ONTAP 9.1, 9.3, 9.5, 9.6 oder 9.7 ausgeführt werden.
+
+
+
+ a| 
+Storage-Funktionsprofile
+ a| 
+Um Storage-Funktionsprofile zu verwenden oder Alarme einzurichten, müssen Sie VASA Provider für ONTAP aktivieren. Nach der Aktivierung von VASA Provider können Sie VMware Virtual Volumes (VVols) Datastores konfigurieren und Storage-Funktionsprofile und Alarme erstellen und managen.
+
+Die Alarme warnen Sie, wenn ein Volume oder ein Aggregat fast voll ausgelastet ist oder wenn ein Datenspeicher nicht mehr dem zugehörigen Storage-Funktionsprofil entspricht.
+
+|===

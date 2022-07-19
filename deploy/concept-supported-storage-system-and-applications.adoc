@@ -1,0 +1,41 @@
+---
+permalink: deploy/concept-supported-storage-system-and-applications.html 
+sidebar: sidebar 
+keywords: supported, storage, system, licensing, applications, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'Bevor Sie mit der Implementierung der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) beginnen, sollten Sie die grundlegenden Anforderungen des Storage-Systems, der Applikations- und Lizenzierungsanforderungen kennen.' 
+---
+= Unterstützte Storage-Systeme, Lizenzen und Applikationen für die virtuelle Appliance für VSC, VASA Provider und SRA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie mit der Implementierung der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) beginnen, sollten Sie die grundlegenden Anforderungen des Storage-Systems, der Applikations- und Lizenzierungsanforderungen kennen.
+
+Der (IMT) enthält aktuelle Informationen zu den unterstützten Versionen von ONTAP, vCenter Server, ESXi Hosts, Plug-in-Applikationen und Site Recovery Manager (SRM).
+
+* https://imt.netapp.com/matrix/imt.jsp?components=97563;&solution=56&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool VSC 9.7.1"^]
+* https://imt.netapp.com/matrix/imt.jsp?components=97564;&solution=376&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool VASA Provider 9.7.1"^]
+* https://imt.netapp.com/matrix/imt.jsp?components=97565;&solution=576&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool SRA 9.7.1"^]
+
+
+Sie müssen die FlexClone Lizenz aktivieren, um Snapshot-Vorgänge für Virtual Machines und Klonvorgänge für VMware Virtual Volumes (VVols) Datastores durchzuführen.
+
+Storage Replication Adapter (SRA) erfordert die folgenden Lizenzen:
+
+* SnapMirror Lizenz
++
+Sie müssen die SnapMirror Lizenz aktivieren, um Failover-Vorgänge für SRA auszuführen.
+
+* FlexClone Lizenz
++
+Sie müssen die FlexClone Lizenz aktivieren, um Test-Failover-Vorgänge für SRA durchzuführen.
+
+
+
+Um die IOPS für einen Datastore anzuzeigen, müssen Sie entweder die Storage-I/O-Steuerung aktivieren oder das Kontrollkästchen „Storage-I/O-Statistiksammlung deaktivieren“ in der Konfiguration des Storage-I/O-Steuersystems deaktivieren. Sie können die Storage-I/O-Steuerung nur aktivieren, wenn Sie über die Enterprise Plus-Lizenz von VMware verfügen.
+
+* https://kb.vmware.com/s/article/1022091["VMware KB Artikel 1022091: Fehlerbehebung bei Storage I/O Control"^]
+* https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-37CC0E44-7BC7-479C-81DC-FFFC21C1C4E3.html["Dokumentation der VMware vSphere Storage I/O Control Anforderungen"^]
+

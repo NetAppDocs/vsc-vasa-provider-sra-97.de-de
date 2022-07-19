@@ -1,0 +1,78 @@
+---
+permalink: manage/concept-datastore-reports.html 
+sidebar: sidebar 
+keywords: datastore, reports, 
+summary: Die Datastore-Berichte bieten detaillierte Informationen zu herkömmlichen Datastores und den auf diesen Datastores erstellten Virtual Machines. 
+---
+= Datastore Reports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Datastore-Berichte bieten detaillierte Informationen zu herkömmlichen Datastores und den auf diesen Datastores erstellten Virtual Machines.
+
+Das herkömmliche Dashboard ermöglicht es Ihnen, potenzielle Probleme mit den Datastores und Virtual Machines in Ihrem vCenter Server zu prüfen und zu identifizieren. Sie können Berichte anzeigen, sortieren und exportieren. Die Daten für die Berichte zu herkömmlichen Datastores und Virtual Machines werden vom vCenter Server bereitgestellt.
+
+Der Datastore bietet die folgenden vordefinierten Berichte:
+
+* Datastore Report
+* Virtual Machine Report
+
+
+
+
+== Datastore Report
+
+Das Menü Datastore Report enthält Informationen zu den folgenden Parametern für Datenspeicher:
+
+* Name des Datenspeichers
+* Datenspeichertyp: NFS oder VMFS
+* Freier Speicherplatz
+* Genutzter Speicherplatz
+* Gesamter Speicherplatz
+* Prozentsatz des genutzten Speicherplatzes
+* Prozentsatz des verfügbaren Speicherplatzes
+* IOPS
++
+Der Bericht zeigt die IOPS für den Datastore an.
+
+* Latenz
++
+Der Bericht zeigt die Latenzinformationen für den Datastore an.
+
+
+
+Sie können auch die Zeit überprüfen, zu der der Bericht generiert wurde. Das Menü Datastore Report ermöglicht es Ihnen, den Bericht nach Ihren Anforderungen zu organisieren und dann den organisierten Bericht mit der Schaltfläche *Export in CSV* zu exportieren. Bei den Datenspeichernamen im Bericht handelt es sich um Links, die zur Registerkarte Überwachung des ausgewählten Datastores navigieren. Dort können Sie die Performance-Metriken des Datastores anzeigen.
+
+
+
+== Virtual Machine Report
+
+Das Menü „Virtual Machine Report“ enthält die folgenden Performance-Kennzahlen für alle Virtual Machines, die von VSC bereitgestellte Datenspeicher für einen ausgewählten vCenter Server verwenden:
+
+* Name der virtuellen Maschine
+* Engagierte Kapazität
++
+Der Bericht zeigt den Wert für die für eine virtuelle Maschine bestimmte Kapazität an.
+
+* Verfügbarkeit
++
+Der Bericht zeigt die Zeit an, zu der die virtuelle Maschine eingeschaltet ist und auf einem ESXi-Host verfügbar ist.
+
+* Latenz
++
+Der Bericht zeigt die Latenz für Virtual Machines in allen Datastores an, die den Virtual Machines zugeordnet sind.
+
+* Stromzustand
++
+Der Bericht zeigt an, ob die virtuelle Maschine eingeschaltet oder ausgeschaltet ist.
+
+* Host
++
+Der Bericht zeigt die Hostsysteme an, auf denen die virtuelle Maschine verfügbar ist.
+
+
+
+Jeder Name der virtuellen Maschine im Bericht ist ein Link zur Registerkarte Überwachung der ausgewählten virtuellen Maschine. Sie können den Bericht der virtuellen Maschine nach Ihren Anforderungen sortieren und den Bericht in einem exportieren `.CSV` Datei und speichern Sie den Bericht auf Ihrem lokalen System. Der Zeitstempel des Berichts wird ebenfalls an den gespeicherten Bericht angehängt.

@@ -1,0 +1,16 @@
+---
+permalink: manage/concept-workflow-for-configuring-the-unified-appliance.html 
+sidebar: sidebar 
+keywords: workflow, for, configuring, the, virtual, appliance, for, vsc, vasa, provider, and, sra, 
+summary: Zum Konfigurieren der Virtual Machine für VSC, VASA Provider und SRA müssen die Storage-Systeme konfiguriert, ein Storage-Funktionsprofil erstellt, der Datastore bereitgestellt und SRA optional für die Disaster Recovery konfiguriert werden. 
+---
+= Workflow zur Konfiguration der virtuellen Appliance für VSC, VASA Provider und SRA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zum Konfigurieren der Virtual Machine für VSC, VASA Provider und SRA müssen die Storage-Systeme konfiguriert, ein Storage-Funktionsprofil erstellt, der Datastore bereitgestellt und SRA optional für die Disaster Recovery konfiguriert werden.
+
+image::../media/use-case-vsc-users.gif[Anwendungsfall vsc für Benutzer]

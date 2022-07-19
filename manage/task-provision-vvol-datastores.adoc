@@ -1,0 +1,117 @@
+---
+permalink: manage/task-provision-vvol-datastores.html 
+sidebar: sidebar 
+keywords: provisioning, vvols, datastores, 
+summary: Mit dem Provisioner-Datastore-Assistenten können Sie einen VVols-Datastore nur dann bereitstellen, wenn VASA Provider in Ihrer virtuellen Appliance für VSC, VASA Provider und SRA aktiviert ist. 
+---
+= Bereitstellung von VVols Datastores
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen VVols-Datastore nur mit dem *Provision Datastore* -Assistenten bereitstellen, wenn VASA Provider in Ihrer virtuellen Appliance für VSC, VASA Provider und SRA aktiviert ist.
+
+.Bevor Sie beginnen
+* Sie sollten sicherstellen, dass die Subnetzdetails aller Netzwerke, mit denen der ESXi-gehostete verbunden ist, in eingegeben werden `Kaminoprefs.xml`.
++
+Siehe *Aktivieren der Datastore-Montage über verschiedene Subnetze* Abschnitt in _VSC 9.7 Bereitstellungs- und Setup-Handbuch_.
+
+* Sie sollten eine ähnliche Replizierungsrichtlinie konfigurieren und für die Datastores am Quell- und Zielspeicherort planen, damit die umgekehrte Replizierung erfolgreich durchgeführt werden kann.
+
+
+Über das Menü *Provisioner Datastore* können Sie ein Storage-Funktionsprofil für den Datastore angeben. Dadurch können Sie konsistente Service Level Objectives (SLOs) festlegen und den Provisionierungsprozess vereinfachen. Sie können nur ein Storage-Funktionsprofil angeben, wenn Sie VASA Provider aktiviert haben.
+
+FlexVol Volumes, die als Storage gesichert werden, werden auf dem vVol Dashboard nur angezeigt, wenn sie ONTAP 9.5 oder höher ausführen. Sie sollten den vCenter Server *New Datastore* Wizard zur Bereitstellung von VVols-Datastores nicht verwenden.
+
+* Zum Erstellen von VVols-Datastores müssen Sie die Cluster-Anmeldedaten verwenden.
++
+Sie können SVM-Anmeldedaten nicht zum Erstellen von VVols-Datastores verwenden.
+
+* VASA Provider unterstützt nicht das Klonen einer Virtual Machine, die sich auf dem VVols Datastore eines Protokolls für einen anderen Datastore mit einem anderen Protokoll befindet.
+* Sie sollten die Paarung des Clusters und die SVM-Kopplung am Quell- und Zielstandort abgeschlossen haben.
+
+
+.Schritte
+. Klicken Sie auf der vSphere Client-Startseite auf *Hosts und Cluster*.
+. Wählen Sie im Navigationsbereich das Rechenzentrum aus, auf dem Sie den Datastore bereitstellen möchten.
+. Geben Sie die Hosts an, auf denen der Datastore gemountet werden soll.
++
+[cols="1a,1a"]
+|===
+| So stellen Sie den Datenspeicher zur Verfügung: | Tun Sie das... 
+
+
+ a| 
+Alle Hosts in einem Datacenter
+ a| 
+Klicken Sie mit der rechten Maustaste auf ein Datencenter und wählen Sie dann MENU:NetApp VSC[Provision Datastore].
+
+
+
+ a| 
+Alle Hosts in einem Cluster
+ a| 
+Klicken Sie mit der rechten Maustaste auf einen Cluster und wählen Sie dann Menü:NetApp VSC[Provision Datastore].
+
+
+
+ a| 
+Einem einzelnen Host aus
+ a| 
+Klicken Sie mit der rechten Maustaste auf einen Host und wählen Sie dann Menü:NetApp VSC[Provision Datastore].
+
+|===
+. Füllen Sie die Felder im Dialogfeld *New Datastore* aus, um den Datenspeicher zu erstellen.
++
+Die meisten Felder im Dialogfeld sind selbsterklärend. In der folgenden Tabelle werden einige der Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
+
++
+[cols="1a,1a"]
+|===
+| Abschnitt | Beschreibung 
+
+
+ a| 
+Allgemein
+ a| 
+Der Abschnitt *Allgemein* des Dialogfelds *Neuer Datastore* bietet Optionen zum Eingeben von Speicherort, Name, Beschreibung, Typ und Protokoll für den neuen Datenspeicher. Der VVols-Datastore-Typ wird zur Konfiguration eines VVols-Datastores verwendet.
+
+[NOTE]
+====
+Wenn Sie iSCSI VVols-Datastore für die VVols-Replizierung bereitstellen, müssen Sie vor der Erstellung des VVols-Datastores am Zielstandort SnapMirror Update und Cluster-Neuerkennung durchführen.
+
+====
+
+
+ a| 
+Storage-System
+ a| 
+In diesem Abschnitt können Sie auswählen, ob die Replizierung im VVols-Datastore aktiviert oder deaktiviert werden soll. Für diesen Release ist nur ein Replizierungsprofil vom asynchronen Typ zulässig. Anschließend können Sie ein oder mehrere Storage-Funktionsprofile auswählen. Die vom System empfohlenen Werte von gepaarten *Storage System* und *Storage VM* werden automatisch ausgefüllt. Die empfohlenen Werte werden nur dann ausgefüllt, wenn sie in ONTAP gekoppelt sind. Sie können diese Werte bei Bedarf ändern.
+
+[NOTE]
+====
+Beim Erstellen von FlexVol Volumes in ONTAP sollten Sie sicherstellen, dass Sie diese mit den Attributen erstellen, die Sie im Storage-Funktionsprofil auswählen möchten. Sowohl Lese-Schreib- als auch Datenschutz FlexVol-Volumes sollten ähnliche Attribute aufweisen.
+
+====
+Nachdem FlexVol Volumes erstellt und SnapMirror in ONTAP initialisiert wurde, sollten Sie eine Storage-Neuerkennung in der VSC ausführen, damit Sie die neuen Volumes sehen können.
+
+
+
+ a| 
+Storage-Attribute
+ a| 
+Sie sollten den Zeitplan für SnapMirror und das erforderliche FlexVol Volume aus der vorhandenen Liste auswählen. Dieser Zeitplan sollte dem Zeitplan ähneln, der auf der Seite VM Storage Policies ausgewählt wurde. Der Benutzer sollte FlexVol Volumes auf ONTAP mit SnapMirror erstellt haben, die aufgeführt sind. Sie können das Standard-Storage-Funktionsprofil auswählen, das für die Erstellung von VVols verwendet werden soll. Verwenden Sie dazu die Option *Default Storage Capability Profile*.
+
+|===
+. Klicken Sie im Abschnitt *Zusammenfassung* auf *Fertig stellen*.
++
+Bei der Konfiguration eines VVols-Datastores wird im Back-End eine Replizierungsgruppe erstellt.
+
+
+
+*Verwandte Informationen*
+
+xref:reference-verify-vvol-dashboard-data-requirements.adoc[VVol Dashboard – Datenanforderungen]

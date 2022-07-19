@@ -1,0 +1,41 @@
+---
+permalink: manage/task-edit-a-vvol-datastore.html 
+sidebar: sidebar 
+keywords: editing, a, vvols, datastore, 
+summary: 'Sie können einen vorhandenen VMware Virtual Volumes (VVols)-Datastore bearbeiten, um das Standard-Storage-Funktionsprofil zu ändern. Das Standard-Storage-Funktionsprofil wird in erster Linie für Swap VVols verwendet.' 
+---
+= Bearbeiten eines VVols-Datastores
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen vorhandenen VMware Virtual Volumes (VVols)-Datastore bearbeiten, um das Standard-Storage-Funktionsprofil zu ändern. Das Standard-Storage-Funktionsprofil wird in erster Linie für Swap VVols verwendet.
+
+.Schritte
+. Klicken Sie auf der Seite vSphere Client auf *Hosts und Cluster*.
+. Klicken Sie mit der rechten Maustaste auf den Datastore und wählen Sie dann Menü:NetApp VSC[Edit Properties of vVol Datastore].
++
+Das Dialogfeld Eigenschaften von vVol Datastore bearbeiten wird angezeigt.
+
+. Nehmen Sie die erforderlichen Änderungen vor.
++
+Sie können das Standard-Storage-Funktionsprofil für den VVols-Datastore ändern, indem Sie in der Dropdown-Liste im Dialogfeld „vVol Datastore bearbeiten“ ein neues Profil auswählen. Sie können auch den Namen und die Beschreibung des VVols-Datastores ändern.
+
++
+[NOTE]
+====
+Sie können den vCenter Server nicht ändern, auf dem sich der VVols-Datastore befindet.
+
+====
+. Wenn Sie Ihre Änderungen vorgenommen haben, klicken Sie auf *OK*.
++
+In einem Nachrichtenfeld wird gefragt, ob Sie den VVols-Datastore aktualisieren möchten.
+
+. Klicken Sie auf *OK*, um Ihre Änderungen anzuwenden.
++
+Es wird eine Erfolgsmeldung angezeigt, die mitgeteilt wird, dass der VVols-Datastore aktualisiert wurde.
+
+

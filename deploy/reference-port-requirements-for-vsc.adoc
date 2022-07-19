@@ -1,0 +1,60 @@
+---
+permalink: deploy/reference-port-requirements-for-vsc.html 
+sidebar: sidebar 
+keywords: port, requirements, vsc 
+summary: 'Standardmäßig verwendet (VSC) bestimmte Ports, um die Kommunikation zwischen seinen Komponenten zu ermöglichen. Dazu gehören Storage-Systeme und VMware vCenter Server. Wenn Firewalls aktiviert sind, müssen Sie sicherstellen, dass die Firewalls so eingestellt sind, dass Ausnahmen zugelassen werden.' 
+---
+= Port-Anforderungen für VSC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Standardmäßig verwendet (VSC) bestimmte Ports, um die Kommunikation zwischen seinen Komponenten zu ermöglichen. Dazu gehören Storage-Systeme und VMware vCenter Server. Wenn Firewalls aktiviert sind, müssen Sie sicherstellen, dass die Firewalls so eingestellt sind, dass Ausnahmen zugelassen werden.
+
+Bei Firewalls anderer als Windows sollten Sie manuell Zugriff auf bestimmte Ports gewähren, die von VSC verwendet werden. Wenn Sie diesen Ports keinen Zugriff gewähren, wird eine Fehlermeldung wie die folgende angezeigt.
+
+_Kommunikation mit dem Server nicht möglich_
+
+VSC verwendet die folgenden bidirektionalen TCP-Standardports:
+
+[cols="1a,1a"]
+|===
+| Standard-Portnummer | Beschreibung 
+
+
+ a| 
+9083
+ a| 
+Bei Aktivierung verwenden sowohl VASA Provider als auch Storage Replication Adapter (SRA) diesen Port zur Kommunikation mit dem vCenter Server. Dieser Port wird auch zum Abrufen der TCP/IP-Einstellungen benötigt.
+
+
+
+ a| 
+443
+ a| 
+Je nach Konfiguration Ihrer Anmeldedaten achten VMware vCenter Server und die Speichersysteme auf die sichere Kommunikation auf diesem Port.
+
+
+
+ a| 
+8143
+ a| 
+VSC wartet auf eine sichere Kommunikation von diesem Port.
+
+
+
+ a| 
+7
+ a| 
+VSC sendet eine Echo-Anfrage an ONTAP zur Überprüfung der Erreichbarkeit. Diese ist nur beim Hinzufügen eines Storage-Systems erforderlich und kann später deaktiviert werden.
+
+|===
+[NOTE]
+====
+Sie sollten das Internet Control Message Protocol (ICMP) aktivieren, bevor Sie die virtuelle Appliance für VSC, VASA Provider und SRA implementieren.
+
+Wenn ICMP deaktiviert ist, schlägt die Erstkonfiguration der virtuellen Appliance für VSC, VASA Provider und SRA fehl und VSC kann die VSC- und VASA-Provider-Services nach der Implementierung nicht starten. Nach der Implementierung müssen Sie die VSC- und VASA-Provider-Services manuell aktivieren.
+
+====

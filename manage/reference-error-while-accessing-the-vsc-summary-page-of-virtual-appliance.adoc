@@ -1,0 +1,26 @@
+---
+permalink: manage/reference-error-while-accessing-the-vsc-summary-page-of-virtual-appliance.html 
+sidebar: sidebar 
+keywords: error, while, accessing, the, vsc, summary, page, of, virtual, appliance, 
+summary: 'Die Fehlermeldung /opt/netapp/vscserver/etc/vsc/Performance.json (keine solche Datei oder Verzeichnis) wird möglicherweise angezeigt, wenn Sie versuchen, nach der Implementierung der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) auf die VSC Übersichtsseite zu zugreifen.' 
+---
+= Fehler beim Zugriff auf die VSC Übersichtsseite der virtuellen Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Fehlermeldung `/opt/netapp/vscserver/etc/vsc/performance.json (No such file or directory)` Möglicherweise werden Sie angezeigt, wenn Sie versuchen, auf die VSC Übersichtsseite zuzugreifen, nachdem Sie die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) implementiert haben.
+
+
+
+== Beschreibung
+
+Wenn Sie versuchen, nach der Implementierung der virtuellen Appliance für VSC, VASA Provider und SRA auf das VSC Dashboard zuzugreifen, kann es zu einem Fehler kommen, da der Initialisierungsprozess des Planers nicht abgeschlossen ist.
+
+
+
+== Behelfslösung
+
+Sie müssen einige Sekunden nach der Bereitstellung der virtuellen Appliance warten, bis der Initialisierungsprozess für den Leistungsplaner abgeschlossen ist, und klicken dann auf die image:../media/dashboard-refresh-icon.gif[""] Um die neuesten Daten zu erhalten.

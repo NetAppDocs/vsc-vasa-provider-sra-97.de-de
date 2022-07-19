@@ -1,0 +1,47 @@
+---
+permalink: manage/reference-error-deleting-a-datastore-after-network-settings-are-changed.html 
+sidebar: sidebar 
+keywords: delete, datastore,troubleshooting errors 
+summary: Fehler beim Löschen eines Datenspeichers nach Änderung der Netzwerkeinstellungen 
+---
+= Fehler beim Löschen eines Datenspeichers nach Änderung der Netzwerkeinstellungen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Problem
+
+Nach dem Ändern der IP-Adresse der virtuellen Appliance für VSC, VASA Provider und SRA wird beim Ausführen bestimmter Vorgänge über die VSC-Schnittstelle ein Fehler angezeigt. Löschen eines Datastores oder Versuch, auf den VASA Provider Server auf dem ESXi Host zuzugreifen.
+
+
+
+== Ursache
+
+Der vCenter Server verwendet die aktualisierte IP-Adresse nicht und verwendet weiterhin die alte IP-Adresse, um Anrufe zu VASA Provider zu tätigen.
+
+
+
+== Korrekturmaßnahme
+
+Wenn sich die IP-Adresse der virtuellen Appliance für VSC, VASA Provider und SRA ändert, sollten Sie Folgendes durchführen:
+
+. Deregistrieren von VSC über vCenter Server.
+. Datenzugriff `https://<vcenter_ip>/mob`.
+. Klicken Sie auf MENU:Inhalt[Extension Manager > Endung aufheben > Registrieren Sie alle com.netapp.extensions].
+. Melden Sie sich beim vCenter Server als Root mit putty an.
+. Wechseln Sie zum Verzeichnis vsphere-Client-Serenity mit: `cd /etc/vmware/vsphere-client/vc-packages/vsphere-client-serenity`.
+. Beenden Sie den vSphere Client:-Dienst mit `vsphere-client stop`.
+. Entfernen Sie die Verzeichnisse, die die UI-Erweiterungen enthalten: `rm -rf com.netapp*`
+. Starten Sie den Dienst vSphere Client: Mit `vsphere-client start`.
++
+Dieser Vorgang kann einige Minuten dauern, bis der vSphere Client korrekt neu gestartet und initialisiert wurde.
+
+. Wechseln Sie in das Verzeichnis Gelassenheit der vsphere-ui: `/etc/vmware/vsphere-ui/vc-packages/vsphere-client-serenity/`.
+. Stoppen Sie die vSphere UI Dienst mit `vsphere-ui stop`.
+. Entfernen Sie die Verzeichnisse, die die UI-Erweiterungen enthalten: `rm -rf com.netapp*`
+. Starten Sie vSphere UI mit den folgenden Funktionen: `service-control --start vsphere-ui`.
+

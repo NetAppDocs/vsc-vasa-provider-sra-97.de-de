@@ -1,0 +1,71 @@
+---
+permalink: manage/concept-configure-vvols-datastores.html 
+sidebar: sidebar 
+keywords: configuring, vvols, datastores, virtual, volumes 
+summary: 'Über den VASA Provider für ONTAP lassen sich VMware Virtual Volumes (VVols) erstellen und managen. Sie können einen VVols-Datastore bereitstellen, bearbeiten, mounten und löschen. Sie können auch dem VVols-Datastore Storage hinzufügen oder aus dem VVols-Datastore Storage entfernen. Für eine höhere Flexibilität. Sie können jede Virtual Machine und die zugehörige VMDK bereitstellen und managen.' 
+---
+= Konfigurieren Sie VVols Datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über den VASA Provider für ONTAP lassen sich VMware Virtual Volumes (VVols) erstellen und managen. Sie können einen VVols-Datastore bereitstellen, bearbeiten, mounten und löschen. Sie können auch dem VVols-Datastore Storage hinzufügen oder aus dem VVols-Datastore Storage entfernen. Für eine höhere Flexibilität. Sie können jede Virtual Machine und die zugehörige VMDK bereitstellen und managen.
+
+Ein VVols-Datastore besteht aus einem oder mehreren FlexVol-Volumes innerhalb eines Storage-Containers (auch „`hinter Storage`“ genannt). Eine Virtual Machine kann auf einen VVols oder mehrere VVols Datastores verteilt werden.
+
+Sie können einen VVols-Datastore mit mehreren FlexVol Volumes erstellen, jedoch müssen alle FlexVol Volumes im Storage Container dasselbe Protokoll (NFS, iSCSI oder FCP) und dieselben Storage Virtual Machines (SVMs) verwenden.
+
+Sie benötigen keine detaillierten Informationen zum zugrunde liegenden Storage. Sie müssen z. B. kein bestimmtes FlexVol Volume identifizieren, das den Storage enthält. Nachdem Sie dem VVols-Datastore FlexVol-Volumes hinzugefügt haben, managt der Storage-Container die Storage-Anforderungen und verhindert mögliche Situationen bei der VM-Bereitstellung, bei denen VMauf einem zugrunde liegende Volume ohne Kapazität bereitgestellt werden.
+
+[NOTE]
+====
+Daher empfiehlt es sich, mehrere FlexVol Volumes in einen VVols-Datastore einzubeziehen, um die Performance und Flexibilität zu steigern. Da bei FlexVol Volumes die Anzahl der LUNs beschränkt ist, die die Anzahl der Virtual Machines, einschließlich mehrerer FlexVol Volumes, einschränken, können Sie mehr Virtual Machines im VVols Datastore speichern.
+
+====
+Im Rahmen der Einrichtung müssen Sie ein Storage-Funktionsprofil für den von Ihnen erstellten VVols Datastore angeben. Sie können ein oder mehrere VASA Provider Storage-Funktionsprofile für einen VVols Datastore auswählen. Zudem können Sie für alle VVols-Datastores, die automatisch in diesem Storage Container erstellt werden, ein Standard-Storage-Funktionsprofil festlegen.
+
+VASA Provider erstellt je nach Bedarf verschiedene VVols während der Bereitstellung von Virtual Machines oder der Erstellung von VMDK.
+
+* *Konfig*
++
+VMware vSphere verwendet diesen VVols-Datastore, um Konfigurationsinformationen zu speichern.
+
++
+In SAN-Implementierungen (Block) ist der Storage eine 4-GB-LUN.
+
++
+In einer NFS-Implementierung ist dies ein Verzeichnis, das VM-Konfigurationsdateien wie die vmx-Datei enthält, und Zeiger auf andere VVols-Datastores.
+
+* * Daten*
++
+Diese VVols enthält Betriebssysteminformationen und Benutzerdateien.
+
++
+Bei SAN-Implementierungen ist dies eine LUN, die die Größe der virtuellen Festplatte hat.
+
++
+In einer NFS-Implementierung handelt es sich hierbei um eine Datei, die die Größe des virtuellen Laufwerks hat.
+
+* *Tausch*
++
+Diese VVols werden erstellt, wenn die Virtual Machine eingeschaltet ist und beim Ausschalten der Virtual Machine gelöscht wird.
+
++
+Bei SAN-Implementierungen ist dies eine LUN, die die Größe des virtuellen Speichers ist.
+
++
+In einer NFS-Implementierung handelt es sich hierbei um eine Datei mit der Größe des virtuellen Speichers.
+
+* *Speicher*
++
+Diese VVols werden erstellt, wenn die Option Speicher-Snapshots bei der Erstellung eines VM-Snapshots ausgewählt ist.
+
++
+Bei SAN-Implementierungen ist dies eine LUN, die die Größe des virtuellen Speichers ist.
+
++
+In einer NFS-Implementierung handelt es sich hierbei um eine Datei mit der Größe des virtuellen Speichers.
+
+

@@ -1,0 +1,44 @@
+---
+permalink: deploy/task-install-the-nfs-vaai-plug-in.html 
+sidebar: sidebar 
+keywords: installing, the, nfs, vaai, plug-in, 
+summary: 'Sie können das NFS-Plug-in für VMware vStorage APIs for Array Integration (VAAI) mithilfe der GUI der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) installieren.' 
+---
+= Installieren Sie das NFS VAAI Plug-in
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das NFS-Plug-in für VMware vStorage APIs for Array Integration (VAAI) mithilfe der GUI der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) installieren.
+
+.Bevor Sie beginnen
+* Sie müssen das Installationspaket für das NFS-Plug-in für VAAI heruntergeladen haben (`.vib`) Von .
++
+https://mysupport.netapp.com/site/["NetApp Support"^]
+
+* Sie müssen ESXi Host 6.5 oder höher und ONTAP 9.1 oder höher installiert haben.
+* Sie müssen den ESXi-Host eingeschaltet und einen NFS-Datastore gemountet haben.
+* Sie müssen die Werte des festgelegt haben `DataMover.HardwareAcceleratedMove`, `DataMover.HardwareAcceleratedInit`, und `VMFS3.HardwareAcceleratedLocking` Hosteinstellungen auf „`1`“.
++
+Diese Werte werden automatisch auf dem ESXi-Host gesetzt, wenn das Dialogfeld *Empfohlene Einstellungen* aktualisiert wird.
+
+* Sie müssen die vstorage-Option auf dem aktiviert haben, indem Sie die verwenden `vserver nfs modify -vserver vserver_name -vstorage enabled` Befehl.
+
+
+.Schritte
+. Benennen Sie den um `.vib` Datei, die Sie von auf heruntergeladen haben `NetAppNasPlugin.vib` Um den von der VSC definierten Namen anzupassen.
+. Klicken Sie auf der VSC Startseite auf *Einstellungen*.
+. Klicken Sie auf die Registerkarte * NFS VAAI Tools*.
+. Klicken Sie im Abschnitt *vorhandene Version* auf *Ändern*.
+. Durchsuchen und wählen Sie den umbenannten aus `.vib` Datei, und klicken Sie dann auf *Upload*, um die Datei auf das virtuelle Gerät hochzuladen.
+. Wählen Sie im Abschnitt *auf ESXi Hosts installieren* den ESXi Host aus, auf dem Sie das NFS VAAI Plug-in installieren möchten, und klicken Sie dann auf *Installieren*.
++
+Befolgen Sie die Anweisungen auf dem Bildschirm, um die Installation abzuschließen. Sie können den Installationsfortschritt im Abschnitt Aufgaben von vSphere Web Client überwachen.
+
+. Starten Sie den ESXi-Host nach Abschluss der Installation neu.
++
+Beim Neustart des ESXi Hosts erkennt VSC automatisch das NFS VAAI Plug-in. Sie müssen keine weiteren Schritte durchführen, um das Plug-in zu aktivieren.
+
+

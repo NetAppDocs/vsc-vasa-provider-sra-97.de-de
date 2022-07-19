@@ -1,0 +1,29 @@
+---
+permalink: manage/task-resize-datastores.html 
+sidebar: sidebar 
+keywords: resizing, datastores, 
+summary: Durch die Anpassung der Größe eines Datenspeichers können Sie den Speicher für die Dateien Ihrer virtuellen Maschine vergrößern oder verkleinern. Möglicherweise müssen Sie die Größe eines Datastores ändern, wenn sich Ihre Infrastrukturanforderungen ändern. 
+---
+= Datenspeichergröße ändern
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch die Anpassung der Größe eines Datenspeichers können Sie den Speicher für die Dateien Ihrer virtuellen Maschine vergrößern oder verkleinern. Möglicherweise müssen Sie die Größe eines Datastores ändern, wenn sich Ihre Infrastrukturanforderungen ändern.
+
+Wenn Sie möchten, dass VSC beim Umskalieren des enthaltenen Volumes die Größe des VMFS-Datastore ändert, sollten Sie bei der erstmaligen Bereitstellung des VMFS-Datastore nicht die Option *vorhandenes Volume* verwenden* unter *Speicherattribute* verwenden, sondern es automatisch ein neues Volume für jeden Datastore erstellen lassen.
+
+Sie können einen NFS-Datenspeicher vergrößern oder verkleinern. Sie können nur die Größe eines VMFS-Datenspeichers erhöhen.
+
+.Schritte
+. Klicken Sie auf der Seite vSphere Client *Home* auf *Hosts und Cluster*.
+. Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Datastore enthält.
+. Klicken Sie mit der rechten Maustaste auf den Datastore und wählen Sie Menü:NetApp VSC[Größe].
+. Geben Sie im Dialogfeld *Größe* eine neue Größe für den Datastore an, und klicken Sie dann auf *OK*.
++
+Sie können im Menü *Storage Systems* die Option *RECOVER ALL* ausführen, um die Speicherliste unter Storage Systems und Dashboard manuell zu aktualisieren oder auf die nächste geplante Aktualisierung zu warten.
+
+

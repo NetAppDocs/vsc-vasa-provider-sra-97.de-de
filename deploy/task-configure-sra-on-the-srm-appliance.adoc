@@ -1,0 +1,29 @@
+---
+permalink: deploy/task-configure-sra-on-srm-appliance.html 
+sidebar: sidebar 
+keywords: configuring, sra, srm, appliance, 
+summary: 'Sobald Sie die SRM Appliance implementiert haben, sollten Sie SRA auf der SRM Appliance konfigurieren. Die erfolgreiche Konfiguration von SRA ermöglicht die Kommunikation der SRM Appliance mit SRA für das Disaster-Recovery-Management. Um die Kommunikation zwischen der SRM Appliance und SRA zu ermöglichen, sollten die virtuelle Appliance für VSC, VASA Provider und SRA-Anmeldeinformationen (IP-Adresse und Administratorkennwort) in der SRM Appliance gespeichert werden.' 
+---
+= Konfigurieren Sie SRA auf der SRM Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sobald Sie die SRM Appliance implementiert haben, sollten Sie SRA auf der SRM Appliance konfigurieren. Die erfolgreiche Konfiguration von SRA ermöglicht die Kommunikation der SRM Appliance mit SRA für das Disaster-Recovery-Management. Um die Kommunikation zwischen der SRM Appliance und SRA zu ermöglichen, sollten die virtuelle Appliance für VSC, VASA Provider und SRA-Anmeldeinformationen (IP-Adresse und Administratorkennwort) in der SRM Appliance gespeichert werden.
+
+Sie sollten die hochladen `tar.gz` Datei zu SRM Appliance.
+
+Die Konfiguration von SRA auf einer SRM Appliance speichert die SRA Anmeldedaten in der SRM Appliance.
+
+.Schritte
+. Melden Sie sich mit Hilfe eines Administratorkontos an der SRM-Appliance mit putty an.
+. Wechseln Sie mit dem Befehl zum Root-Benutzer: `su root`
+. Geben Sie am Protokollspeicherort den Befehl ein, um die von SRA verwendete Docker-ID zu erhalten `docker ps -l`
+. Geben Sie zum Anmelden bei der Container-ID den Befehl ein `docker exec -it -u srm <container id> sh`
+. Konfigurieren Sie SRM mit der virtuellen Appliance für VSC, VASA Provider und SRA IP-Adresse und Passwort mithilfe des Befehls: `perl command.pl -I <va-IP> administrator <va-password>`
++
+Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert werden, wird angezeigt. SRA kann mit dem SRA-Server unter Verwendung der angegebenen IP-Adresse, des Ports und der Anmeldeinformationen kommunizieren.
+
+

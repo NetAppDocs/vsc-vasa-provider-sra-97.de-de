@@ -1,0 +1,25 @@
+---
+permalink: deploy/reference-vsc-and-vasa-provider-services-restart-in-scaled-environments.html 
+sidebar: sidebar 
+keywords: vsc, and vasa, provider, services, restart, highly, scaled, environments, 
+summary: Die VSC- und VASA Provider-Services werden in hoch skalierten Umgebungen neu gestartet 
+---
+= Die VSC- und VASA Provider-Services werden in hoch skalierten Umgebungen neu gestartet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Problem
+
+Die virtuelle Appliance für VSC, VASA Provider und SRA führt möglicherweise nicht optimal in einer hochgradig skalierten Umgebung aus und kann zu Problemen wie VSC und VASA Provider Services führen, die häufig neu gestartet werden.
+
+
+
+== Korrekturmaßnahme
+
+Ändern Sie die RAM- und Heap-Speicheranforderungen der virtuellen Appliance für VSC, VASA Provider und SRA.
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/tune_memory_settings_of_VM_VSC%2C_VASA_Provider%2C_and_SRA_for_scale_and_performance[]

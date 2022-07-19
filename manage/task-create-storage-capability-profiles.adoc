@@ -1,0 +1,125 @@
+---
+permalink: manage/task-create-storage-capability-profiles.html 
+sidebar: sidebar 
+keywords: configuring, storage, capability, profiles, 
+summary: Mit VSC können Sie manuell Storage-Funktionsprofile erstellen, anhand der Funktionen eines Datastores automatisch ein Profil erstellen oder ein Profil entsprechend den Anforderungen ändern. 
+---
+= Storage-Funktionsprofile konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit VSC können Sie manuell Storage-Funktionsprofile erstellen, anhand der Funktionen eines Datastores automatisch ein Profil erstellen oder ein Profil entsprechend den Anforderungen ändern.
+
+Sie müssen Ihre VASA Provider Instanz auf der Virtual Storage Console für VMware vSphere registriert haben.
+
+Nachdem Sie ein Profil eingerichtet haben, können Sie das Profil nach Bedarf bearbeiten.
+
+.Schritte
+. Klicken Sie auf der Virtual Storage Console (VSC) *Startseite*-Seite auf *Storage Capability Profiles*.
+. Erstellen Sie ein Profil oder bearbeiten Sie ein vorhandenes Profil, falls erforderlich:
++
+[cols="1a,1a"]
+|===
+| Ihr Ziel ist | Tun Sie das... 
+
+
+ a| 
+Erstellen Sie ein Profil
+ a| 
+Klicken Sie Auf *image:../media/create-icon.gif[""]*.
+
+
+
+ a| 
+Bearbeiten Sie ein vorhandenes Profil
+ a| 
+Klicken Sie auf das Profil, das Sie ändern möchten, auf der Seite Storage Capability Profiles auf die Profile, die auf der Seite Storage Capability Profiles aufgeführt sind.
+
+|===
++
+[NOTE]
+====
+Um die Werte anzuzeigen, die einem vorhandenen Profil zugeordnet sind, können Sie auf der Seite Storage Capabilities Profile auf den Profilnamen klicken. VASA Provider zeigt dann die Übersichtsseite für dieses Profil an. - Vorhandene Storage-Funktionsprofile, die vor der 9.6 virtuellen Appliance für VSC, VASA Provider und SRA erstellt wurden, können nicht geändert werden.
+
+====
+. Füllen Sie die Seiten im Assistenten * Storage Capability Profile erstellen* aus, um ein Profil einzurichten oder Werte zu bearbeiten, um ein vorhandenes Profil zu ändern.
++
+Die meisten Felder in diesem Assistenten sind selbsterklärend. In der folgenden Tabelle werden einige der Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
+
++
+[cols="1a,1a"]
+|===
+| Feld | Erklärung 
+
+
+ a| 
+Identifizierung mehrerer Profile
+ a| 
+Sie können den Zweck des Storage-Capability-Profils mithilfe des Feldes *DESCRIPTION* auf der Registerkarte Name und Beschreibung beschreiben. Eine gute Beschreibung ist nützlich, da es sich bei der Einrichtung verschiedener Profile auf der Grundlage der verwendeten Anwendungen empfiehlt.
+
+So erfordert eine geschäftskritische Applikation beispielsweise ein Profil mit Funktionen, die eine höhere Performance unterstützen, beispielsweise eine AFF Plattform. Ein Datenspeicher, der zu Test- oder Schulungszwecken verwendet wird, kann ein Profil mit einer FAS Plattform mit geringerer Performance verwenden und alle Storage-Effizienzfunktionen und das Tiering zur Kostenkontrolle nutzen.
+
+Wenn Sie den Modus „`Linked`“ für Ihre vCenter Server aktiviert haben, müssen Sie den vCenter Server auswählen, für den Sie das Storage-Funktionsprofil erstellen.
+
+
+
+ a| 
+Plattform
+ a| 
+Sie können Ihr Storage-System entweder für den Plattformtyp AFF oder FAS auswählen. Die Optionen auf den nachfolgenden Bildschirmen werden basierend auf Ihrer Auswahl des Speichersystems aktualisiert.
+
+
+
+ a| 
+Leistung
+ a| 
+Über die Registerkarte Performance können Sie herkömmliche QoS-Richtlinien für Ihr Storage-System festlegen.
+
+** Wenn Sie *Keine* auswählen, wird eine QoS-Richtlinie ohne Limit (unendlich) auf ein Daten VVol angewendet.
+** Wenn Sie *QoS Policy Group* auswählen, wird auf ein VVol eine herkömmliche QoS-Richtlinie angewendet.
++
+Sie können den Wert für *Max IOPS* und *Min IOPS* festlegen, wodurch Sie die QoS-Funktionalität nutzen können. Wenn Sie Infinite IOPS auswählen, wird das Feld Max IOPS deaktiviert. Bei der Anwendung auf einen herkömmlichen Datenspeicher wird eine QoS-Richtlinie mit Wert „`Max IOPS`“ erstellt und einem FlexVol Volume zugewiesen. In Kombination mit einem VVol Datastore wird für jedes Daten VVol eine QoS-Richtlinie mit maximalen IOPS- und IOPS-Minimal-Werten erstellt.
+
++
+[NOTE]
+====
+*** Maximale IOPS und minimale IOPS können auch auf das FlexVol Volume für einen herkömmlichen Datenspeicher angewendet werden.
+*** Sie müssen sicherstellen, dass die Performance-Kennzahlen nicht auch auf Storage Virtual Machine \(SVM\)-Ebene, auf Aggregatebene oder auf FlexVol-Volume-Ebene separat festgelegt werden.
+
+
+====
+
+
+
+
+ a| 
+Storage-Attribute
+ a| 
+Die Storage-Attribute, die Sie in dieser Registerkarte aktivieren können, hängen vom Storage-Typ ab, den Sie in der Registerkarte Personality auswählen.
+
+** Bei der Auswahl von FAS Storage können Sie die Speicherplatzreserve (Thick oder Thin Provisioning) konfigurieren, die Deduplizierung, Komprimierung und Verschlüsselung aktivieren.
++
+Das Tiering-Attribut ist deaktiviert, da dieses Attribut für den FAS Storage nicht anwendbar ist.
+
+** Wenn Sie sich für AFF Storage entscheiden, können Sie Verschlüsselung und Tiering aktivieren.
++
+Die Deduplizierung und Komprimierung sind für AFF Storage standardmäßig aktiviert und können nicht deaktiviert werden. Die Platzreserve ist als Thin Provisioning konfiguriert und kann nicht auf Thick Provisioning geändert werden (Thin ist für die Aggregat-Effizienz und das Tiering erforderlich).
+
++
+Das Tiering-Attribut ermöglicht die Nutzung von Volumes, die zu einem FabricPool-fähigen Aggregat gehören (unterstützt von VASA Provider für AFF Systeme mit ONTAP 9.4 und höher). Für das Tiering-Attribut können Sie eine der folgenden Richtlinien konfigurieren:
+
+** Beliebig: Ermöglicht die Nutzung dieses Storage-Funktionsprofils mit jedem FlexVol Volume unabhängig davon, ob Fabric Pool verwendet wird oder nicht
+** Keine: Verhindert, dass Volume-Daten in die Kapazitäts-Tier verschoben werden
+** Nur Snapshot: Verschiebt Benutzerdatenblöcke von Volume Snapshot Kopien, die nicht dem aktiven File-System zugeordnet sind, auf Kapazitäts-Tier
+** Auto: Verschiebt selten genutzte Datenblöcke in den Snapshot Kopien und dem aktiven Filesystem auf die Kapazitäts-Tier
+
+
+|===
+. Überprüfen Sie Ihre Auswahl auf der Seite *Zusammenfassung*, und klicken Sie dann auf *OK*.
++
+Nachdem Sie ein Profil erstellt haben, können Sie zur Seite Storage Mapping zurückkehren, um anzuzeigen, welche Profile mit welchen Datastores übereinstimmen.
+
+

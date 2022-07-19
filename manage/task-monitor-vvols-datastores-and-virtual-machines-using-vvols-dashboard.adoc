@@ -1,0 +1,67 @@
+---
+permalink: manage/task-monitor-vvols-datastores-and-virtual-machines-using-vvols-dashboard.html 
+sidebar: sidebar 
+keywords: monitoring, vvols, datastores, virtual, machines, using, the, vVol, dashboard, 
+summary: 'Sie können die Performance überwachen und die fünf wichtigsten Datastores von SAN VMware Virtual Volumes (VVols) in Ihrem vCenter Server anhand der Parameter anzeigen, die Sie mithilfe des vVol Dashboards der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) auswählen.' 
+---
+= Überwachen Sie VVols Datastores und Virtual Machines über das vVol Dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Performance überwachen und die fünf wichtigsten Datastores von SAN VMware Virtual Volumes (VVols) in Ihrem vCenter Server anhand der Parameter anzeigen, die Sie mithilfe des vVol Dashboards der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) auswählen.
+
+.Bevor Sie beginnen
+* Sie sollten OnCommand API Services 2.1 oder höher aktiviert haben, wenn Sie ONTAP 9.6 oder älter verwenden.
++
+Sie müssen OnCommand API Services beim VASA Provider nicht registrieren, um sich die Details zum SAN VVols Datastore oder dem SAN VVols VM Datastore-Bericht für ONTAP 9.7 ansehen zu können.
+
++
+https://mysupport.netapp.com/site/["NetApp Support"^]
+
+* Sie sollten ONTAP 9.3 oder höher für Ihr Storage-System verwenden.
+
+
+link:reference-verify-vvol-dashboard-data-requirements.html["VVol Dashboard – Datenanforderungen"]
+
+Die von ONTAP bereitgestellten IOPS-Daten werden abgerundet und auf dem vVol Dashboard angezeigt. Es könnte einen Unterschied zwischen dem tatsächlichen IOPS-Wert geben, der von ONTAP bereitgestellt wird, und dem IOPS-Wert, der auf dem vVol Dashboard angezeigt wird.
+
+[NOTE]
+====
+* Wenn Sie OnCommand API Services zum ersten Mal registrieren, können Sie alle Performance-Metriken für SAN VVols Datastores auf dem vVol Dashboard nur nach 15 bis 30 Minuten anzeigen.
+* Die vVol Dashboard-Daten werden regelmäßig in einem Intervall von 10 Minuten aktualisiert.
+* Wenn Sie ein Storage-System über Ihre vCenter Server Instanz hinzugefügt, geändert oder gelöscht haben, werden diese möglicherweise bereits seit einiger Zeit nicht mehr geändert.
++
+Dies liegt daran, dass OnCommand API Services Zeit benötigt, um aktualisierte Metriken von ONTAP zu erhalten.
+
+* Der Wert für IOPS insgesamt, der im Portlet *Übersicht* des vVol Dashboards angezeigt wird, stellt keinen kumulativen Wert des Werts für Lese-IOPS und Schreib-IOPS dar.
++
+Lese-IOPS, Schreib-IOPS und IOPS insgesamt sind separate Metriken, die von OnCommand API Services bereitgestellt werden. Wenn der IOPS-Wert insgesamt und der durch die OnCommand API Services bereitgestellte kumulative IOPS-Wert (IOPS-Wert für Lesen + IOPS-Schreiben-Wert) sich unterscheiden, wird derselbe Unterschied in den IOPS-Werten auf dem vVol Dashboard beobachtet.
+
+
+
+====
+.Schritte
+. Klicken Sie auf der vSphere Client-Startseite auf *Virtual Storage Console*.
+. Wählen Sie den gewünschten vCenter Server aus, indem Sie das Dropdown-Menü *vCenter Server* verwenden, um die Datenspeicher anzuzeigen.
+. Klicken Sie auf *vVol Dashboard*.
++
+Das Portlet *Datastores* enthält folgende Details:
+
++
+** Die Anzahl der VVols-Datastores, die über VASA Provider in der vCenter Server Instanz gemanagt werden
+** Die fünf wichtigsten VVols-Datastores basierend auf Ressourcenauslastung und Performance-Parametern. Sie können die Liste der Datastores basierend auf dem genutzten Speicherplatz, der IOPS oder der Latenz und in der erforderlichen Reihenfolge ändern.
+
+
+. Zeigen Sie die Details der virtuellen Maschinen mithilfe des Portlets * Virtuelle Maschinen* an.
++
+Das Portlet *Virtual Machines* enthält folgende Details:
+
++
+** Anzahl der Virtual Machines, die ONTAP Datastores in Ihrem vCenter Server verwenden
+** Die fünf wichtigsten Virtual Machines basieren auf IOPS, Latenz, Durchsatz, engagierter Kapazität, Uptime Und logischer Speicherplatz, den Sie anpassen können, wie die fünf wichtigsten Virtual Machines im vVol Dashboard angezeigt werden.
+
+
+

@@ -1,0 +1,100 @@
+---
+permalink: deploy/task-deploy-ontap-tools.html 
+sidebar: sidebar 
+keywords: deploying, the, virtual, appliance, for vsc, vasa, provider, and sra, 
+summary: 'Sie sollten die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) in Ihrer Umgebung implementieren und die erforderlichen Parameter angeben, um die Appliance verwenden zu können.' 
+---
+= Implementieren Sie die virtuelle Appliance für VSC, VASA Provider und SRA
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) in Ihrer Umgebung implementieren und die erforderlichen Parameter angeben, um die Appliance verwenden zu können.
+
+.Bevor Sie beginnen
+* Sie müssen eine unterstützte Version von vCenter Server ausführen.
++
+[NOTE]
+====
+Die virtuelle Appliance für VSC, VASA Provider und SRA kann bei einer Windows Implementierung von vCenter Server oder einer Implementierung der VMware vCenter Server Virtual Appliance (vCSA) registriert werden.
+
+====
++
+https://mysupport.netapp.com/matrix/imt.jsp?components=97563;&solution=56&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool VSC 9.7"^]
+
+* Sie müssen Ihre vCenter Server-Umgebung konfiguriert und eingerichtet haben.
+* Sie müssen einen ESXi-Host für Ihre virtuelle Maschine einrichten.
+* Sie müssen das heruntergeladen haben `.ova` Datei:
+* Sie müssen über die Anmeldedaten des Administrators für Ihre vCenter Server-Instanz verfügen.
+* Sie müssen alle Browser-Sessions des vSphere Clients abgemeldet, geschlossen und den Browser-Cache gelöscht haben, um Probleme mit dem Browser-Cache während der Bereitstellung der virtuellen Appliance für VSC, VASA Provider und SRA zu vermeiden.
++
+xref:task-clean-the-vsphere-cached-downloaded-plug-in-packages.adoc[Reinigen Sie die heruntergeladenen Plug-in-Pakete von vSphere im Cache]
+
+* Sie müssen das Internet Control Message Protocol (ICMP) aktiviert haben.
++
+Wenn ICMP deaktiviert ist, schlägt die Erstkonfiguration der virtuellen Appliance für VSC, VASA Provider und SRA fehl und VSC kann die VSC- und VASA-Provider-Services nach der Implementierung nicht starten. Nach der Implementierung müssen Sie die VSC- und VASA-Provider-Services manuell aktivieren.
+
+
+
+Wenn Sie eine neue Installation der virtuellen Appliance für VSC, VASA Provider und SRA implementieren, ist VASA Provider standardmäßig aktiviert. Bei einem Upgrade von einer früheren Version der virtuellen Appliance bleibt der Status von VASA Provider erhalten, und VASA Provider muss möglicherweise manuell aktiviert werden.
+
+link:task-enable-vasa-provider-for-configuring-virtual-datastores.html["Aktivieren Sie VASA Provider zur Konfiguration von virtuellen Datastores"]
+
+.Schritte
+. Melden Sie sich beim vSphere Client an.
+. Wählen Sie Menü:Startseite[Host & Clusters].
+. Klicken Sie mit der rechten Maustaste auf das gewünschte Rechenzentrum und klicken Sie dann auf *OVA-Vorlage bereitstellen*.
+. Wählen Sie die anzuwendende Methode zur Bereitstellung der Bereitstellungsdatei für VSC, VASA Provider und SRA aus, und klicken Sie dann auf *Weiter*.
++
+[cols="1a,1a"]
+|===
+| Standort | Aktion 
+
+
+ a| 
+URL
+ a| 
+Geben Sie die URL für das an `.ova` Datei für die virtuelle Appliance für VSC, VASA Provider und SRA.
+
+
+
+ a| 
+Ordner
+ a| 
+Wählen Sie die aus `.ova` Datei für die virtuelle Appliance für VSC, VASA Provider und SRA vom gespeicherten Speicherort aus
+
+|===
+. Geben Sie die Details ein, um den Bereitstellungsassistenten anzupassen.
++
+Siehe link:reference-deploment-customization-requirements.html["Überlegungen zur Anpassung der Implementierung"] Vollständige Angaben.
+
+. Überprüfen Sie die Konfigurationsdaten, und klicken Sie dann auf *Weiter*, um die Bereitstellung abzuschließen.
++
+Wenn Sie warten, bis die Bereitstellung abgeschlossen ist, können Sie den Fortschritt der Bereitstellung über die Registerkarte *Aufgaben* anzeigen.
+
+. Schalten Sie die virtuelle Appliance ein, und öffnen Sie dann eine Konsole der virtuellen Maschine, auf der die virtuelle Appliance ausgeführt wird.
+. Überprüfen Sie, ob VSC, VASA Provider und SRA-Services nach Abschluss der Implementierung ausgeführt werden.
+. Wenn die virtuelle Appliance für VSC, VASA Provider und SRA nicht mit einem vCenter Server registriert ist, nutzen Sie sie `+https://appliance_ip:8143/Register.html+` Um die VSC Instanz zu registrieren.
+. Melden Sie sich ab- und erneut beim vSphere Client an, um die implementierte virtuelle Appliance für VSC, VASA Provider und SRA anzuzeigen.
++
+Es kann ein paar Minuten dauern, bis das Plug-in im vSphere Client aktualisiert wird.
+
++
+[NOTE]
+====
+Wenn Sie das Plug-in nicht selbst nach der Anmeldung anzeigen können, müssen Sie den vSphere Client-Cache reinigen. xref:task-clean-the-vsphere-cached-downloaded-plug-in-packages.adoc[Reinigen Sie die heruntergeladenen Plug-in-Pakete von vSphere im Cache]
+
+====
+
+
+++++
+
+[NOTE]
+====
+Wenn Sie ONTAP 9.6 oder früher verwenden, dann um das vVol Dashboard anzuzeigen, müssen Sie herunterladen und installieren . Für ONTAP 9.7 müssen Sie jedoch nicht beim VASA Provider registriert werden.
+
+====
+xref:task-register-oncommand-api-services-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra.adoc[Melden Sie sich mit der virtuellen Appliance für VSC, VASA Provider und SRA an]

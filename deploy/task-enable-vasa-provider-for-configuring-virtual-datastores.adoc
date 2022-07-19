@@ -1,0 +1,34 @@
+---
+permalink: deploy/task-enable-vasa-provider-for-configuring-virtual-datastores.html 
+sidebar: sidebar 
+keywords: enabling, vasa, provider, for, configuring, virtual, datastores, 
+summary: 'Bei der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und dem Storage Replication Adapter (SRA) sind die VASA Provider-Funktion standardmäßig aktiviert. Sie können Datastores von VMware Virtual Volumes (VVols) mit den erforderlichen Storage-Funktionsprofilen für jeden VVols Datastore konfigurieren.' 
+---
+= Aktivieren Sie VASA Provider zur Konfiguration von virtuellen Datastores
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und dem Storage Replication Adapter (SRA) sind die VASA Provider-Funktion standardmäßig aktiviert. Sie können Datastores von VMware Virtual Volumes (VVols) mit den erforderlichen Storage-Funktionsprofilen für jeden VVols Datastore konfigurieren.
+
+.Bevor Sie beginnen
+* Sie müssen Ihre vCenter Server-Instanz eingerichtet und ESXi konfiguriert haben.
+* Sie müssen die virtuelle Appliance für VSC, VASA Provider und SRA implementiert haben.
+
+
+Wenn die VASA Provider-Funktion deaktiviert wird, bevor ein Upgrade auf Version 9.7.1 der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) durchgeführt wird, bleibt die VASA Provider-Funktion nach dem Upgrade deaktiviert. In dieser Version können Sie die VVols Replizierungsfunktion für VVols Datastores aktivieren.
+
+.Schritte
+. Melden Sie sich bei der Web-Benutzeroberfläche von VMware vSphere an.
+. Klicken Sie im vSphere Client auf MENU:Menü[Virtuelle Speicherkonsole].
+. Klicken Sie Auf *Einstellungen*.
+. Klicken Sie auf der Registerkarte *Administrative Einstellungen* auf *Funktionen verwalten*.
+. Wählen Sie im Dialogfeld *Funktionen verwalten* die zu Aktivieren anzuwählende VASA Provider-Erweiterung aus.
+. Wenn Sie die Replikationsfunktion für VVols-Datastores verwenden möchten, verwenden Sie die Schaltfläche *VVols-Replizierung aktivieren* umschalten.
+. Geben Sie die IP-Adresse der virtuellen Appliance für VSC, VASA Provider und SRA sowie das Administratorpasswort ein, und klicken Sie dann auf *Anwenden*.
+
+
+Bei Verwendung von ONTAP 9.6 oder älteren Clustern müssen Sie sich bei VASA Provider registrieren, um Details zu VVols Datastores und Virtual Machines zu erhalten, die in den Berichten über SAN VVols VM und SAN VVols Datastores verwendet werden. Aber wenn Sie ONTAP 9.7 oder höher verwenden, müssen Sie sich nicht bei VASA Provider registrieren.

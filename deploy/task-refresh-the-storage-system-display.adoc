@@ -1,0 +1,48 @@
+---
+permalink: deploy/task-refresh-the-storage-system-display.html 
+sidebar: sidebar 
+keywords: refreshing, the, storage, system, display, 
+summary: 'Sie können die von Virtual Storage Console für VMware vSphere bereitgestellte Aktualisierungsfunktion verwenden, um die Informationen zu Storage-Systemen zu aktualisieren und die Virtual Storage Console (VSC) zur Erkennung von Storage-Systemen zu erzwingen.' 
+---
+= Aktualisieren Sie die Anzeige des Speichersystems
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die von Virtual Storage Console für VMware vSphere bereitgestellte Aktualisierungsfunktion verwenden, um die Informationen zu Storage-Systemen zu aktualisieren und die Virtual Storage Console (VSC) zur Erkennung von Storage-Systemen zu erzwingen.
+
+Die Option „`reFresh`“ ist nützlich, wenn Sie die Standardanmeldeinformationen für die Speichersysteme nach Erhalt eines Authentifizierungsfehlers geändert haben. Sie sollten immer einen Aktualisierungsvorgang durchführen, wenn Sie die Anmeldedaten des Speichersystems geändert haben, nachdem das Speichersystem „`Authentifizierungsfehler`“ gemeldet hat. Während des Updates versucht VSC, mithilfe der neuen Zugangsdaten eine Verbindung zum Storage-System herzustellen.
+
+Je nach System-Setup kann dieser Vorgang viel Zeit in Anspruch nehmen.
+
+.Schritte
+. Klicken Sie auf der Seite VMware vSphere Client *Home* auf *Storage Systems*.
+. Starten Sie das Update:
++
+[cols="1a,1a"]
+|===
+| Wenn dieser Standort... | Klicken Sie Auf... 
+
+
+ a| 
+Virtual Storage Console
+ a| 
+Das Symbol * ALLE WIEDERENTDECKEN*.
+
+
+
+ a| 
+Rechenzentrum
+ a| 
+Klicken Sie mit der rechten Maustaste auf das Datacenter und klicken Sie dann auf Menü:NetApp VSC[Update Host and Storage Data].
+
+|===
+. Klicken Sie im Dialogfeld *Host- und Speicherdaten aktualisieren* auf *OK*.
++
+Je nach Anzahl der Hosts und Storage-Systeme in Ihrem Datacenter kann die Erkennung einige Minuten dauern. Dieser Erkennungsvorgang arbeitet im Hintergrund.
+
+. Klicken Sie im Dialogfeld *Erfolg* auf *OK*.
+

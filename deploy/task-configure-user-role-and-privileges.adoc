@@ -1,0 +1,41 @@
+---
+permalink: deploy/task-configure-user-role-and-privileges.html 
+sidebar: sidebar 
+keywords: user, roles, configuring, user, roles, and, privileges, 
+summary: Neue Benutzerrollen zum Management von Storage-Systemen können mit der JSON-Datei konfiguriert werden, die mit der virtuellen Appliance für VSC, VASA Provider, SRA und ONTAP System Manager bereitgestellt wird. 
+---
+= Konfigurieren von Benutzerrollen und -Berechtigungen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Neue Benutzerrollen zum Management von Storage-Systemen können mit der JSON-Datei konfiguriert werden, die mit der virtuellen Appliance für VSC, VASA Provider, SRA und ONTAP System Manager bereitgestellt wird.
+
+.Bevor Sie beginnen
+* Sie sollten die Datei ONTAP-Berechtigungen mithilfe von von von von der virtuellen Appliance für VSC, VASA Provider und SRA heruntergeladen haben `+https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip+`.
+* Sie sollten ONTAP 9.7 System Manager konfiguriert haben.
+* Sie sollten sich mit Administratorrechten für das Speichersystem angemeldet haben.
+
+
+.Schritte
+. Entpacken Sie die heruntergeladene Datei `+https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip+` Datei:
+. Greifen Sie auf ONTAP System Manager zu.
+. Klicken Sie auf Menü:CLUSTER[Einstellungen > Benutzer und Rollen].
+. Klicken Sie Auf *Benutzer Hinzufügen*.
+. Wählen Sie im Dialogfeld * Benutzer hinzufügen* die Option *Virtualisierungsprodukte* aus.
+. Klicken Sie auf *Durchsuchen*, um die JSON-Datei der ONTAP-Berechtigungen auszuwählen und hochzuladen.
++
+DAS PRODUKTFELD wird automatisch ausgefüllt.
+
+. Wählen Sie die gewünschte Funktion aus dem Dropdown-Menü * PRODUCT CAPABILITY* aus.
++
+Das Feld * ROLLE* wird automatisch ausgefüllt, basierend auf der ausgewählten Produktfunktion.
+
+. Geben Sie den erforderlichen Benutzernamen und das erforderliche Passwort ein.
+. Wählen Sie die für den Benutzer erforderlichen Berechtigungen (Discovery, Create Storage, Modify Storage, Destroy Storage) aus, und klicken Sie dann auf *Add*.
+
+
+Die neue Rolle und der neue Benutzer werden hinzugefügt, und Sie können die detaillierten Berechtigungen unter der von Ihnen konfigurierten Rolle sehen.

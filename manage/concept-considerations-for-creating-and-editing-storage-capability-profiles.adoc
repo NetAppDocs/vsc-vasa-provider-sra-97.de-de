@@ -1,0 +1,32 @@
+---
+permalink: manage/concept-considerations-for-creating-and-editing-storage-capability-profiles.html 
+sidebar: sidebar 
+keywords: considerations, for, creating, and, editing, storage, capability, profiles, 
+summary: Beachten Sie bei der Erstellung und Bearbeitung von Storage-Funktionsprofilen die Überlegungen. 
+---
+= Überlegungen beim Erstellen und Bearbeiten von Storage-Funktionsprofilen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beachten Sie bei der Erstellung und Bearbeitung von Storage-Funktionsprofilen die Überlegungen.
+
+* Sie können Minimum-IOPS nur für AFF Systeme konfigurieren.
+* Sie können QoS-Kennzahlen auf Datastore-Ebene eines virtuellen Volumes (VVol) konfigurieren.
++
+Diese Funktion bietet größere Flexibilität bei der Zuweisung unterschiedlicher QoS-Metriken für unterschiedliche VMDKs derselben Virtual Machine, die in einem virtuellen Datastore bereitgestellt wird.
+
+* Sie können Storage-Funktionsprofile für FAS- und AFF-Datastores konfigurieren.
++
+Bei FAS-Systemen können Sie die Platzreservierung für Thick oder Thin Provisioning konfigurieren. Bei AFF Systemen kann die Platzreserve nur mit Thin Provisioning konfiguriert werden.
+
+* Sie können Storage-Funktionsprofile zur Verschlüsselung Ihrer Datenspeicher nutzen.
+* Vorhandene Storage-Funktionsprofile können nach einem Upgrade von einer früheren Version der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) auf die aktuelle Version der virtuellen Appliance für VSC, VASA Provider und SRA nicht mehr geändert werden.
++
+Die Profile der älteren Storage-Funktionen werden zur Rückwärtskompatibilität aufbewahrt. Wenn die Standardvorlagen nicht verwendet werden, dann während des Upgrades auf die aktuelle Version der virtuellen Appliance für VSC, VASA Provider und SRA, werden die vorhandenen Vorlagen überschrieben, um die neuen QoS-Kennzahlen zur Performance der Storage-Funktionsprofile wiederzugeben.
+
+* Sie können die alten Storage-Funktionsprofile nicht ändern oder verwenden, um neue virtuelle Datastores oder VM Storage-Richtlinien bereitzustellen.
+* Sie müssen für alle neuen Datenspeicher neue Storage-Funktionsprofile verwenden.
+

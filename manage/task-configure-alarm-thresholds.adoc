@@ -1,0 +1,41 @@
+---
+permalink: manage/task-configure-alarm-thresholds.html 
+sidebar: sidebar 
+keywords: configuring, alarm, thresholds, 
+summary: Sie können VSC verwenden, um Alarme einzustellen, um Sie zu benachrichtigen, wenn die Volumenschwellenwerte und Aggregat-Schwellenwerte die festgelegten Grenzwerte erreichen. 
+---
+= Konfigurieren der Alarmschwellenwerte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können VSC verwenden, um Alarme einzustellen, um Sie zu benachrichtigen, wenn die Volumenschwellenwerte und Aggregat-Schwellenwerte die festgelegten Grenzwerte erreichen.
+
+.Schritte
+. Klicken Sie auf der Seite Virtual Storage Console *Home* auf *Einstellungen*.
+. Klicken Sie Auf *Einstellungen Für Unified Appliance*.
+. Geben Sie die Prozentwerte für das Feld *beinahe volle Schwelle (%)* und das Feld *Vollschwellenwert (%)* sowohl für die Lautstärkeralarmschwellenwerte als auch für die aggregierten Alarmschwellenwerte an.
++
+Beim Festlegen der Werte müssen Sie die folgenden Informationen berücksichtigen:
+
++
+** Durch Klicken auf *Zurücksetzen* werden die Schwellenwerte auf die vorherigen Werte zurückgesetzt.
++
+Durch Klicken auf *Zurücksetzen* werden die Schwellenwerte nicht auf die Standardwerte von 80 Prozent für „`nahezu voll`“ und 90 Prozent für „`voll`“ zurückgesetzt.
+
+** Es gibt zwei Möglichkeiten, die Werte festzulegen:
++
+*** Mithilfe der nach-oben- und nach-unten-Pfeile neben den Werten können Sie die Schwellenwerte anpassen.
+*** Sie können die Pfeile auf der Trackleiste unterhalb der Werte verschieben, um die Schwellenwerte anzupassen.
+
+
+** Der niedrigste Wert, den Sie für das Feld *Full Threshold (%)* für Volumen und Aggregate einstellen können, beträgt 6 Prozent.
+
+
+. Klicken Sie nach der Angabe der erforderlichen Werte auf *Anwenden*.
++
+Sie müssen für Lautstärkeralarm und Aggregat-Alarm auf *Apply* klicken.
+
+

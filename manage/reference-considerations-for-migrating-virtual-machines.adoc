@@ -1,0 +1,59 @@
+---
+permalink: manage/reference-considerations-for-migrating-virtual-machines.html 
+sidebar: sidebar 
+keywords: considerations, for, migrating, or, cloning, virtual, machines, 
+summary: Bei der Migration von virtuellen Maschinen in Ihr Rechenzentrum sollten Sie einige Überlegungen beachten. 
+---
+= Überlegungen bei der Migration oder dem Klonen von Virtual Machines
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Migration von virtuellen Maschinen in Ihr Rechenzentrum sollten Sie einige Überlegungen beachten.
+
+
+
+== Migrieren Sie geschützte Virtual Machines
+
+Sie können die geschützten virtuellen Maschinen migrieren in:
+
+* Derselbe VVols-Datastore auf einem anderen ESXi-Host
+* Unterschiedliche kompatible VVols-Datastores auf demselben ESXi-Host
+* Unterschiedliche kompatible VVols-Datastores auf einem anderen ESXi-Host
+
+
+Wird eine Virtual Machine zu einem anderen FlexVol Volume migriert, so wird auch die jeweilige Metadatendatei mit den Informationen der virtuellen Maschine aktualisiert. Wenn eine Virtual Machine zu einem anderen ESXi-Host, aber demselben Storage migriert wird, wird die zugrunde liegende FlexVol-Volume-Metadatei nicht verändert.
+
+
+
+== Klonen geschützter Virtual Machines
+
+Sie können geschützte Virtual Machines folgendermaßen klonen:
+
+* Derselbe Container desselben FlexVol Volumes mithilfe der Replizierungsgruppe
++
+Die Metadatendatei dieses FlexVol Volume wird mit den geklonten Virtual Machines aktualisiert.
+
+* Derselbe Container eines anderen FlexVol Volumes unter Verwendung der Replizierungsgruppe
++
+Das FlexVol Volume, auf dem die geklonte Virtual Machine gespeichert wird, wird die Metadatendatei mit den Details der geklonten Virtual Machine aktualisiert.
+
+* Unterschiedlicher Container oder VVols Datastore
++
+Dem FlexVol Volume, auf dem die geklonte Virtual Machine gespeichert wird, werden die Metadatendatei die Details der Virtual Machine aktualisiert.
+
+
+
+VMware unterstützt derzeit keine in einer VM-Vorlage geklonte Virtual Machine.
+
+Der Klon einer geschützten Virtual Machine wird unterstützt.
+
+
+
+== Snapshots von Virtual Machines
+
+Derzeit werden nur Snapshots virtueller Maschinen ohne Speicher unterstützt. Wenn auf einer virtuellen Maschine Snapshot mit Arbeitsspeicher vorhanden ist, wird die virtuelle Maschine nicht als Schutz betrachtet.
+
+Sie können auch nicht ungesicherte virtuelle Maschine mit Speicher-Snapshot schützen. Für diesen Release sollten Sie den Speicher-Snapshot löschen, bevor Sie den Schutz für die virtuelle Maschine aktivieren.

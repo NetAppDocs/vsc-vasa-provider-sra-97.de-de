@@ -1,0 +1,64 @@
+---
+permalink: manage/concept-what-vasa-provider-reports-do.html 
+sidebar: sidebar 
+keywords: VSC, VASA Provider, and SRA 
+summary: 'VVols Berichte enthalten detaillierte Informationen zu VMware Virtual Volumes (VVols) Datastores und den Virtual Machines, die auf diesen Datastores erstellt werden. Das vVol Dashboard ermöglicht Ihnen, potenzielle Probleme mit den VVols Datastores und Virtual Machines in Ihrem vCenter Server zu prüfen und zu identifizieren.' 
+---
+= VVols Berichte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VVols Berichte enthalten detaillierte Informationen zu VMware Virtual Volumes (VVols) Datastores und den Virtual Machines, die auf diesen Datastores erstellt werden. Das vVol Dashboard ermöglicht Ihnen, potenzielle Probleme mit den VVols Datastores und Virtual Machines in Ihrem vCenter Server zu prüfen und zu identifizieren.
+
+Sie können Berichte anzeigen, organisieren und exportieren. Die Daten für die VVols-Datastores und den Bericht Virtual Machines werden vom ONTAP zusammen mit den OnCommand API Services bereitgestellt.
+
+VVols bietet die folgenden vordefinierten Berichte:
+
+* VVol Datastore-Bericht
+* VVol VM Report
+
+
+
+
+== VVol Datastore-Bericht
+
+Das Menü *vVol Datastore Report* enthält Informationen zu den folgenden Parametern für Datenspeicher:
+
+* Name des VVols-Datastores
+* Freier Speicherplatz
+* Genutzter Speicherplatz
+* Gesamter Speicherplatz
+* Prozentsatz des genutzten Speicherplatzes
+* Prozentsatz des verfügbaren Speicherplatzes
+* IOPS
+* Latenz
+
+
+Sie können auch die Zeit überprüfen, zu der der Bericht generiert wurde. Das Menü *vVol Datastore Report* ermöglicht es Ihnen, den Bericht nach Ihren Anforderungen zu organisieren und dann den organisierten Bericht über die Schaltfläche *Export in CSV* zu exportieren. Jeder SAN VVols Datastore-Name im Bericht ist ein Link, der zur Registerkarte *Monitor* des ausgewählten SAN VVols Datastore navigiert. Dort können Sie die Performance-Kennzahlen anzeigen.
+
+
+
+== VVols Virtual Machine Report
+
+Das Menü *vVol Virtual Machine Summary Report* enthält die folgenden Performance-Metriken für alle Virtual Machines, die die SAN VVols-Datastores nutzen, die von VASA Provider für ONTAP für einen ausgewählten vCenter Server bereitgestellt werden:
+
+* Name der virtuellen Maschine
+* Engagierte Kapazität
+* Verfügbarkeit
+* Durchsatz
++
+Der Bericht zeigt an, ob die virtuelle Maschine eingeschaltet oder ausgeschaltet ist.
+
+* Logischer Speicherplatz
+* Host
+* Stromzustand
+* Latenz
++
+Der Bericht zeigt die Latenz für Virtual Machines über alle VVols Datastores an, die den Virtual Machines zugeordnet sind.
+
+
+
+Jeder Name einer virtuellen Maschine im Bericht ist ein Link zur Registerkarte *Monitor* der ausgewählten virtuellen Maschine. Sie können den Bericht der virtuellen Maschine gemäß Ihren Anforderungen organisieren und den Bericht in exportieren `.CSV` Formatieren Sie den Bericht und speichern Sie ihn dann auf Ihrem lokalen System. Der Zeitstempel des Berichts wird an den gespeicherten Bericht angehängt.

@@ -1,0 +1,24 @@
+---
+permalink: manage/concept-what-reports-do.html 
+sidebar: sidebar 
+keywords: what, reports, do, 
+summary: Berichte enthalten detaillierte Informationen zu Datastores und Virtual Machines, sodass Sie potenzielle Probleme bei Datastores und Virtual Machines in Ihrem vCenter Server prüfen und identifizieren können. 
+---
+= Was Berichte tun
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Berichte enthalten detaillierte Informationen zu Datastores und Virtual Machines, sodass Sie potenzielle Probleme bei Datastores und Virtual Machines in Ihrem vCenter Server prüfen und identifizieren können.
+
+Sie können Berichte anzeigen, sortieren und exportieren.
+
+Virtual Storage Console (VSC) bietet die folgenden vordefinierten Berichte:
+
+* Datastore Report
+* Virtual Machine Report
+* VVol Datastore Report
+* VVol Virtual Machine Report
+

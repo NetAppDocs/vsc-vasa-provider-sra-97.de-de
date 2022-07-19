@@ -1,0 +1,32 @@
+---
+permalink: deploy/concept-configure-high-availability-for-virtual-appliance-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: configuring, high, availability, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'Die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) unterstützt eine Konfiguration (HA), sodass während eines Ausfalls unterbrechungsfreie Funktionen von VSC, VASA Provider und SRA verfügbar gemacht werden.' 
+---
+= Konfigurieren Sie Hochverfügbarkeit für die virtuelle Appliance für VSC, VASA Provider und SRA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) unterstützt eine Konfiguration (HA), sodass während eines Ausfalls unterbrechungsfreie Funktionen von VSC, VASA Provider und SRA verfügbar gemacht werden.
+
+Die virtuelle Appliance für VSC, VASA Provider und SRA basiert auf der VMware vSphere (HA)-Funktion und der vSphere Fehlertoleranz (FT)-Funktion. (HA)-Lösung bietet eine schnelle Recovery nach Ausfällen. Die folgenden Ursachen sind:
+
+* Host-Ausfall
+* Netzwerkausfall
+* Fehler bei Virtual Machine (Ausfall des Gastbetriebssystems)
+* Absturz der Applikation (VSC, VASA Provider und SRA)
+
+
+Auf der virtuellen Appliance ist keine zusätzliche Konfiguration erforderlich. Nur vCenter-Server und ESXi-Hosts müssen mit der VMware vSphere HA-Funktion oder der vSphere FT-Funktion basierend auf ihren Anforderungen konfiguriert werden. Sowohl HA als AUCH FT erfordern Cluster-Hosts zusammen mit Shared Storage. FT hat zusätzliche Anforderungen und Einschränkungen.
+
+Neben der VMware vSphere HA Lösung und der vSphere FT Lösung unterstützt die virtuelle Appliance auch dabei, VSC, VASA Provider und SRA Services jederzeit verfügbar zu halten. Der Watchdog-Prozess der virtuellen Appliance überwacht regelmäßig alle drei Dienste und startet sie automatisch neu, wenn Fehler erkannt werden. So wird Applikationsausfälle verhindert.
+
+[NOTE]
+====
+VCenter HA wird von der virtuellen Appliance für VSC, VASA Provider und SRA nicht unterstützt.
+
+====

@@ -1,0 +1,37 @@
+---
+permalink: manage/task-check-for-datastore-compliance-with-the-mapped-storage-capability-profile.html 
+sidebar: sidebar 
+keywords: verifying, datastore, compliance, with, the, mapped, storage, capability, profile, 
+summary: Sie können schnell überprüfen, ob Ihre Datenspeicher den Storage-Funktionsprofilen entsprechen, die den Datastores zugeordnet sind. 
+---
+= Überprüfen Sie die Datastore-Compliance mit dem zugeordneten Storage-Funktionsprofil
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können schnell überprüfen, ob Ihre Datenspeicher den Storage-Funktionsprofilen entsprechen, die den Datastores zugeordnet sind.
+
+.Bevor Sie beginnen
+* Sie müssen Ihre VASA Provider Instanz über Virtual Storage Console für VMware vSphere (VSC) registriert haben.
+* VSC muss Ihren Storage erkannt haben.
+
+
+.Schritte
+. Klicken Sie auf der VSC *Startseite* Seite auf *Storage Mapping*.
+. Überprüfen Sie die Informationen in der Spalte *Compliance Status*, um nicht konforme Datastores zu identifizieren und die Warnungen aus Gründen der Nichteinhaltung zu prüfen.
++
+[NOTE]
+====
+Wenn Sie auf die *COMPLIANCE-PRÜFUNG*-Schaltfläche klicken, führt VSC eine erneute Bestandsaufnahme für den gesamten Storage durch, was einige Minuten dauern kann.
+
+====
++
+Wenn ein Datastore nicht mehr mit seinem Profil kompatibel ist, wird in der Spalte *Compliance Status* eine Warnmeldung angezeigt, die den Grund für die Nichteinhaltung angibt. Beispielsweise kann für ein Profil eine Komprimierung erforderlich sein. Wenn sich diese Einstellung für den Storage geändert hat, wird Komprimierung nicht mehr verwendet und der Datenspeicher ist nicht kompatibel.
+
+
+
+Wenn Sie einen Datenspeicher feststellen, der nicht mit seinem Profil kompatibel ist, können Sie die Einstellungen auf dem Volume für den Datastore ändern, um den Datastore kompatibel zu machen. Alternativ können Sie dem Datenspeicher ein neues Profil zuweisen.
+
+Sie können die Einstellungen auf der Seite *Storage Capability Profile* ändern.

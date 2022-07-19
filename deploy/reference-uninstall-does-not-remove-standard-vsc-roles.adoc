@@ -1,0 +1,20 @@
+---
+permalink: deploy/reference-uninstall-does-not-remove-standard-vsc-roles.html 
+sidebar: sidebar 
+keywords: uninstall, does, not, remove, standard, vsc, roles, 
+summary: 'Bei der Deinstallation der Virtual Storage Console für VMware vSphere (VSC) bleiben die VSC Standardrollen erhalten. Das erwartete Verhalten und es wirkt sich nicht auf die Performance der VSC aus oder auf die Fähigkeit zum Upgrade auf eine neue Version von VSC. Sie können diese Rollen bei Bedarf manuell löschen.' 
+---
+= Durch die Deinstallation werden keine Standard-VSC-Rollen entfernt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Deinstallation der Virtual Storage Console für VMware vSphere (VSC) bleiben die VSC Standardrollen erhalten. Das erwartete Verhalten und es wirkt sich nicht auf die Performance der VSC aus oder auf die Fähigkeit zum Upgrade auf eine neue Version von VSC. Sie können diese Rollen bei Bedarf manuell löschen.
+
+Während durch die Deinstallation die VSC-Rollen nicht entfernt werden, werden bei der Deinstallation die lokalisierten Namen für die VSC-spezifischen Berechtigungen entfernt und ihr folgendes Präfix angehängt: „`XXX fehlende Berechtigung`“. Wenn Sie zum Beispiel das Dialogfeld vSphere *Rolle bearbeiten* nach der Installation von VSC öffnen, werden die VSC-spezifischen Berechtigungen als aufgeführt angezeigt.
+
+Dieses Verhalten geschieht, weil vCenter Server keine Option zum Entfernen von Berechtigungen bietet.
+
+Wenn Sie VSC neu installieren oder ein Upgrade auf eine neuere Version von VSC durchführen, werden alle standardmäßigen VSC-Rollen und VSC-spezifischen Berechtigungen wiederhergestellt.

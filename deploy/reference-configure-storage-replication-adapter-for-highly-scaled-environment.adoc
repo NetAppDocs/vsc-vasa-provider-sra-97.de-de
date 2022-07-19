@@ -1,0 +1,43 @@
+---
+permalink: deploy/reference-configure-storage-replication-adapter-for-highly-scaled-environment.html 
+sidebar: sidebar 
+keywords: configuration, storage, replication, adapter, highly, scaled, environment, 
+summary: 'Um in stark skalierten Umgebungen optimal arbeiten zu können, müssen Sie die Storage-Timeout-Intervalle gemäß den empfohlenen Einstellungen für Storage Replication Adapter (SRA) konfigurieren.' 
+---
+= Konfiguration des Storage Replication Adapter für Umgebungen mit hohem Skalierbarkeit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um in stark skalierten Umgebungen optimal arbeiten zu können, müssen Sie die Storage-Timeout-Intervalle gemäß den empfohlenen Einstellungen für Storage Replication Adapter (SRA) konfigurieren.
+
+
+
+== Einstellungen für Speicheranbieter
+
+* Sie müssen den Wert des erhöhen `StorageProvider.resignatureTimeout` Einstellung von 900 Sekunden auf 12000 Sekunden.
+* Sie müssen die aktivieren `StorageProvider.autoResignatureMode` Option.
+
+
+Weitere Informationen zum Ändern der Speicheranbieter-Einstellungen finden Sie in der VMware-Dokumentation.
+
+https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Dokumentation zu VMware vSphere: Ändern der Storage Provider-Einstellungen"^]
+
+
+
+== Speichereinstellungen
+
+Sie müssen den Wert des festlegen `storage.commandTimeout` Timeout-Intervall für Umgebungen mit hoher Skalierbarkeit auf 12,000 Sekunden
+
+[NOTE]
+====
+Das angegebene Zeitüberschreitungsintervall ist der Höchstwert. Sie müssen nicht warten, bis die maximale Zeitüberschreitung erreicht ist. Die meisten Befehle sind innerhalb des festgelegten maximalen Timeout-Intervalls abgeschlossen.
+
+====
+https://kb.netapp.com/app/answers/answer_view/a_id/1001111["Antwort auf die NetApp Knowledgebase 1001111: NetApp Storage Replication Adapter 4.0/7.X für den ONTAP Sizing Guide"^]
+
+Die VMware Dokumentation zum Ändern der SAN-Provider-Einstellungen enthält weitere Informationen.
+
+https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Dokumentation Zum Vmware Site Recovery Manager: Storage-Einstellungen Ändern"^]

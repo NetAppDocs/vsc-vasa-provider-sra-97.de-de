@@ -1,0 +1,59 @@
+---
+permalink: deploy/reference-deploment-customization-requirements.html 
+sidebar: sidebar 
+keywords: deployment, customization, considerations, 
+summary: Bei der Implementierung der virtuellen Appliance für VSC, VASA Provider und SRA müssen Sie einige Einschränkungen berücksichtigen. 
+---
+= Überlegungen zur Anpassung der Implementierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Implementierung der virtuellen Appliance für VSC, VASA Provider und SRA müssen Sie einige Einschränkungen berücksichtigen.
+
+
+
+== Benutzerpasswort für den Appliance-Administrator
+
+Sie dürfen keine Leerzeichen im Administratorpasswort verwenden.
+
+
+
+== Anmeldedaten für die Appliance-Wartungskonsole
+
+Sie müssen über den Benutzernamen „`maint`“ auf die Wartungskonsole zugreifen. Sie können das Passwort für den Benutzer „`maint`“ während der Bereitstellung festlegen. Sie können das Passwort über das Menü *Anwendungskonfiguration* der Wartungskonsole Ihrer virtuellen Appliance für VSC, VASA Provider und SRA ändern.
+
+
+
+== Anmeldedaten für vCenter Server-Administrator
+
+Sie können die Administratoranmeldedaten für vCenter Server festlegen, während Sie die virtuelle Appliance für VSC, VASA Provider und SRA implementieren.
+
+Wenn sich das Kennwort für den vCenter Server ändert, können Sie das Kennwort für den Administrator mithilfe der folgenden URL aktualisieren: `_https_://<IP>:8143/Register.html` Dabei handelt es sich die IP-Adresse der virtuellen Appliance für VSC, VASA Provider und SRA, die Sie während der Implementierung bereitstellen.
+
+
+
+== IP-Adresse des vCenter Server
+
+* Sie sollten die IP-Adresse (IPv4 oder IPv6) der vCenter Server Instanz angeben, in der die virtuelle Appliance für VSC, VASA Provider und SRA registriert werden soll.
++
+Der generierte Typ von VSC- und VASA-Zertifikaten hängt von der IP-Adresse (IPv4 oder IPv6) ab, die Sie während der Bereitstellung bereitgestellt haben. Wenn Sie während der Bereitstellung der virtuellen Appliance für VSC, VASA Provider und SRA keine statischen IP-Details und kein DHCP eingegeben haben, bietet das Netzwerk sowohl IPv4- als auch IPv6-Adressen.
+
+* Die virtuelle Appliance für VSC, VASA Provider und SRA IP-Adresse, die zur Registrierung mit vCenter Server verwendet wird, hängt von der Art der vCenter Server IP-Adresse (IPv4 oder IPv6) ab, die im Implementierungsassistenten eingegeben wurde.
++
+Sowohl VSC- als auch VASA-Zertifikate werden mit derselben IP-Adresse generiert, die bei der vCenter Server Registrierung verwendet wird.
+
+
+
+[NOTE]
+====
+IPv6 wird nur ab vCenter Server 6.7 unterstützt.
+
+====
+
+
+== Netzwerkeigenschaften von Appliances
+
+Wenn Sie DHCP nicht verwenden, geben Sie einen gültigen DNS-Hostnamen (nicht qualifiziert) sowie die statische IP-Adresse für die virtuelle Appliance für VSC, VASA Provider und SRA und die anderen Netzwerkparameter an. Alle diese Parameter sind für eine ordnungsgemäße Installation und Betrieb erforderlich.

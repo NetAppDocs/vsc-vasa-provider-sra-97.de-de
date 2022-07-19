@@ -1,0 +1,33 @@
+---
+permalink: deploy/reference-sra-fails-to-perform-optimally-in-a-highly-scaled-environment.html 
+sidebar: sidebar 
+keywords: sra, fails, to, perform, optimally, highly, scaled, environment, 
+summary: SRA scheitert in einer stark skalierten Umgebung an der optimalen Performance 
+---
+= SRA scheitert in einer stark skalierten Umgebung an der optimalen Performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Problem
+
+SRA führt in einer stark skalierten Umgebung nicht optimal aus (wenn VMware Maximalwerte wie 250 PGS, 250 RPS, 5000 VMs ausgeführt hat) und kann zu Problemen wie Timeout-Fehlern oder ONTAP-Timeouts führen.
+
+
+
+== Korrekturmaßnahme
+
+Sie müssen die Timeout-Intervalle ändern.
+
+link:reference-configure-storage-replication-adapter-for-highly-scaled-environment.html["Konfiguration des Storage Replication Adapter für Umgebungen mit hohem Skalierbarkeit"]
+
+[NOTE]
+====
+Auch die Speichereinstellungen für Skalierung und Performance Ihrer virtuellen Appliance für VSC, VASA Provider und SRA lassen sich in stark skalierten Setups ändern.
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/tune_memory_settings_of_VM_VSC%2C_VASA_Provider%2C_and_SRA_for_scale_and_performance[]
+
+====

@@ -1,0 +1,44 @@
+---
+permalink: manage/task-configure-resource-mappings.html 
+sidebar: sidebar 
+keywords: configuring, resource, mappings, 
+summary: Sie müssen Ihre Ressourcen am geschützten Standort und am Recovery-Standort zuordnen, damit Virtual Machines für ein Failover zu einer oder anderen Host-Gruppe konfiguriert werden. 
+---
+= Konfigurieren von Ressourcenzuordnungen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen Ihre Ressourcen am geschützten Standort und am Recovery-Standort zuordnen, damit Virtual Machines für ein Failover zu einer oder anderen Host-Gruppe konfiguriert werden.
+
+Sie müssen die geschützten und die Recovery-Standorte miteinander verbunden haben.
+
+++++
+
+[NOTE]
+====
+Im Site Recovery Manager (SRM) können Ressourcen in Ressourcen-Pools, ESXi Hosts oder vSphere Clustern zusammengefasst werden.
+
+====
+.Schritte
+. Melden Sie sich bei Ihrem vCenter Server an, und klicken Sie auf das Menü:Site Recovery[Sites].
+. Wählen Sie Ihre geschützte Seite aus, und klicken Sie dann auf *Verwalten*.
+. Wählen Sie auf der Registerkarte Verwalten die Option *Ressourcenzuordnungen* aus.
+. Klicken Sie auf das image:../media/new-resource-mappings.gif[""] Symbol zum Erstellen einer neuen Ressourcenzuordnung.
++
+Der Assistent „Ressourcenzuordnung erstellen“ wird angezeigt.
+
+. Führen Sie im Assistenten * Ressourcen-Mapping erstellen* folgende Schritte aus:
++
+.. Wählen Sie *Zuordnungen automatisch für Ressource vorbereiten mit übereinstimmenden Namen* und klicken Sie auf *Weiter*.
+.. Wählen Sie die erforderlichen Rechenzentrumsobjekte für die geschützten und Wiederherstellungsstandorte aus, und klicken Sie auf *Zuordnungen hinzufügen*.
+.. Klicken Sie auf *Weiter*, nachdem Zuordnungen erfolgreich erstellt wurden.
+.. Wählen Sie das Objekt aus, das früher zum Erstellen einer umgekehrten Zuordnung verwendet wurde, und klicken Sie dann auf *Fertig stellen*.
+
+
+
+
+Auf der Seite Ressourcenzuordnungen werden die geschützten Standortressourcen und die Ressourcen des Recovery-Standorts angezeigt. Sie können die gleichen Schritte für andere Netzwerke in Ihrer Umgebung befolgen.

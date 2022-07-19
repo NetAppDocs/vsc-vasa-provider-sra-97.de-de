@@ -1,0 +1,30 @@
+---
+permalink: manage/task-verify-the-replicated-storage-environment.html 
+sidebar: sidebar 
+keywords: verifying, replicated, storage, systems, 
+summary: 'Sie müssen überprüfen, ob der geschützte Standort und der Recovery-Standort nach der Konfiguration des Storage Replication Adapter (SRA) erfolgreich miteinander gepaart wurden. Das replizierte Storage-System muss sowohl vom geschützten als auch vom Recovery-Standort erkannt werden können.' 
+---
+= Überprüfung replizierter Storage-Systeme
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen überprüfen, ob der geschützte Standort und der Recovery-Standort nach der Konfiguration des Storage Replication Adapter (SRA) erfolgreich miteinander gepaart wurden. Das replizierte Storage-System muss sowohl vom geschützten als auch vom Recovery-Standort erkannt werden können.
+
+.Bevor Sie beginnen
+* Sie müssen Ihr Storage-System konfiguriert haben.
+* Sie müssen den geschützten Standort und den Recovery-Standort mit dem SRM Array Manager gekoppelt haben.
+* Bevor Sie den Test-Failover-Betrieb und den Failover-Vorgang für SRA durchführen, müssen Sie die Lizenz und die SnapMirror Lizenz aktivieren.
+
+
+.Schritte
+. Melden Sie sich bei Ihrem vCenter Server an.
+. Navigieren Sie zum Menü:Site Recovery[Array Based Replication].
+. Wählen Sie die gewünschte SVM aus, und überprüfen Sie die entsprechenden Details in den *Array-Paaren*.
++
+Die Speichersysteme müssen am geschützten Standort und am Recovery-Standort mit dem Status „`Enabled`“ erkannt werden.
+
+

@@ -1,0 +1,30 @@
+---
+permalink: manage/concept-how-to-send-comments-about-documentation-and-receive-update-notifications-netapp-post-preface.html 
+sidebar: sidebar 
+keywords: doccomments, quality, documentation, high-quality, documentation, how, to, send, comments, about, documentation, and, receive, update, notifications, 
+summary: 'Sie können uns dabei helfen, die Qualität unserer Dokumentation zu verbessern, indem Sie uns Ihr Feedback senden. Sie erhalten eine automatische Benachrichtigung, wenn die Dokumentation auf Produktionsebene (GA/FCS) zuerst veröffentlicht wird oder wenn wichtige Änderungen an bestehenden Dokumenten auf Produktionsebene vorgenommen werden.' 
+---
+= So senden Sie Kommentare zu Dokumentation und erhalten Update-Benachrichtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können uns dabei helfen, die Qualität unserer Dokumentation zu verbessern, indem Sie uns Ihr Feedback senden. Sie erhalten eine automatische Benachrichtigung, wenn die Dokumentation auf Produktionsebene (GA/FCS) zuerst veröffentlicht wird oder wenn wichtige Änderungen an bestehenden Dokumenten auf Produktionsebene vorgenommen werden.
+
+Falls Sie Vorschläge zur Verbesserung dieses Dokuments haben, senden Sie uns Ihre Anmerkungen per E-Mail.
+
+link:mailto:doccomments@netapp.com["doccomments@netapp.com"^]
+
+Um uns zu helfen, Ihre Kommentare an die richtige Abteilung zu leiten, geben Sie in die Betreffzeile den Produktnamen, die Version und das Betriebssystem ein.
+
+Wenn Sie bei Veröffentlichung der produktionsrelevanten Dokumentation automatisch benachrichtigt oder wichtige Änderungen an bestehenden Dokumenten auf Produktionsebene vorgenommen werden möchten, folgen Sie dem Twitter Account @NetAppDoc.
+
+Sie können uns auch unter folgender Adresse kontaktieren:
+
+* NetApp Inc., 1395 Crossman Ave., Sunnyvale, CA 94089, USA
+* Telefon: +1 (408) 822-6000
+* Fax: +1 (408) 822-4501
+* Support-Telefon: +1 (888) 463-8277
+

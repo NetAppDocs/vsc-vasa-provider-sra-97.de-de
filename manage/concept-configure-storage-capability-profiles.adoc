@@ -1,0 +1,14 @@
+---
+permalink: manage/concept-configure-storage-capability-profiles.html 
+sidebar: sidebar 
+keywords: creating, storage, capability, profiles, provider 
+summary: MIT VASA Provider for ONTAP können Sie Storage-Funktionsprofile erstellen und diesen Ihrem Storage zuordnen. Auf diese Weise können Sie die Konsistenz im gesamten Storage gewährleisten. Mit VASA Provider können Sie auch die Compliance zwischen dem Storage und den Storage-Funktionsprofilen prüfen. 
+---
+= Erstellung von Storage-Funktionsprofilen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MIT VASA Provider for ONTAP können Sie Storage-Funktionsprofile erstellen und diesen Ihrem Storage zuordnen. Auf diese Weise können Sie die Konsistenz im gesamten Storage gewährleisten. Mit VASA Provider können Sie auch die Compliance zwischen dem Storage und den Storage-Funktionsprofilen prüfen.

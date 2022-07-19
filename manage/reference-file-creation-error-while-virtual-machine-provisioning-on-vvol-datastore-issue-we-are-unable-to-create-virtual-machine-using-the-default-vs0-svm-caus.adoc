@@ -1,0 +1,37 @@
+---
+permalink: manage/reference-file-creation-error-while-virtual-machine-provisioning-on-vvol-datastore-issue-we-are-unable-to-create-virtual-machine-using-the-default-vs0-svm-caus.html 
+sidebar: sidebar 
+keywords: error, provisioning, virtual, machine, troubleshooting, error, 
+summary: Fehler bei der Dateierstellung während der Bereitstellung von Virtual Machines auf VVol Datastores 
+---
+= Fehler bei der Dateierstellung während der Bereitstellung von Virtual Machines auf VVol Datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== Problem
+
+Es ist nicht möglich, eine Virtual Machine mit der Standard Storage Virtual Machine (SVM) oder einer gemischten Storage Virtual Machine (SVM) zu erstellen, auf der IPv6- und IPv4-Daten-LIFS konfiguriert sind.
+
+
+
+== Ursache
+
+Das Problem tritt auf, weil die Standard-vs0 sowohl IPv6- als auch IPv4-Daten-LIFs hat und kein reiner IPv4-Datastore ist.
+
+
+
+== Korrekturmaßnahme
+
+Sie können eine virtuelle Maschine mit vs0 mit den folgenden Schritten bereitstellen:
+
+. Verwenden Sie System Manager, um alle IPv6 LIFs zu deaktivieren.
+. Entdecken Sie den Cluster neu.
+. Stellen Sie eine Virtual Machine im VVol Datastore bereit, auf dem die Bereitstellung gescheitert ist.
++
+Die virtuelle Maschine wurde erfolgreich bereitgestellt.
+
+

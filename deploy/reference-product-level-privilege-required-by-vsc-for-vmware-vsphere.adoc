@@ -1,0 +1,36 @@
+---
+permalink: deploy/reference-product-level-privilege-required-by-vsc-for-vmware-vsphere.html 
+sidebar: sidebar 
+keywords: product-level, privilege, required, vsc, vmware, vsphere, 
+summary: Um auf die Virtual Storage Console für VMware vSphere GUI zuzugreifen, müssen Sie über die VSC-spezifische View Berechtigung auf Produktebene, die auf der richtigen vSphere Objektebene zugewiesen ist, verfügen. Wenn Sie sich ohne diese Berechtigung anmelden, zeigt die VSC eine Fehlermeldung an, wenn Sie auf das NetApp Symbol klicken und verhindert, dass Sie auf die VSC zugreifen. 
+---
+= Berechtigung auf Produktebene erforderlich von VSC für VMware vSphere
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um auf die Virtual Storage Console für VMware vSphere GUI zuzugreifen, müssen Sie über die VSC-spezifische View Berechtigung auf Produktebene, die auf der richtigen vSphere Objektebene zugewiesen ist, verfügen. Wenn Sie sich ohne diese Berechtigung anmelden, zeigt die VSC eine Fehlermeldung an, wenn Sie auf das NetApp Symbol klicken und verhindert, dass Sie auf die VSC zugreifen.
+
+In den folgenden Informationen wird die VSC Berechtigung auf Produktebene View beschrieben:
+
+[cols="1a,1a,1a"]
+|===
+| Berechtigung | Beschreibung | Zuweisungsebene 
+
+
+ a| 
+Anzeigen
+ a| 
+Sie können auf die VSC GUI zugreifen. Diese Berechtigung ermöglicht Ihnen nicht, Aufgaben in der VSC auszuführen. Zum Ausführen von VSC Aufgaben müssen Sie über die richtigen VSC-spezifischen und nativen vCenter Server-Berechtigungen für diese Aufgaben verfügen.
+ a| 
+Die Zuweisungsebene legt fest, welche Teile der Benutzeroberfläche angezeigt werden können.
+
+Durch das Zuweisen der View-Berechtigung im Root-Objekt (Ordner) können Sie VSC durch Klicken auf das NetApp Symbol eingeben.
+
+Sie können die View-Berechtigung einer anderen vSphere Objektebene zuweisen. Dabei ist jedoch die VSC-Menüs, die Sie anzeigen und verwenden können, beschränkt.
+
+Das Root-Objekt ist der empfohlene Ort, um alle Berechtigungen zuzuweisen, die die View-Berechtigung enthalten.
+
+|===

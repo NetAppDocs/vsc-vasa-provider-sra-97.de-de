@@ -1,0 +1,111 @@
+---
+permalink: deploy/task-access-virtual-appliance-maiintenance-console-options.html 
+sidebar: sidebar 
+keywords: accessing, maintenance, console, options, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'Ihre Applikations-, System- und Netzwerkkonfigurationen können über die Wartungskonsole der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) gemanagt werden. Sie können Ihr Administratorkennwort und Ihr Wartungskennwort ändern. Außerdem können Sie Supportpakete generieren, verschiedene Protokollebenen festlegen, TLS-Konfigurationen anzeigen und verwalten und die Remote-Diagnose starten.' 
+---
+= Greifen Sie auf die Optionen der Wartungskonsole der virtuellen Appliance für VSC, VASA Provider und SRA zu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ihre Applikations-, System- und Netzwerkkonfigurationen können über die Wartungskonsole der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) gemanagt werden. Sie können Ihr Administratorkennwort und Ihr Wartungskennwort ändern. Außerdem können Sie Supportpakete generieren, verschiedene Protokollebenen festlegen, TLS-Konfigurationen anzeigen und verwalten und die Remote-Diagnose starten.
+
+Nach der Implementierung der virtuellen Appliance für VSC, VASA Provider und SRA müssen die VMware Tools installiert sein.
+
+.Über diese Aufgabe
+* Sie müssen „`maint`“ als Benutzername und das bei der Implementierung konfigurierte Passwort verwenden, um sich bei der Wartungskonsole der virtuellen Appliance für VSC, VASA Provider und SRA anzumelden.
+* Sie müssen ein Passwort für den Benutzer „`diag`“ festlegen, während Sie die Ferndiagnose aktivieren.
+
+
+.Schritte
+. Öffnen Sie die Registerkarte *Zusammenfassung* Ihrer bereitgestellten virtuellen Appliance.
+. Klicken Sie Auf image:../media/launch-maintenance-console.gif[""] Um die Wartungskonsole zu starten.
++
+Sie können auf die folgenden Optionen für die Wartungskonsole zugreifen:
+
++
+** *Anwendungskonfiguration*
++
+Folgende Optionen stehen zur Verfügung:
+
++
+*** Zeigt eine Zusammenfassung des Serverstatus an
+*** Starten Sie den Virtual Storage Console Service
+*** Beenden Sie den Virtual Storage Console Service
+*** Starten Sie VASA Provider und SRA Service
+*** Beenden Sie den VASA Provider und den SRA Service
+*** Ändern Sie das Benutzerpasswort „Administrator“
+*** Zertifikate erneut generieren
+*** Hard Reset KeyStore und Zertifikate
+*** Hard Reset-Datenbank
+*** ÄNDERN SIE DAS PROTOKOLL-Level für den Virtual Storage Console-Service
+*** Ändern Sie DIE PROTOKOLLEBENE für den VASA Provider und den SRA Service
+*** Anzeigen der TLS-Konfiguration
+*** Aktivieren des TLS-Protokolls
+*** Deaktivieren des TLS-Protokolls
+
+
+** *Systemkonfiguration*
++
+Folgende Optionen stehen zur Verfügung:
+
++
+*** Starten Sie die virtuelle Maschine neu
+*** Virtuelle Maschine herunterfahren
+*** Ändern Sie das Benutzerpasswort „Wartung“
+*** Zeitzone ändern
+*** NTP-Server ändern
++
+Sie können eine IPv6-Adresse für Ihren NTP-Server angeben.
+
+*** SSH-Zugriff aktivieren/deaktivieren
+*** Erhöhen der Größe der Jail-Festplatte (/jail)
+*** Upgrade
+*** Installation der VMware Tools
+
+
+** *Netzwerkkonfiguration*
++
+Folgende Optionen stehen zur Verfügung:
+
++
+*** Zeigt die Einstellungen für die IP-Adresse an
+*** Ändern Sie die IP-Adresseinstellungen
++
+Sie können diese Option verwenden, um die IP-Adresse nach der Implementierung in IPv6 zu ändern.
+
+*** Zeigen Sie die Einstellungen für die Suche nach Domain-Namen an
+*** Ändern Sie die Einstellungen für die DNS-Suche
+*** Statische Routen anzeigen
+*** Ändern Sie statische Routen
++
+Sie können diese Option verwenden, um eine IPv6-Route hinzuzufügen.
+
+*** Änderungen speichern
+*** Ping an einen Host
++
+Sie können diese Option verwenden, um einen Ping an einen IPv6-Host zu senden.
+
+*** Standardeinstellungen wiederherstellen
+
+
+** *Support und Diagnose*
++
+Folgende Optionen stehen zur Verfügung:
+
++
+*** Erzeugen Sie das Support Bundle
+*** Zugriff auf die Diagnoseschale
+*** Remote-Diagnosezugriff aktivieren
+
+
+
+
+
+
+*Verwandte Informationen*
+
+xref:concept-virtual-storage-console-and-vasa-provider-log-files.adoc[Protokolldateien von VSC und VASA Provider]

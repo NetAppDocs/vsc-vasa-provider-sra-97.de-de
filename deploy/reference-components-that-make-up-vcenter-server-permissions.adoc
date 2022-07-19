@@ -1,0 +1,109 @@
+---
+permalink: deploy/reference-components-that-make-up-vcenter-server-permissions.html 
+sidebar: sidebar 
+keywords: components, vcenter, server, permissions, 
+summary: Der vCenter Server erkennt Berechtigungen und keine Berechtigungen. Jede vCenter Server-Berechtigung besteht aus drei Komponenten. 
+---
+= Komponenten von vCenter Server-Berechtigungen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der vCenter Server erkennt Berechtigungen und keine Berechtigungen. Jede vCenter Server-Berechtigung besteht aus drei Komponenten.
+
+Der vCenter Server verfügt über die folgenden Komponenten:
+
+* Mindestens eine Berechtigung (die Rolle)
++
+Die Berechtigungen definieren die Aufgaben, die ein Benutzer ausführen kann.
+
+* VSphere Objekt
++
+Das Objekt ist das Ziel für die Aufgaben.
+
+* Ein Benutzer oder eine Gruppe
++
+Der Benutzer oder die Gruppe definiert, wer die Aufgabe ausführen kann.
+
+
+
+Wie das folgende Diagramm veranschaulicht, müssen Sie alle drei Elemente haben, um eine Berechtigung zu erhalten.
+
+[NOTE]
+====
+In diesem Diagramm zeigen die grauen Felder Komponenten im vCenter Server an, und die weißen Felder geben die Komponenten an, die im Betriebssystem vorhanden sind, auf dem vCenter Server ausgeführt wird.
+
+====
+image::../media/permission-updated-graphic.png[Grafik mit Berechtigungen aktualisiert]
+
+
+
+== Berechtigungen
+
+Virtual Storage Console für VMware vSphere umfasst zwei Arten von Berechtigungen:
+
+* Native vCenter Server-Berechtigungen
++
+Diese Berechtigungen werden mit dem vCenter Server geliefert.
+
+* VSC-spezifische Berechtigungen
++
+Diese Berechtigungen werden für bestimmte VSC Aufgaben definiert. Sie sind nur bei VSC zu finden.
+
+
+
+VSC-Aufgaben erfordern sowohl VSC-spezifische Berechtigungen als auch native vCenter Server-Berechtigungen. Diese Berechtigungen stellen die „`Rolle`“ für den Benutzer dar. Eine Berechtigung kann mehrere Berechtigungen haben. Diese Berechtigungen gelten für einen Benutzer, der beim vCenter Server angemeldet ist.
+
+[NOTE]
+====
+Um die Arbeit mit der RBAC von vCenter Server zu vereinfachen, bietet VSC verschiedene Standardrollen mit allen VSC-spezifischen und nativen Berechtigungen, die zur Ausführung von VSC Aufgaben erforderlich sind.
+
+====
+Wenn Sie die Berechtigungen innerhalb einer Berechtigung ändern, sollte sich der Benutzer, der mit dieser Berechtigung verknüpft ist, ausloggen und sich dann anmelden, um die aktualisierte Berechtigung zu aktivieren.
+
+[cols="1a,1a,1a"]
+|===
+| Berechtigung | Rollen | Aufgaben 
+
+
+ a| 
+Menü:NetApp Virtual Storage Console[View]
+ a| 
+* VSC Administrator
+* VSC Provisionierung
+* VSC schreibgeschützt
+
+ a| 
+Für alle spezifischen Aufgaben von VSC und VASA Provider ist die View Berechtigung erforderlich.
+
+
+
+ a| 
+Menü:NetApp Virtual Storage Console[richtlinienbasiertes Management > Management] oder Menü:privilege.nvpfVSC.VASAGroup.com.netapp.nvpf.label[Management]
+ a| 
+VSC Administrator
+ a| 
+VSC und VASA Provider Aufgaben bezüglich Storage-Funktionsprofilen und Schwellenwerteinstellungen.
+
+|===
+
+
+== VSphere Objekte
+
+Berechtigungen werden mit vSphere Objekten verknüpft, z. B. vCenter Server, ESXi Hosts, Virtual Machines, Datastores, Datacenter, Und Ordner. Sie können jedem vSphere-Objekt Berechtigungen zuweisen. Auf Grundlage der Berechtigung, die einem vSphere-Objekt zugewiesen ist, bestimmt der vCenter Server, wer welche Aufgaben auf dem Objekt ausführen kann. Für VSC-spezifische Aufgaben werden Berechtigungen nur auf der Root-Ordnerebene (vCenter Server) und nicht auf einer anderen Einheit zugewiesen und validiert. Außer VAAI Plugin Betrieb, wo Berechtigungen gegen die betroffenen ESXi validiert werden.
+
+
+
+== Benutzer und Gruppen
+
+Sie können Active Directory (oder den lokalen vCenter Server-Rechner) verwenden, um Benutzer und Benutzergruppen einzurichten. Sie können dann mit vCenter Server-Berechtigungen den Zugriff auf diese Benutzer oder Gruppen gewähren, damit sie bestimmte VSC-Aufgaben durchführen können.
+
+[NOTE]
+====
+Diese vCenter Server Berechtigungen gelten für Benutzer von VSC vCenter, nicht für VSC-Administratoren. Standardmäßig haben VSC-Administratoren vollständigen Zugriff auf das Produkt und benötigen keine ihnen zugewiesenen Berechtigungen.
+
+====
+Benutzern und Gruppen sind ihnen keine Rollen zugewiesen. Sie erhalten Zugriff auf eine Rolle, indem sie Teil einer vCenter Server-Berechtigung sind.

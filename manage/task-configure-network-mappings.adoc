@@ -1,0 +1,37 @@
+---
+permalink: manage/task-configure-network-mappings.html 
+sidebar: sidebar 
+keywords: configuring, network, mappings, 
+summary: Sie müssen Ihre Netzwerke am geschützten Standort und am Recovery-Standort zuordnen, um eine Kommunikation zwischen ihnen zu ermöglichen. 
+---
+= Konfigurieren Sie die Netzwerkzuordnungen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen Ihre Netzwerke am geschützten Standort und am Recovery-Standort zuordnen, um eine Kommunikation zwischen ihnen zu ermöglichen.
+
+Sie müssen die geschützten und die Recovery-Standorte miteinander verbunden haben.
+
+.Schritte
+. Melden Sie sich bei Ihrem vCenter Server an und klicken Sie auf Menü:Site Recovery[Sites].
+. Wählen Sie Ihre geschützte Seite aus, und klicken Sie dann auf *Verwalten*.
+. Wählen Sie auf der Registerkarte Verwalten die Option *Netzwerkzuordnungen* aus.
+. Klicken Sie auf das image:../media/new-network-mappings.gif[""] Symbol, um eine neue Netzwerkzuordnung zu erstellen.
++
+Der Assistent „Netzwerkzuordnung erstellen“ wird angezeigt.
+
+. Führen Sie im Assistenten „Netzwerkzuordnung erstellen“ folgende Schritte aus:
++
+.. Wählen Sie *Zuordnungen automatisch für Netzwerke mit übereinstimmenden Namen* aus, und klicken Sie auf *Weiter*.
+.. Wählen Sie die erforderlichen Rechenzentrumsobjekte für die geschützten und Wiederherstellungsstandorte aus, und klicken Sie auf *Zuordnungen hinzufügen*.
+.. Klicken Sie auf *Weiter*, nachdem Zuordnungen erfolgreich erstellt wurden.
+.. Wählen Sie das Objekt aus, das früher zum Erstellen einer umgekehrten Zuordnung verwendet wurde, und klicken Sie dann auf *Fertig stellen*.
+
+
+
+
+Auf der Seite Netzwerkzuordnungen werden die geschützten Standortressourcen und die Ressourcen des Recovery-Standorts angezeigt. Sie können die gleichen Schritte für andere Netzwerke in Ihrer Umgebung befolgen.

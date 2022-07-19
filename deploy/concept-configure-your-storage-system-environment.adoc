@@ -1,0 +1,34 @@
+---
+permalink: deploy/concept-configure-your-storage-system-environment.html 
+sidebar: sidebar 
+keywords: configuring, virtual, storage, console, vmware, vsphere, storage, system, environment, 
+summary: 'Virtual Storage Console für VMware vSphere bietet einen einzigen Mechanismus, mit dem Storage-Systeme erfasst und die Storage-Zugangsdaten festgelegt werden können. Sie stellen die ONTAP-Berechtigungen bereit, die erforderlich sind, damit Benutzer von Virtual Storage Console (VSC) mithilfe der Storage-Systeme Aufgaben durchführen können.' 
+---
+= Konfigurieren Sie Ihre Virtual Storage Console für VMware vSphere Storage-System-Umgebung
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Virtual Storage Console für VMware vSphere bietet einen einzigen Mechanismus, mit dem Storage-Systeme erfasst und die Storage-Zugangsdaten festgelegt werden können. Sie stellen die ONTAP-Berechtigungen bereit, die erforderlich sind, damit Benutzer von Virtual Storage Console (VSC) mithilfe der Storage-Systeme Aufgaben durchführen können.
+
+Bevor VSC die Storage-Ressourcen anzeigen und managen kann, muss VSC die Storage-Systeme erkennen. Im Rahmen des Erkennungsvorgangs müssen Sie die ONTAP Zugangsdaten für Ihre Storage-Systeme angeben. Hierbei handelt es sich um die Berechtigungen (oder Rollen), die mit dem Benutzernamen und dem Kennwort-Paar verknüpft sind, das jedem Speichersystem zugewiesen ist. Diese Benutzername und Passwort-Paare verwenden die rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) von ONTAP und müssen aus ONTAP heraus eingerichtet werden. Sie können diese Anmeldedaten nicht in VSC ändern. Sie können ONTAP RBAC-Rollen mit definieren.
+
+[NOTE]
+====
+Wenn Sie sich als Administrator anmelden, verfügen Sie automatisch über alle Berechtigungen für dieses Speichersystem.
+
+====
+Wenn Sie der VSC ein Storage-System hinzufügen, müssen Sie eine IP-Adresse für das Storage-System und den mit dem System verknüpften Benutzernamen und das Passwort eingeben. Sie können Standardanmeldeinformationen einrichten, die VSC während der Erkennung des Storage-Systems verwendet, oder Sie können manuell die Anmeldedaten eingeben, wenn das Speichersystem erkannt wird. Die Details des Storage-Systems, das zur VSC hinzugefügt wird, werden automatisch an die Erweiterungen weitergeleitet, die Sie bei Ihrer Implementierung aktivieren. Sie müssen nicht manuell Storage zu VASA Provider und Storage Replication Adapter (SRA) hinzufügen. VSC und SRA unterstützen das Hinzufügen von Anmeldeinformationen auf Cluster-Ebene und -Ebene. VASA Provider unterstützt nur Cluster-Level-Anmeldeinformationen zum Hinzufügen von Storage-Systemen.
+
+Wenn in Ihrer Umgebung mehrere vCenter Server-Instanzen enthalten sind, wird beim Hinzufügen eines Storage-Systems zur VSC von der Seite Storage Systems aus ein vCenter Server-Feld angezeigt, in dem Sie angeben können, welcher vCenter Server-Instanz das Speichersystem hinzugefügt werden soll. Wenn Sie ein Speichersystem hinzufügen, indem Sie mit der rechten Maustaste auf einen Rechenzentrumsnamen klicken, können Sie keine vCenter Server-Instanz angeben, da der Server bereits mit diesem Datacenter verknüpft ist.
+
+Die Bestandsaufnahme erfolgt auf eine der folgenden Arten. In jedem Fall müssen Sie die Anmeldeinformationen für jedes neu entdeckte Speichersystem angeben.
+
+* Sobald der VSC Service gestartet wird, beginnt die VSC den automatischen Prozess der Bestandsaufnahme.
+* Sie können auf der Seite Storage Systems auf die Schaltfläche *ALLE WIEDERENTDECKEN* klicken oder auf einem Host oder einem Rechenzentrum klicken, um sie im Menü *Aktionen* auszuwählen (Menü:Aktionen[NetApp VSC > Host- und Speicherdaten aktualisieren]). Sie können auch auf der Registerkarte „erste Schritte“ im Abschnitt „Übersicht“ auf *ENTDECKEN* klicken.
+
+
+Für alle VSC Funktionen sind spezielle Berechtigungen zum Durchführen von Aufgaben erforderlich. Sie können festlegen, was Benutzer basierend auf den mit der ONTAP-Rolle verknüpften Anmeldeinformationen tun können. Alle Benutzer mit demselben Benutzernamen und Kennwort-Paar des Speichersystems nutzen die gleichen Anmeldeinformationen für das Speichersystem und können dieselben Vorgänge ausführen.

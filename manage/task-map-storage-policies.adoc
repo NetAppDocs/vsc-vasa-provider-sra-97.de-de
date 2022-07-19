@@ -1,0 +1,28 @@
+---
+permalink: manage/task-map-storage-policies.html 
+sidebar: sidebar 
+keywords: mapping, storage, policies, 
+summary: Sie sollten die Storage-Richtlinien am geschützten Standort den Storage-Richtlinien am Recovery-Standort zuordnen, damit Ihre Recovery-Pläne die wiederhergestellten Virtual Machines auf den entsprechenden Datastores basierend auf Ihren Zuordnungen platzieren. Nachdem die Virtual Machine am Recovery-Standort wiederhergestellt wurde, wird die zugeordnete VM-Speicherrichtlinie der Virtual Machine zugewiesen. 
+---
+= Zuordnung von Storage-Richtlinien
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten die Storage-Richtlinien am geschützten Standort den Storage-Richtlinien am Recovery-Standort zuordnen, damit Ihre Recovery-Pläne die wiederhergestellten Virtual Machines auf den entsprechenden Datastores basierend auf Ihren Zuordnungen platzieren. Nachdem die Virtual Machine am Recovery-Standort wiederhergestellt wurde, wird die zugeordnete VM-Speicherrichtlinie der Virtual Machine zugewiesen.
+
+.Schritte
+. Klicken Sie im vSphere-Client auf MENU:Standortwiederherstellung[Site Recovery öffnen].
+. Klicken Sie auf der Registerkarte *Standortpaar* auf Menü:Konfigurieren[Storage Policy Mappings].
+. Wählen Sie die gewünschte Site aus, und klicken Sie dann auf *Neu*, um eine neue Zuordnung zu erstellen.
+. Wählen Sie die Option *Automatische Vorbereitung von Zuordnungen für Speicherrichtlinien mit übereinstimmenden Namen*, und klicken Sie dann auf *WEITER*.
++
+SRM wählt Storage-Richtlinien am geschützten Standort aus, für den eine Storage-Richtlinie mit demselben Namen am Recovery-Standort vorhanden ist. Wenn Sie jedoch die Option für die manuelle Zuordnung auswählen, können Sie mehrere Speicherrichtlinien auswählen.
+
+. Klicken Sie auf *Zuordnungen hinzufügen* und klicken Sie auf *WEITER*.
+. Wählen Sie im Abschnitt *Reverse Mapping* die erforderlichen Kontrollkästchen für die Zuordnung aus und klicken Sie dann auf *NEXT*.
+. Überprüfen Sie im Abschnitt * Ready to Complete* Ihre Auswahl und klicken Sie auf *FINISH*.
+

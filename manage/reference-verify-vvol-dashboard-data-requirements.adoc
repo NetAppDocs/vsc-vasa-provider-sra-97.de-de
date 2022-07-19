@@ -1,0 +1,49 @@
+---
+permalink: manage/reference-verify-vvol-dashboard-data-requirements.html 
+sidebar: sidebar 
+keywords: vVol, dashboard, data, requirements, 
+summary: 'Sie müssen einige wichtige Anforderungen der vVol Konsole überprüfen, um dynamische Details der VMware Virtual Volumes (VVols) Datenspeicher und der Virtual Machines anzuzeigen.' 
+---
+= VVol Dashboard – Datenanforderungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen einige wichtige Anforderungen der vVol Konsole überprüfen, um dynamische Details der VMware Virtual Volumes (VVols) Datenspeicher und der Virtual Machines anzuzeigen.
+
+Die folgende Tabelle bietet einen Überblick darüber, was Sie überprüfen sollten, ob das vVol Dashboard nicht die Performance-Metriken für die bereitgestellten SAN VVols Datastores und Virtual Machines anzeigt.
+
+[cols="1a,1a"]
+|===
+| Überlegungen | Beschreibung 
+
+
+ a| 
+Erstmalige Implementierung von OnCommand API Services
+ a| 
+* Wenn Sie ONTAP Cluster 9.6 oder früher haben, dann verwenden Sie OnCommand API Services 2.1 oder höher.
++
+Sie müssen bei VASA Provider keine Registrierung von OnCommand API Services durchführen, wenn Sie ONTAP 9.7 oder höher verwenden.
+
+* Nach dem Herunterladen und Installieren der OnCommand API Services von der NetApp Support-Website müssen Sie die Installationsanweisungen befolgen, die Sie im Installations- und Setup-Leitfaden „ _OnCommand API Services Installation and Setup_“ erhalten haben.
+* Jede VASA Provider-Instanz muss über eine dedizierte OnCommand API Services Instanz verfügen.
++
+OnCommand API Services dürfen nicht zwischen mehreren VASA Provider-Instanzen oder vCenter Servern gemeinsam genutzt werden.
+
+* OnCommand API Services wird ausgeführt und ist zugänglich.
+
+
+
+
+ a| 
+Storage-System
+ a| 
+* Sie verwenden ONTAP 9.3 oder höher.
+* Sie verwenden die entsprechenden Anmeldedaten für das Speichersystem.
+* Das Storage-System ist aktiv und kann aufgerufen werden.
+* Die ausgewählte virtuelle Maschine muss mindestens einen VVols-Datastore verwenden, und I/O-Vorgänge werden auf der Festplatte der virtuellen Maschine ausgeführt.
+
+
+|===

@@ -1,0 +1,29 @@
+---
+permalink: manage/task-migrate-existing-virtual-machines-to-7-1-virtual-appliance.html 
+sidebar: sidebar 
+keywords: migrating, virtual, machines, with, older, storage, capability, profiles, 
+summary: 'Wenn Sie die aktuelle Version der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) verwenden, Dann sollten Sie Ihre virtuellen Maschinen migrieren, die mit den QoS-Metriken „MaxThrughput MBPS“ oder „MaxThrughput IOPS“ bereitgestellt werden, auf neue VVol Datastores, die mit den QoS-Kennzahlen „Max IOPS“ der neuesten Version der virtuellen Appliance für VSC, VASA Provider und SRA bereitgestellt werden.' 
+---
+= Migration von Virtual Machines mit älteren Storage-Funktionsprofilen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die aktuelle Version der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) verwenden, Anschließend sollten Sie Ihre Virtual Machines, die mit den QoS-Kennzahlen „`MaxThroughput MBPS`“ oder „`MaxThrughput IOPS`“ bereitgestellt werden, auf neue VVol Datastores migrieren, die mit den QoS-Kennzahlen „`Max IOPS`“ der neuesten Version der virtuellen Appliance für VSC, VASA Provider und SRA bereitgestellt werden.
+
+Bei der aktuellen Version der virtuellen Appliance für VSC, VASA Provider und SRA lassen sich QoS-Kennzahlen für jede Virtual Machine oder Virtual Machine Disk (VMDK) konfigurieren. Die QoS-Kennzahlen wurden bereits auf ONTAP FlexVol Volume-Ebene angewendet und von allen Virtual Machines bzw. VMDKs genutzt, die auf diesem FlexVol Volume bereitgestellt wurden.
+
+Ab der Version 7.2 der virtuellen Appliance für VSC, VASA Provider und SRA werden die QoS-Kennzahlen einer Virtual Machine nicht mit anderen Virtual Machines gemeinsam genutzt.
+
+[NOTE]
+====
+Sie dürfen die vorhandene VM-Speicherrichtlinie nicht ändern, da die virtuellen Maschinen möglicherweise nicht mehr kompatibel sind.
+
+====
+.Schritte
+. Erstellen Sie VVol Datastores mithilfe eines neuen Storage-Funktionsprofils mit dem erforderlichen Wert „`Max IOPS`“.
+. Erstellen Sie eine VM Storage Policy und ordnen Sie die neue VM Storage Policy dem neuen Storage-Funktionsprofil zu.
+. Migrieren Sie die vorhandenen Virtual Machines mithilfe der neuen VM-Storage-Richtlinie zu den neu erstellten VVol Datastores.
+

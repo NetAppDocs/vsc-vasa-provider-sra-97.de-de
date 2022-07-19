@@ -1,0 +1,42 @@
+---
+permalink: manage/reference-thick-provision-fails-for-vvol-datastores-on-ontap-9-4.html 
+sidebar: sidebar 
+keywords: thick, provisioning, of, VVols, fails, for, ONTAP, 9.4, storage, systems, 
+summary: 'Die Thick Provisioning von virtuellen Volumes (VVols) schlägt fehl, wenn der VVol Datastore keine per Thick Provisioning bereitgestellten FlexVol Volumes auf einem ONTAP 9.4 Storage-System enthält.' 
+---
+= Thick Provisioning von VVols ist bei ONTAP 9.4 Storage-Systemen nicht möglich
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Thick Provisioning von virtuellen Volumes (VVols) schlägt fehl, wenn der VVol Datastore keine per Thick Provisioning bereitgestellten FlexVol Volumes auf einem ONTAP 9.4 Storage-System enthält.
+
+
+
+== Problem
+
+Bei der Bereitstellung des VVol können Fehlermeldungen wie die folgende empfangen:
+
+[listing]
+----
+com.netapp.vasa.vvol.exceptions.OutOfResourceException: Unable to find a location
+for a vvol of size 4,096 in storage container vvol_nfs_new - Checked 1 places.
+Specific reasons were vvol_nfs_new | Final Score: 0 | 100 -> 0 : FlexVol of
+vvol_nfs_new does not support required storage profile, details [FlexVolume with
+name vvol_nfs_new is not thick provisioned]
+----
+
+
+== Ursache
+
+Dieser Fehler tritt auf, wenn auf dem VVol keine per Thick Provisioning bereitgestellten FlexVol Volumes vorhanden sind.
+
+
+
+== Nutzen
+
+. Fügen Sie ein neues FlexVol Volume mit Storage-Funktion bei aktiviertem Thick Provisioning für das VVol hinzu.
+. Erstellen Sie mithilfe des FlexVol Volumes eine neue Virtual Machine.
+

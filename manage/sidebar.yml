@@ -1,0 +1,142 @@
+---
+section: manage
+title: Managen
+entries:
+- title: Workflow zur Konfiguration der virtuellen Appliance für VSC, VASA Provider
+    und SRA
+  url: "/manage/concept-workflow-for-configuring-the-unified-appliance.html"
+- title: Konfiguration der Storage-Systeme für VSC, VASA Provider und SRA
+  url: "/manage/concept-configure-storage-systems-for-vsc-vasa-provider-and-sra.html"
+  entries:
+  - title: Fügen Sie Storage-Systeme zur VSC hinzu
+    url: "/manage/task-add-storage-systems.html"
+  - title: Legen Sie die Standardanmeldeinformationen für Speichersysteme fest
+    url: "/manage/task-set-default-credentials-for-storage-systems.html"
+  - title: Konfigurieren der Alarmschwellenwerte
+    url: "/manage/task-configure-alarm-thresholds.html"
+- title: Erstellung von Storage-Funktionsprofilen
+  url: "/manage/concept-configure-storage-capability-profiles.html"
+  entries:
+  - title: Welche Storage-Funktionen sind verfügbar
+    url: "/manage/concept-what-storage-capabilities-are.html"
+  - title: Überlegungen beim Erstellen und Bearbeiten von Storage-Funktionsprofilen
+    url: "/manage/concept-considerations-for-creating-and-editing-storage-capability-profiles.html"
+  - title: Storage-Funktionsprofile konfigurieren
+    url: "/manage/task-create-storage-capability-profiles.html"
+- title: Konfiguration herkömmlicher Datastores und Virtual Machines
+  url: "/manage/concept-configure-traditional-datastores.html"
+  entries:
+  - title: Bereitstellung von Datenspeichern
+    url: "/manage/task-provision-datastores.html"
+  - title: Zuordnen von Datastores zu Storage-Funktionsprofilen
+    url: "/manage/task-map-storage-to-storage-capability-profiles.html"
+  - title: Automatische Generierung von Storage-Funktionsprofilen
+    url: "/manage/task-automatically-generate-scps.html"
+  - title: Überprüfen Sie die Datastore-Compliance mit dem zugeordneten Storage-Funktionsprofil
+    url: "/manage/task-check-for-datastore-compliance-with-the-mapped-storage-capability-profile.html"
+  - title: Überwachen Sie Datastores und Virtual Machines mit dem herkömmlichen Dashboard
+    url: "/manage/task-monitor-datastores-using-the-traditional-dashboard.html"
+  - title: Bearbeiten Sie die ESXi Hosteinstellungen für VSC, VASA Provider und SRA
+    url: "/manage/task-edit-esxi-host-settings.html"
+- title: Konfigurieren Sie VVols Datastores
+  url: "/manage/concept-configure-vvols-datastores.html"
+  entries:
+  - title: Konfiguration der Replizierung für VVols Datastore
+    url: "/manage/concept-configure-replication-for-vvols-datastore.html"
+  - title: Bereitstellung von VVols Datastores
+    url: "/manage/task-provision-vvol-datastores.html"
+  - title: Überwachen Sie VVols Datastores und Virtual Machines über das vVol Dashboard
+    url: "/manage/task-monitor-vvols-datastores-and-virtual-machines-using-vvols-dashboard.html"
+    entries:
+    - title: VVol Dashboard – Datenanforderungen
+      url: "/manage/reference-verify-vvol-dashboard-data-requirements.html"
+- title: Managen Sie die Disaster Recovery-Einrichtung mit Site Recovery Manager
+  url: "/manage/concept-manage-disaster-recovery-setup-using-srm.html"
+  entries:
+  - title: Konfiguration von VM Storage Policies
+    url: "/manage/task-configure-vm-storage-policies.html"
+  - title: Konfigurieren Sie Schutzgruppen
+    url: "/manage/task-configure-protection-groups.html"
+  - title: Kombinieren Sie geschützte Standorte und Recovery-Standorte
+    url: "/manage/task-pair-protected-and-recovery-sites.html"
+  - title: Konfigurieren Sie geschützte Ressourcen und Recovery-Standortressourcen
+    url: "/manage/concept-configure-protected-and-recovery-site-resources.html"
+    entries:
+    - title: Konfigurieren Sie die Netzwerkzuordnungen
+      url: "/manage/task-configure-network-mappings.html"
+    - title: Konfigurieren von Ordnerzuordnungen
+      url: "/manage/task-configure-folder-mappings.html"
+    - title: Konfigurieren von Ressourcenzuordnungen
+      url: "/manage/task-configure-resource-mappings.html"
+    - title: Zuordnung von Storage-Richtlinien
+      url: "/manage/task-map-storage-policies.html"
+    - title: Platzhalter-Datastores konfigurieren
+      url: "/manage/task-configure-placeholder-datastores.html"
+    - title: Konfigurieren Sie SRA mit Array Manager
+      url: "/manage/task-configure-array-manager.html"
+  - title: Überprüfung replizierter Storage-Systeme
+    url: "/manage/task-verify-the-replicated-storage-environment.html"
+  - title: Sicherung ungesicherter Virtual Machines
+    url: "/manage/task-protect-non-protected-virtual-machines.html"
+- title: Management herkömmlicher und VVols Datastores
+  url: "/manage/concept-manage-datastore.html"
+  entries:
+  - title: Mounten Sie Datenspeicher auf zusätzlichen Hosts
+    url: "/manage/task-mount-datastores-on-host.html"
+  - title: Datenspeichergröße ändern
+    url: "/manage/task-resize-datastores.html"
+  - title: Bearbeiten eines VVols-Datastores
+    url: "/manage/task-edit-a-vvol-datastore.html"
+  - title: Ad-Storage auf einen VVols Datastore
+    url: "/manage/task-add-storage-to-a-vvol-datastore.html"
+  - title: Entfernen Sie Storage von einem VVols Datastore
+    url: "/manage/task-remove-storage-from-a-vvols-datastore.html"
+  - title: Mounten Sie einen VVols Datastore
+    url: "/manage/task-mount-a-vvol-datastore.html"
+  - title: Überlegungen bei der Migration oder dem Klonen von Virtual Machines
+    url: "/manage/reference-considerations-for-migrating-virtual-machines.html"
+  - title: Migrieren Sie herkömmliche Virtual Machines zu VVols Datastores
+    url: "/manage/task-migrate-standard-virtual-machines-to-vvol-datastores.html"
+  - title: Migration von Virtual Machines mit älteren Storage-Funktionsprofilen
+    url: "/manage/task-migrate-existing-virtual-machines-to-7-1-virtual-appliance.html"
+- title: Virtual Storage Console-Berichte verstehen
+  url: "/manage/concept-virtual-storage-console-reports.html"
+  entries:
+  - title: Was Berichte tun
+    url: "/manage/concept-what-reports-do.html"
+  - title: Datastore Reports
+    url: "/manage/concept-datastore-reports.html"
+  - title: VVols Berichte
+    url: "/manage/concept-what-vasa-provider-reports-do.html"
+- title: Fehlerbehebung mit der virtuellen Appliance für VSC, VASA Provider und SRA
+  url: "/manage/concept-troubleshoot-issues-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra-test.html"
+  entries:
+  - title: Sammeln Sie die Protokolldateien
+    url: "/manage/task-collect-the-log-files.html"
+  - title: VVol Datastore-Bereitstellung schlägt mit einer großen Anzahl von Volumes
+      fehl
+    url: "/manage/reference-vvol-datastore-provision-fails-with-large-number-of-volumes.html"
+  - title: Problem beim Bearbeiten von VM Storage Policies nach dem Upgrade
+    url: "/manage/reference-edit-vm-storage-policies-after-upgrade-throws-error-message.html"
+  - title: DER VASA Provider-Status wird in der vCenter Server-GUI als „Offline“ angezeigt
+    url: "/manage/reference-vasa-provider-storage-provider-status-show-offline-in-vcenter-gui.html"
+  - title: Fehler beim Zugriff auf die VSC Übersichtsseite der virtuellen Appliance
+    url: "/manage/reference-error-while-accessing-the-vsc-summary-page-of-virtual-appliance.html"
+  - title: Fehler beim Löschen eines Datenspeichers nach Änderung der Netzwerkeinstellungen
+    url: "/manage/reference-error-deleting-a-datastore-after-network-settings-are-changed.html"
+  - title: Die Bereitstellung virtueller Maschinen schlägt mit einem nicht definierten
+      Fehler fehl
+    url: "/manage/reference-vm-provision-fails-with-undefined-error.html"
+  - title: Thick Provisioning von VVols ist bei ONTAP 9.4 Storage-Systemen nicht möglich
+    url: "/manage/reference-thick-provision-fails-for-vvol-datastores-on-ontap-9-4.html"
+  - title: Zugriff auf Datenspeicher, wenn der Status eines Volume in Offline geändert
+      wurde
+    url: "/manage/reference-datastore-inaccessible-when-volume-status-is-changed-to-offline.html"
+  - title: Wenn Sie ein Speichersystem mit IPv4 hinzufügen, führt dies zu einem Authentifizierungsfehler
+      mit dem IPv6-Status im Speichersystem-Grid
+    url: "/manage/reference-authentication-failure-status-is-displayed-with-ipv6-as-the-cluster-ip-even-if-cluster-is-added-with-ipv4.html"
+  - title: Fehler bei der Dateierstellung während der Bereitstellung von Virtual Machines
+      auf VVol Datastores
+    url: "/manage/reference-file-creation-error-while-virtual-machine-provisioning-on-vvol-datastore-issue-we-are-unable-to-create-virtual-machine-using-the-default-vs0-svm-caus.html"
+  - title: Für SRA in SRM wird ein falscher Status „Failover in Bearbeitung“ gemeldet
+    url: "/manage/reference-failover-in-progress-status-is-reported-inappropriately-for-sra.html"
