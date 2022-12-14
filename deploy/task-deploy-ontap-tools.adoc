@@ -39,6 +39,7 @@ Wenn ICMP deaktiviert ist, schlägt die Erstkonfiguration der virtuellen Applian
 
 
 
+.Über diese Aufgabe
 Wenn Sie eine neue Installation der virtuellen Appliance für VSC, VASA Provider und SRA implementieren, ist VASA Provider standardmäßig aktiviert. Bei einem Upgrade von einer früheren Version der virtuellen Appliance bleibt der Status von VASA Provider erhalten, und VASA Provider muss möglicherweise manuell aktiviert werden.
 
 link:task-enable-vasa-provider-for-configuring-virtual-datastores.html["Aktivieren Sie VASA Provider zur Konfiguration von virtuellen Datastores"]
@@ -90,6 +91,7 @@ Wenn Sie das Plug-in nicht selbst nach der Anmeldung anzeigen können, müssen S
 ====
 
 
+.Nachdem Sie fertig sind
 ++++
 
 [NOTE]

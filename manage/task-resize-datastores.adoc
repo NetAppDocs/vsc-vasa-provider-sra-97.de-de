@@ -14,8 +14,10 @@ summary: Durch die Anpassung der Größe eines Datenspeichers können Sie den Sp
 [role="lead"]
 Durch die Anpassung der Größe eines Datenspeichers können Sie den Speicher für die Dateien Ihrer virtuellen Maschine vergrößern oder verkleinern. Möglicherweise müssen Sie die Größe eines Datastores ändern, wenn sich Ihre Infrastrukturanforderungen ändern.
 
+.Bevor Sie beginnen
 Wenn Sie möchten, dass VSC beim Umskalieren des enthaltenen Volumes die Größe des VMFS-Datastore ändert, sollten Sie bei der erstmaligen Bereitstellung des VMFS-Datastore nicht die Option *vorhandenes Volume* verwenden* unter *Speicherattribute* verwenden, sondern es automatisch ein neues Volume für jeden Datastore erstellen lassen.
 
+.Über diese Aufgabe
 Sie können einen NFS-Datenspeicher vergrößern oder verkleinern. Sie können nur die Größe eines VMFS-Datenspeichers erhöhen.
 
 .Schritte

@@ -14,6 +14,7 @@ summary: 'Sie können den verfügbaren Storage mit dem Assistenten zum Hinzufüg
 [role="lead"]
 Sie können den verfügbaren Speicher mit dem Assistenten *Add Storage* erweitern, um FlexVol Volumes zu einem vorhandenen VMware Virtual Volumes (VVols) Datastore hinzuzufügen.
 
+.Über diese Aufgabe
 Wenn Sie ein FlexVol Volume hinzufügen, haben Sie auch die Möglichkeit, das mit diesem Volume verknüpfte Storage-Funktionsprofil zu ändern. Sie können entweder über die VASA Provider-Funktion zur automatischen Generierung ein neues Profil für das Volume erstellen oder einem vorhandenen Profil dem Volume zuweisen.
 
 [NOTE]

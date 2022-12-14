@@ -13,6 +13,7 @@ summary: 'Wenn Sie die aktuelle Version der virtuellen Appliance für Virtual St
 [role="lead"]
 Wenn Sie die aktuelle Version der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) verwenden, Anschließend sollten Sie Ihre Virtual Machines, die mit den QoS-Kennzahlen „`MaxThroughput MBPS`“ oder „`MaxThrughput IOPS`“ bereitgestellt werden, auf neue VVol Datastores migrieren, die mit den QoS-Kennzahlen „`Max IOPS`“ der neuesten Version der virtuellen Appliance für VSC, VASA Provider und SRA bereitgestellt werden.
 
+.Über diese Aufgabe
 Bei der aktuellen Version der virtuellen Appliance für VSC, VASA Provider und SRA lassen sich QoS-Kennzahlen für jede Virtual Machine oder Virtual Machine Disk (VMDK) konfigurieren. Die QoS-Kennzahlen wurden bereits auf ONTAP FlexVol Volume-Ebene angewendet und von allen Virtual Machines bzw. VMDKs genutzt, die auf diesem FlexVol Volume bereitgestellt wurden.
 
 Ab der Version 7.2 der virtuellen Appliance für VSC, VASA Provider und SRA werden die QoS-Kennzahlen einer Virtual Machine nicht mit anderen Virtual Machines gemeinsam genutzt.

@@ -14,6 +14,7 @@ summary: 'Sie können Storage-System manuell zur Virtual Storage Console (VSC) h
 [role="lead"]
 Sie können Storage-System manuell zur Virtual Storage Console (VSC) hinzufügen.
 
+.Über diese Aufgabe
 Jedes Mal, wenn Sie starten (VSC) oder wählen Sie die Option *ALLE* WIEDERENTDECKEN, erkennt VSC automatisch die verfügbaren Speichersysteme.
 
 .Schritte

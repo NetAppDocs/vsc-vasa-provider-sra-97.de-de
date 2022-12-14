@@ -19,6 +19,7 @@ Sie müssen die geschützten und Recovery-Standorte, die mit Ihrem vSphere Clien
 * Sie müssen SRA auf den geschützten und Recovery-Standorten installiert haben.
 
 
+.Über diese Aufgabe
 Bei SnapMirror Fan-out-Konfigurationen wird ein Quell-Volume auf zwei unterschiedliche Ziele repliziert. Diese erzeugen ein Problem während der Recovery, wenn SRM die Virtual Machine vom Ziel wiederherstellen muss.
 
 [NOTE]
@@ -39,4 +40,5 @@ Storage Replication Adapter (SRA) unterstützt keine Fan-out-SnapMirror-Konfigur
 . Wenn Sie dazu aufgefordert werden, klicken Sie auf *Ja*, um die Sicherheitszertifikate zu akzeptieren.
 
 
+.Ergebnisse
 Sowohl die geschützten als auch die Wiederherstellungsstandorte werden im Dialogfeld Objekte angezeigt.

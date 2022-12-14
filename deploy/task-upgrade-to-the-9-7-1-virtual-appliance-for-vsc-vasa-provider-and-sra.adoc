@@ -23,6 +23,7 @@ xref:task-clean-the-vsphere-cached-downloaded-plug-in-packages.adoc[Reinigen Sie
 
 
 
+.Über diese Aufgabe
 Nach dem Upgrade bleibt der Status von VASA Provider aus der vorhandenen Implementierung erhalten. Sie sollten VASA Provider anhand der Anforderungen nach dem Upgrade manuell aktivieren oder deaktivieren. VASA Provider sollte jedoch auch dann aktiviert werden, wenn nicht VMware Virtual Volumes (VVols) verwendet werden sollen, da damit Storage-Funktionsprofile für die herkömmliche Datastore-Bereitstellung und Storage-Alarme aktiviert werden können.
 
 [NOTE]

@@ -38,4 +38,5 @@ Das Feld * ROLLE* wird automatisch ausgefüllt, basierend auf der ausgewählten 
 . Wählen Sie die für den Benutzer erforderlichen Berechtigungen (Discovery, Create Storage, Modify Storage, Destroy Storage) aus, und klicken Sie dann auf *Add*.
 
 
+.Ergebnisse
 Die neue Rolle und der neue Benutzer werden hinzugefügt, und Sie können die detaillierten Berechtigungen unter der von Ihnen konfigurierten Rolle sehen.

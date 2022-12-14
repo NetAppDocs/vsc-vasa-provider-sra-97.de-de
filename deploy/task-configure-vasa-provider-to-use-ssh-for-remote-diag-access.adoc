@@ -13,8 +13,10 @@ summary: 'Sie können die virtuelle Appliance für Virtual Storage Console (VSC)
 [role="lead"]
 Sie können die virtuelle Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) konfigurieren, um den SSH-Zugriff für den Diagnose-Benutzer zu aktivieren.
 
+.Bevor Sie beginnen
 Die VASA Provider-Erweiterung muss für Ihre vCenter Server-Instanz aktiviert sein.
 
+.Über diese Aufgabe
 Die Verwendung von SSH für den Zugriff auf den Diagnosebenutzer weist folgende Einschränkungen auf:
 
 * Sie sind nur eine Anmeldung pro Aktivierung von SSH erlaubt.

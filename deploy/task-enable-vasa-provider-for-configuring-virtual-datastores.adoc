@@ -19,6 +19,7 @@ Bei der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider u
 * Sie müssen die virtuelle Appliance für VSC, VASA Provider und SRA implementiert haben.
 
 
+.Über diese Aufgabe
 Wenn die VASA Provider-Funktion deaktiviert wird, bevor ein Upgrade auf Version 9.7.1 der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) durchgeführt wird, bleibt die VASA Provider-Funktion nach dem Upgrade deaktiviert. In dieser Version können Sie die VVols Replizierungsfunktion für VVols Datastores aktivieren.
 
 .Schritte
@@ -31,4 +32,5 @@ Wenn die VASA Provider-Funktion deaktiviert wird, bevor ein Upgrade auf Version 
 . Geben Sie die IP-Adresse der virtuellen Appliance für VSC, VASA Provider und SRA sowie das Administratorpasswort ein, und klicken Sie dann auf *Anwenden*.
 
 
+.Nachdem Sie fertig sind
 Bei Verwendung von ONTAP 9.6 oder älteren Clustern müssen Sie sich bei VASA Provider registrieren, um Details zu VVols Datastores und Virtual Machines zu erhalten, die in den Berichten über SAN VVols VM und SAN VVols Datastores verwendet werden. Aber wenn Sie ONTAP 9.7 oder höher verwenden, müssen Sie sich nicht bei VASA Provider registrieren.

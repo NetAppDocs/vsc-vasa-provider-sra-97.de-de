@@ -18,6 +18,7 @@ VASA Provider für ONTAP ermöglicht die automatische Generierung von Storage-Fu
 * VSC muss Ihren Storage erkannt haben.
 
 
+.Über diese Aufgabe
 Nachdem Sie ein Storage-Funktionsprofil erstellt haben, können Sie das Profil mit weiteren Funktionen ändern. Der Assistent * Storage Capability Profile erstellen* bietet Informationen über die Funktionen, die Sie in ein Profil integrieren können.
 
 .Schritte

@@ -19,6 +19,7 @@ Wenn Sie zum ersten Mal (VSC) in einem vSphere Client ausführen, erkennt VSC di
 * Alle zu erkannten Daten müssen ausgeführt werden, und jeder Cluster Node muss über mindestens eine Daten-LIF verfügen, die für das verwendete Storage-Protokoll (NFS, iSCSI oder FC) konfiguriert ist.
 
 
+.Über diese Aufgabe
 Sie können jederzeit neue Storage-Systeme ermitteln oder Informationen zu vorhandenen Storage-Systemen aktualisieren, um die aktuellsten Kapazitäts- und Konfigurationsinformationen zu erhalten. Sie können auch die Zugangsdaten, die VSC zur Anmeldung bei den Storage-Systemen verwendet, ändern.
 
 Bei der Erkennung der Storage-Systeme erfasst VSC Informationen von den ESXi Hosts, die von der vCenter Server Instanz gemanagt werden.
@@ -35,6 +36,7 @@ Die VSC zeigt ein Dialogfeld „Bestätigen“ an, in dem Sie darauf hingewiesen
 . Wiederholen Sie die Schritte 4 und 5 für alle Speichercontroller mit dem Status „`Authentication Failure`“.
 
 
+.Nachdem Sie fertig sind
 Nach Abschluss des Erkennungsvorgangs führen Sie folgende Schritte aus:
 
 * Verwenden Sie VSC, um ESXi Hosteinstellungen für Hosts zu konfigurieren, die das Warnsymbol in der Spalte *Adaptereinstellungen*, der Spalte *MPIO Settings* oder der Spalte *NFS Settings* anzeigen.

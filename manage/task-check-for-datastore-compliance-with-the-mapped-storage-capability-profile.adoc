@@ -32,6 +32,7 @@ Wenn ein Datastore nicht mehr mit seinem Profil kompatibel ist, wird in der Spal
 
 
 
+.Nachdem Sie fertig sind
 Wenn Sie einen Datenspeicher feststellen, der nicht mit seinem Profil kompatibel ist, können Sie die Einstellungen auf dem Volume für den Datastore ändern, um den Datastore kompatibel zu machen. Alternativ können Sie dem Datenspeicher ein neues Profil zuweisen.
 
 Sie können die Einstellungen auf der Seite *Storage Capability Profile* ändern.

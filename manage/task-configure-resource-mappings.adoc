@@ -14,8 +14,10 @@ summary: Sie müssen Ihre Ressourcen am geschützten Standort und am Recovery-St
 [role="lead"]
 Sie müssen Ihre Ressourcen am geschützten Standort und am Recovery-Standort zuordnen, damit Virtual Machines für ein Failover zu einer oder anderen Host-Gruppe konfiguriert werden.
 
+.Bevor Sie beginnen
 Sie müssen die geschützten und die Recovery-Standorte miteinander verbunden haben.
 
+.Über diese Aufgabe
 ++++
 
 [NOTE]
@@ -41,4 +43,5 @@ Der Assistent „Ressourcenzuordnung erstellen“ wird angezeigt.
 
 
 
+.Ergebnisse
 Auf der Seite Ressourcenzuordnungen werden die geschützten Standortressourcen und die Ressourcen des Recovery-Standorts angezeigt. Sie können die gleichen Schritte für andere Netzwerke in Ihrer Umgebung befolgen.

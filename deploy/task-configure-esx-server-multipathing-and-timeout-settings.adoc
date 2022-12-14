@@ -14,6 +14,7 @@ summary: Die Virtual Storage Console für VMware vSphere überprüft und legt di
 [role="lead"]
 Die Virtual Storage Console für VMware vSphere überprüft und legt die Einstellungen für Multipathing des ESXi Hosts und HBA-Zeitüberschreitungseinstellungen fest, die für Storage-Systeme am besten geeignet sind.
 
+.Über diese Aufgabe
 Dieser Prozess kann je nach Konfiguration und Systemlast sehr viel Zeit in Anspruch nehmen. Der Aufgabenfortschritt wird im Fenster *Letzte Aufgaben* angezeigt. Wenn die Aufgaben abgeschlossen sind, wird das Symbol für die Warnung des Host-Status durch das Symbol Normal oder das Symbol Ausstehender Neustart ersetzt.
 
 .Schritte

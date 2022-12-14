@@ -13,10 +13,12 @@ summary: Mithilfe des herkömmlichen Dashboards der virtuellen Appliance für Vi
 [role="lead"]
 Mithilfe des herkömmlichen Dashboards der virtuellen Appliance für Virtual Storage Console, VASA Provider und Storage Replication Adapter können Sie die herkömmlichen Datastores und Virtual Machines überwachen. Mit den Dashboard-Daten können Sie die Datenspeicherauslastung analysieren und Korrekturmaßnahmen ergreifen, um zu verhindern, dass die Virtual Machines mit speicherbezogenen Einschränkungen umgehen.
 
+.Bevor Sie beginnen
 Wählen Sie im Dialogfeld Storage-I/O-Steuerung konfigurieren die Option *Storage-I/O-Steuerung aktivieren und Statistiken sammeln* oder *Storage-I/O-Steuerung deaktivieren, aber Statistiksammlung aktivieren* aus. Sie können Storage I/O Control nur aktivieren, wenn Sie über die Enterprise Plus Lizenz von VMware verfügen.
 
 https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-BB5D9BAB-9E0E-4204-A76A-54634CD8AD51.html["Dokumentation zu VMware vSphere: Storage I/O Control ermöglichen"^]
 
+.Über diese Aufgabe
 Im VSC Dashboard werden IOPS, der genutzte Speicherplatz, die Latenz und die engagierte Kapazität, die über den vCenter Server bezogen werden, angezeigt. ONTAP bietet im VSC Dashboard Metriken zur Speicherersparnis auf dem Volume. Mit diesen Performance-Parametern können Sie Performance-Engpässe in der virtuellen Umgebung identifizieren und Korrekturmaßnahmen ergreifen, um die Probleme zu beheben.
 
 Im herkömmlichen Dashboard der virtuellen Appliance für VSC, VASA Provider und SRA können Sie entweder NFS-Datastores oder VMFS-Datastores anzeigen. Sie können auf einen Datastore klicken, um zur Detailansicht des Datastores zu navigieren, die von der vCenter Server-Instanz bereitgestellt wird, um Probleme mit den Datastores in Ihrem vCenter Server anzuzeigen und zu beheben.

@@ -13,6 +13,7 @@ summary: 'Die Timeout-Skripte des Gastbetriebssystems (OS) legen die SCSI I/O Ti
 [role="lead"]
 Die Timeout-Skripte des Gastbetriebssystems (OS) legen die SCSI I/O Timeout-Einstellungen für Windows Gastbetriebssysteme fest. Sie können entweder eine Zeitüberschreitung von 60 Sekunden oder eine Zeitüberschreitung von 190 Sekunden angeben. Sie müssen das Windows Gast-Betriebssystem neu booten, damit die Einstellungen wirksam werden.
 
+.Bevor Sie beginnen
 Sie müssen das ISO-Image mit dem Windows-Skript angehängt haben.
 
 .Schritte

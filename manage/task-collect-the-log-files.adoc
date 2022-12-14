@@ -14,6 +14,7 @@ summary: Sie können Protokolldateien für Virtual Storage Console für VMware v
 [role="lead"]
 Sie können Protokolldateien für Virtual Storage Console für VMware vSphere von der Option sammeln, die in der grafischen Benutzeroberfläche der VSC verfügbar ist. Der technische Support fordert Sie möglicherweise auf, die Protokolldateien zu sammeln, damit Sie Probleme beheben können.
 
+.Über diese Aufgabe
 Wenn Sie VASA Provider-Protokolldateien benötigen, können Sie über den Bildschirm *Vendor Provider Control Panel* ein Supportpaket erzeugen. Diese Seite ist Teil der VASA Provider-Wartungsmenüs, auf die Sie über die Konsole der virtuellen Appliance zugreifen können.
 
 https://vm_ip:9083[]

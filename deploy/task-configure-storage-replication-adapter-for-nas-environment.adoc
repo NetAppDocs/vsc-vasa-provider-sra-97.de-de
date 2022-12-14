@@ -13,6 +13,7 @@ summary: 'Sie müssen die Storage-Systeme konfigurieren, bevor Sie Storage Repli
 [role="lead"]
 Sie müssen die Storage-Systeme konfigurieren, bevor Sie Storage Replication Adapter (SRA) für VMware vCenter Site Recovery Manager (SRM) ausführen.
 
+.Bevor Sie beginnen
 Sie müssen die folgenden Programme auf dem geschützten Standort und dem Wiederherstellungsstandort installiert haben:
 
 * SRM

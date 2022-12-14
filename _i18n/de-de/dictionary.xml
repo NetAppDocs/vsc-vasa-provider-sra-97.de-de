@@ -1856,4 +1856,6 @@
   <block id="dec3e9da01f86a71bed912a019fad778" category="sidebar">DER VASA Provider-Status wird in der vCenter Server-GUI als „Offline“ angezeigt</block>
   <block id="07a4e02530218bb020bf2b5915f43cde" category="sidebar">Konfigurieren von Gast-Betriebssystem-Skripten</block>
   <block id="d036f2c382984088af9c7b41532db232" category="sidebar">Voraussetzungen für das Registrieren von VSC in einer Umgebung mit mehreren vCenter Servern</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Nachdem Sie fertig sind</block>
+  <block id="fd69c5cf902969e6fb71d043085ddee6" category="paragraph-title">Ergebnisse</block>
 </blocks>

@@ -13,6 +13,7 @@ summary: 'Ihre Applikations-, System- und Netzwerkkonfigurationen können über 
 [role="lead"]
 Ihre Applikations-, System- und Netzwerkkonfigurationen können über die Wartungskonsole der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) gemanagt werden. Sie können Ihr Administratorkennwort und Ihr Wartungskennwort ändern. Außerdem können Sie Supportpakete generieren, verschiedene Protokollebenen festlegen, TLS-Konfigurationen anzeigen und verwalten und die Remote-Diagnose starten.
 
+.Bevor Sie beginnen
 Nach der Implementierung der virtuellen Appliance für VSC, VASA Provider und SRA müssen die VMware Tools installiert sein.
 
 .Über diese Aufgabe

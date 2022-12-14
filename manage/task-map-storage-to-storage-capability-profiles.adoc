@@ -18,6 +18,7 @@ Sie können die Datastores, die VASA Provider für ONTAP zugeordnet sind, den St
 * Virtual Storage Console (VSC) muss Ihren Storage bereits erkannt haben.
 
 
+.Über diese Aufgabe
 Sie können herkömmlichen Datenspeicher einem Storage-Funktionsprofil zuordnen oder das Storage-Funktionsprofil, das einem Datenspeicher zugeordnet ist, ändern. VASA Provider zeigt auf der Seite *Storage Mappings* alle Datastores des virtuellen Volumes (VVol) an. Alle Datastores, auf die in dieser Aufgabe verwiesen wird, sind herkömmliche Datastores.
 
 .Schritte

@@ -14,6 +14,7 @@ summary: Sie müssen Ihre Ordner auf dem geschützten Standort und dem Wiederher
 [role="lead"]
 Sie müssen Ihre Ordner auf dem geschützten Standort und dem Wiederherstellungsstandort zuordnen, um die Kommunikation zwischen ihnen zu ermöglichen.
 
+.Bevor Sie beginnen
 Sie müssen die geschützten und die Recovery-Standorte miteinander verbunden haben.
 
 .Schritte
@@ -34,4 +35,5 @@ Der Assistent zum Erstellen der Ordnerzuordnung wird angezeigt.
 
 
 
+.Ergebnisse
 Auf der Seite *Ordnerzuordnungen* werden die geschützten Site-Ressourcen und die Ressourcen des Recovery-Standortes angezeigt. Sie können die gleichen Schritte für andere Netzwerke in Ihrer Umgebung befolgen.

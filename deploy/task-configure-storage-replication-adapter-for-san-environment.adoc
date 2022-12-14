@@ -13,6 +13,7 @@ summary: 'Sie müssen die Storage-Systeme einrichten, bevor Sie Storage Replicat
 [role="lead"]
 Sie müssen die Storage-Systeme einrichten, bevor Sie Storage Replication Adapter (SRA) für Site Recovery Manager (SRM) ausführen.
 
+.Bevor Sie beginnen
 Sie müssen die folgenden Programme auf dem geschützten Standort und dem Wiederherstellungsstandort installiert haben:
 
 * SRM

@@ -13,6 +13,7 @@ summary: 'Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren 
 [role="lead"]
 Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren ESXi Hosts und Ihrem Speichersystem unterscheidet, müssen Sie die Voreinstellungen für Virtual Storage Console für VMware vSphere ändern. Wenn Sie die Voreinferenzdatei nicht ändern, schlägt die Bereitstellung von Datastore fehl, da (VSC) den Datastore nicht mounten kann.
 
+.Über diese Aufgabe
 Wenn die Bereitstellung von Datenspeichern fehlschlägt, protokolliert VSC die folgenden Fehlermeldungen:
 
 `Unable to continue. No ip addresses found when cross-referencing kernel ip addresses and addresses on the controller.`

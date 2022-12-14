@@ -14,6 +14,7 @@ summary: Sie können den Schutz Ihrer vorhandenen ungeschützten Virtual Machine
 [role="lead"]
 Sie können den Schutz Ihrer vorhandenen ungeschützten Virtual Machines konfigurieren, die mit VM Storage Policy erstellt wurden, wobei die Replizierung deaktiviert ist. Um einen Schutz zu gewährleisten, sollten Sie die VM-Storage-Richtlinie ändern und eine Replizierungsgruppe zuweisen.
 
+.Über diese Aufgabe
 Wenn die SVM sowohl IPv4 als auch IPv6 LIFs hat, sollten Sie IPv6 LIFs deaktivieren und später Disaster-Recovery-Workflows durchführen.
 
 .Schritte

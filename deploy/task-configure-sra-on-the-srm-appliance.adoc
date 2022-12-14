@@ -13,8 +13,10 @@ summary: 'Sobald Sie die SRM Appliance implementiert haben, sollten Sie SRA auf 
 [role="lead"]
 Sobald Sie die SRM Appliance implementiert haben, sollten Sie SRA auf der SRM Appliance konfigurieren. Die erfolgreiche Konfiguration von SRA ermöglicht die Kommunikation der SRM Appliance mit SRA für das Disaster-Recovery-Management. Um die Kommunikation zwischen der SRM Appliance und SRA zu ermöglichen, sollten die virtuelle Appliance für VSC, VASA Provider und SRA-Anmeldeinformationen (IP-Adresse und Administratorkennwort) in der SRM Appliance gespeichert werden.
 
+.Bevor Sie beginnen
 Sie sollten die hochladen `tar.gz` Datei zu SRM Appliance.
 
+.Über diese Aufgabe
 Die Konfiguration von SRA auf einer SRM Appliance speichert die SRA Anmeldedaten in der SRM Appliance.
 
 .Schritte

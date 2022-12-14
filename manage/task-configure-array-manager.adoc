@@ -20,6 +20,7 @@ Sie können Storage Replication Adapter (SRA) mithilfe des *Array Manager*-Assis
 * Um Mandantenfähigkeit zu ermöglichen, müssen Sie die SVM Management-LIFs aktivieren.
 
 
+.Über diese Aufgabe
 SRA unterstützt das Management auf Cluster-Ebene und das Management der SVM. Wenn Sie Storage auf Cluster-Ebene hinzufügen, können Sie alle SVMs im Cluster erkennen und ausführen. Wenn Sie Storage auf SVM-Ebene hinzufügen, können Sie nur die spezifische SVM managen.
 
 [NOTE]
@@ -72,4 +73,5 @@ Wenn Sie zum Beispiel Volume _src_vol1_ ausschließen möchten, das sich in eine
 . Klicken Sie Auf *Fertig Stellen*.
 
 
+.Nachdem Sie fertig sind
 Sie können dieselben Schritte für den Recovery-Standort befolgen, indem Sie die entsprechenden SVM-Management-IP-Adressen und Anmeldedaten verwenden. Auf dem Bildschirm *Array Pairs* aktivieren des Assistenten * Array Manager hinzufügen* müssen Sie überprüfen, ob das richtige Array-Paar ausgewählt ist und dass es als bereit für die Aktivierung angezeigt wird.

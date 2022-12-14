@@ -13,6 +13,7 @@ summary: 'Das SSL-Zertifikat wird bei der Installation (VSC) generiert. Der Dist
 [role="lead"]
 Das SSL-Zertifikat wird bei der Installation (VSC) generiert. Der Distinguished Name (DN), der für das SSL-Zertifikat generiert wird, ist möglicherweise kein allgemeiner Name (CN), den die Clientcomputer erkennen. Durch Ändern der Passwörter für den Schlüsselspeicher und den privaten Schlüssel können Sie das Zertifikat erneut generieren und ein standortspezifisches Zertifikat erstellen.
 
+.Über diese Aufgabe
 Sie können die Remote-Diagnose mit der Wartungskonsole aktivieren und standortspezifisches Zertifikat generieren.
 
 https://kb.netapp.com/app/answers/answer_view/a_id/1075654["Antwort der NetApp Knowledgebase 1075654: Virtual Storage Console 7.x: Implementierung von CA-signierten Zertifikaten"^]

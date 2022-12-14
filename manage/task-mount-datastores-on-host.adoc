@@ -14,6 +14,7 @@ summary: Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf d
 [role="lead"]
 Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speicher zugreifen. Nachdem Sie die Hosts der VMware Umgebung hinzugefügt haben, können Sie den Datastore auf den zusätzlichen Hosts einbinden.
 
+.Bevor Sie beginnen
 Sie müssen sicherstellen, dass die Subnetzdetails aller Netzwerke, mit denen der ESXi-gehostete verbunden ist, in eingegeben werden `Kaminoprefs.xml`.
 
 Siehe Aktivieren des Datastore-Mounten über verschiedene Subnetze im Abschnitt _VSC 9.6 Deployment and Setup Guide_.

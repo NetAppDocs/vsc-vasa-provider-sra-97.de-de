@@ -13,6 +13,7 @@ summary: 'Die Timeout-Skripte des Gastbetriebssystems (OS) stellen die SCSI-I/O-
 [role="lead"]
 Die Timeout-Skripte des Gastbetriebssystems (OS) stellen die SCSI-I/O-Zeitüberschreitungseinstellungen für die Versionen 4, 5, 6 und 7 von Red hat Enterprise Linux sowie 9, 10 und 11 von SUSE Linux Enterprise Server ein. Sie können entweder eine Zeitüberschreitung von 60 Sekunden oder eine Zeitüberschreitung von 190 Sekunden angeben. Sie müssen das Skript jedes Mal ausführen, wenn Sie auf eine neue Linux-Version aktualisieren.
 
+.Bevor Sie beginnen
 Sie müssen das ISO-Image mit dem Linux-Skript angehängt haben.
 
 .Schritte

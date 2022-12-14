@@ -14,6 +14,7 @@ summary: Sie müssen Ihre Netzwerke am geschützten Standort und am Recovery-Sta
 [role="lead"]
 Sie müssen Ihre Netzwerke am geschützten Standort und am Recovery-Standort zuordnen, um eine Kommunikation zwischen ihnen zu ermöglichen.
 
+.Bevor Sie beginnen
 Sie müssen die geschützten und die Recovery-Standorte miteinander verbunden haben.
 
 .Schritte
@@ -34,4 +35,5 @@ Der Assistent „Netzwerkzuordnung erstellen“ wird angezeigt.
 
 
 
+.Ergebnisse
 Auf der Seite Netzwerkzuordnungen werden die geschützten Standortressourcen und die Ressourcen des Recovery-Standorts angezeigt. Sie können die gleichen Schritte für andere Netzwerke in Ihrer Umgebung befolgen.

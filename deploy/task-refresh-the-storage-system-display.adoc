@@ -14,6 +14,7 @@ summary: 'Sie können die von Virtual Storage Console für VMware vSphere bereit
 [role="lead"]
 Sie können die von Virtual Storage Console für VMware vSphere bereitgestellte Aktualisierungsfunktion verwenden, um die Informationen zu Storage-Systemen zu aktualisieren und die Virtual Storage Console (VSC) zur Erkennung von Storage-Systemen zu erzwingen.
 
+.Über diese Aufgabe
 Die Option „`reFresh`“ ist nützlich, wenn Sie die Standardanmeldeinformationen für die Speichersysteme nach Erhalt eines Authentifizierungsfehlers geändert haben. Sie sollten immer einen Aktualisierungsvorgang durchführen, wenn Sie die Anmeldedaten des Speichersystems geändert haben, nachdem das Speichersystem „`Authentifizierungsfehler`“ gemeldet hat. Während des Updates versucht VSC, mithilfe der neuen Zugangsdaten eine Verbindung zum Storage-System herzustellen.
 
 Je nach System-Setup kann dieser Vorgang viel Zeit in Anspruch nehmen.

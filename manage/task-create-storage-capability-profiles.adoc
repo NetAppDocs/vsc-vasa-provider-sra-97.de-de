@@ -13,8 +13,10 @@ summary: Mit VSC können Sie manuell Storage-Funktionsprofile erstellen, anhand 
 [role="lead"]
 Mit VSC können Sie manuell Storage-Funktionsprofile erstellen, anhand der Funktionen eines Datastores automatisch ein Profil erstellen oder ein Profil entsprechend den Anforderungen ändern.
 
+.Bevor Sie beginnen
 Sie müssen Ihre VASA Provider Instanz auf der Virtual Storage Console für VMware vSphere registriert haben.
 
+.Über diese Aufgabe
 Nachdem Sie ein Profil eingerichtet haben, können Sie das Profil nach Bedarf bearbeiten.
 
 .Schritte

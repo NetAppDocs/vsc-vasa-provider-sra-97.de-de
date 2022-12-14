@@ -13,6 +13,7 @@ summary: 'Bei Verwendung von ONTAP 9.6 oder einer älteren Version können Sie �
 [role="lead"]
 Bei Verwendung von ONTAP 9.6 oder einer älteren Version können Sie über das vVol Dashboard nur Details zu VMware Virtual Volumes (VVols) Datastores und Virtual Machines anzeigen, wenn Sie sich für VASA Provider registriert haben, um Daten für die VVols-VM- und Datastore-Berichte abzurufen.
 
+.Bevor Sie beginnen
 Sie müssen 2.1 oder höher von heruntergeladen haben.
 
 [NOTE]

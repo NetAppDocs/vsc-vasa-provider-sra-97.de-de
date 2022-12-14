@@ -22,6 +22,7 @@ Siehe *Aktivieren der Datastore-Montage über verschiedene Subnetze* Abschnitt i
 * Sie sollten eine ähnliche Replizierungsrichtlinie konfigurieren und für die Datastores am Quell- und Zielspeicherort planen, damit die umgekehrte Replizierung erfolgreich durchgeführt werden kann.
 
 
+.Über diese Aufgabe
 Über das Menü *Provisioner Datastore* können Sie ein Storage-Funktionsprofil für den Datastore angeben. Dadurch können Sie konsistente Service Level Objectives (SLOs) festlegen und den Provisionierungsprozess vereinfachen. Sie können nur ein Storage-Funktionsprofil angeben, wenn Sie VASA Provider aktiviert haben.
 
 FlexVol Volumes, die als Storage gesichert werden, werden auf dem vVol Dashboard nur angezeigt, wenn sie ONTAP 9.5 oder höher ausführen. Sie sollten den vCenter Server *New Datastore* Wizard zur Bereitstellung von VVols-Datastores nicht verwenden.

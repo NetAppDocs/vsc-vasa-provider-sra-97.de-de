@@ -13,8 +13,10 @@ summary: 'Sie können Virtual Machines von herkömmlichen Datastores zu Virtual 
 [role="lead"]
 Sie können Virtual Machines von herkömmlichen Datastores zu Virtual Volumes (VVols) Datastores migrieren, um von richtlinienbasiertem VM-Management und anderen VVols Funktionen zu profitieren. VVols Datastores ermöglichen es, steigende Workload-Anforderungen zu erfüllen.
 
+.Bevor Sie beginnen
 Sie müssen sicherstellen, dass VASA Provider nicht auf den Virtual Machines ausgeführt wird, die Sie migrieren möchten. Wenn Sie eine Virtual Machine migrieren, auf der VASA Provider ausgeführt wird, zu einem VVols Datastore, können Sie keine Managementvorgänge ausführen. Das gilt auch das Hochfahren der Virtual Machines auf VVols Datastores.
 
+.Über diese Aufgabe
 Wenn Sie von einem herkömmlichen Datenspeicher zu einem VVol Datastore migrieren, verwendet der vCenter Server vStorage APIs for Array Integration (VAAI)-Verschiebungen, wenn Daten aus VMFS-Datenspeichern verschoben werden, nicht aber aus einer NFS VMDK-Datei. VAAI-Entlastung verringert normalerweise die Last des Hosts.
 
 .Schritte

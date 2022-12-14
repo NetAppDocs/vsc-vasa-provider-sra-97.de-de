@@ -14,6 +14,7 @@ summary: Sie müssen Schutzgruppen erstellen, um eine Gruppe virtueller Maschine
 [role="lead"]
 Sie müssen Schutzgruppen erstellen, um eine Gruppe virtueller Maschinen auf dem geschützten Standort zu schützen.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass die Quell- und Zielstandorte für Folgendes konfiguriert sind:
 
 * Dieselbe Version von SRM wurde installiert

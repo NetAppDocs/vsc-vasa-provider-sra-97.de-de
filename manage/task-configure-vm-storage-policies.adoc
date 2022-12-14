@@ -14,6 +14,7 @@ summary: Sie sollten VM-Storage-Richtlinien konfigurieren, um Virtual Machines z
 [role="lead"]
 Sie sollten VM-Storage-Richtlinien konfigurieren, um Virtual Machines zu managen, die auf VVols Datastores konfiguriert sind, und um Services wie die Replizierung für die virtuellen Festplatten zu aktivieren. Bei herkömmlichen Datenspeichern kann optional diese VM Storage-Richtlinien verwendet werden.
 
+.Über diese Aufgabe
 Der vSphere Web-Client bietet Standard-Storage-Richtlinien. Sie können jedoch Richtlinien erstellen und sie den Virtual Machines zuweisen.
 
 .Schritte

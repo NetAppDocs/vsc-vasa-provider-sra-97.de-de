@@ -13,6 +13,7 @@ summary: 'Die Timeout-Skripte des Gastbetriebssystems (OS) legen die SCSI I/O Ti
 [role="lead"]
 Die Timeout-Skripte des Gastbetriebssystems (OS) legen die SCSI I/O Timeout-Einstellungen für Solaris 10 fest. Sie können entweder eine Zeitüberschreitung von 60 Sekunden oder eine Zeitüberschreitung von 190 Sekunden angeben.
 
+.Bevor Sie beginnen
 Sie müssen das ISO-Image mit dem Solaris-Skript angehängt haben.
 
 .Schritte

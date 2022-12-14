@@ -14,8 +14,10 @@ summary: 'Über das Dashboard der virtuellen Appliance für Virtual Storage Cons
 [role="lead"]
 Über das Dashboard der virtuellen Appliance für Virtual Storage Console (VSC), VASA Provider und Storage Replication Adapter (SRA) können Sie die ESXi Host-Einstellungen bearbeiten.
 
+.Bevor Sie beginnen
 Sie müssen ein ESXi-Hostsystem für Ihre vCenter-Serverinstanz konfiguriert haben.
 
+.Über diese Aufgabe
 Wenn ein Problem mit Ihren ESXi-Hosteinstellungen auftritt, wird das Problem im Portlet ESXi Hostsysteme des Dashboards angezeigt. Sie können auf das Problem klicken, um den Hostnamen oder die IP-Adresse des ESXi-Hosts anzuzeigen, der das Problem hat.
 
 .Schritte
